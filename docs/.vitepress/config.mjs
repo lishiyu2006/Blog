@@ -4,6 +4,7 @@ const REPO_NAME = '/Blog/'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: REPO_NAME,
   title: "lizzy_web",
   description: "A VitePress Site",
   themeConfig: {
