@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+const REPO_NAME = '/lizzy_web/' 
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "lizzy_web",
