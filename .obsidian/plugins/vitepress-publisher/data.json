@@ -4,7 +4,7 @@
   "useDataView": false,
   "useDataViewJs": false,
   "vitepressDir": "D:\\software\\vitpress",
-  "vitepressSrcDir": "",
+  "vitepressSrcDir": "D:\\software\\vitpress\\docs",
   "vitepressStaticDir": "",
   "deployScriptPath": "",
   "ignoreFileRegex": "^_",
