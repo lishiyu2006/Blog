@@ -1,5 +1,18 @@
 {
-  "publishedContentList": [],
+  "publishedContentList": [
+    {
+      "name": "1.md.md",
+      "isFolder": false
+    },
+    {
+      "name": "Hello World.md",
+      "isFolder": false
+    },
+    {
+      "name": "欢迎.md",
+      "isFolder": false
+    }
+  ],
   "needCleanDirFolder": false,
   "useDataView": false,
   "useDataViewJs": false,
