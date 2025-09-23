@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hello World.md",
+                "file": "欢迎.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hello World"
+              "title": "欢迎"
             }
           }
         ]
@@ -172,10 +172,10 @@
   },
   "active": "03a5f555c677eb1e",
   "lastOpenFiles": [
-    "1.md.md",
     "Hello World.md",
-    "未命名",
     "欢迎.md",
+    "1.md.md",
+    "未命名",
     "token picgo.md",
     "新建文本文档.txt",
     "().md"
