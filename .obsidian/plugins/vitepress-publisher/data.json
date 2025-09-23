@@ -1,0 +1,16 @@
+{
+  "publishedContentList": [],
+  "needCleanDirFolder": false,
+  "useDataView": false,
+  "useDataViewJs": false,
+  "vitepressDir": "",
+  "vitepressSrcDir": "",
+  "vitepressStaticDir": "",
+  "deployScriptPath": "",
+  "ignoreFileRegex": "^_",
+  "autoSyncMdFile": true,
+  "devCommand": "npm run docs:dev",
+  "buildCommand": "npm run docs:build",
+  "previewCommand": "npm run docs:preview",
+  "enableCustomCommands": false
+}
