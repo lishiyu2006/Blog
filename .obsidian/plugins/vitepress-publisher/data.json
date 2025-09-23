@@ -7,7 +7,7 @@
   "vitepressSrcDir": "D:\\software\\vitpress\\docs",
   "vitepressStaticDir": "D:\\software\\vitpress\\static",
   "deployScriptPath": "",
-  "ignoreFileRegex": "^_",
+  "ignoreFileRegex": "",
   "autoSyncMdFile": true,
   "devCommand": "npm run docs:dev",
   "buildCommand": "npm run docs:build",
