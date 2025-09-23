@@ -3,7 +3,7 @@
   "needCleanDirFolder": false,
   "useDataView": false,
   "useDataViewJs": false,
-  "vitepressDir": "",
+  "vitepressDir": "D:\\software\\vitpress",
   "vitepressSrcDir": "",
   "vitepressStaticDir": "",
   "deployScriptPath": "",
