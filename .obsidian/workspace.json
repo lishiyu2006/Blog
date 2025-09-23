@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "340644c58b2108be",
+        "id": "5d24743e13f110fc",
         "type": "tabs",
         "children": [
           {
-            "id": "03a5f555c677eb1e",
+            "id": "5d8208dbaf69c86b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -169,12 +169,17 @@
   },
   "active": "14ff5fcc9111227d",
   "lastOpenFiles": [
+    "tool/preface.md",
+    "LLM/preface.md",
+    "project/preface.md",
+    "project/preface 1.md",
+    "diary/preface.md",
+    "1.md.md",
     "tool",
-    "++",
-    "好玩的东西",
+    "LLM",
+    "diary",
     "project",
     "欢迎.md",
-    "1.md.md",
     "Hello World.md",
     "token picgo.md",
     "新建文本文档.txt",
