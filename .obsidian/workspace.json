@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/preface.md",
+                "file": "未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "preface"
+              "title": "未命名"
             }
           }
         ],
@@ -185,10 +185,10 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "14ff5fcc9111227d",
+  "active": "0245175e14c741eb",
   "lastOpenFiles": [
     "project/preface.md",
-    "question/preface.md",
+    "未命名.md",
     "question",
     "tool/preface.md",
     "LLM/preface.md",
