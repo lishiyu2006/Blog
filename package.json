@@ -1,5 +1,5 @@
 {
-  "name": "lizzy-name",
+  "name": "下午茶",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,5 +9,11 @@
   },
   "devDependencies": {
     "vitepress": "^1.0.0-rc.20"
+  },
+  "dependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress-markdown-timeline": "^1.2.2",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-sidebar": "^1.33.0"
   }
 }
