@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/1.preface.md",
+                "file": "LLM/GAN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.preface"
+              "title": "GAN"
             }
           }
         ],
@@ -184,10 +184,10 @@
   },
   "active": "bb39569f4dda34e3",
   "lastOpenFiles": [
+    "diary/1.preface.md",
     "project/1.preface.md",
     "question/1.preface.md",
     "tool/1.preface.md",
-    "diary/1.preface.md",
     "LLM/1.preface.md",
     "LLM/GAN.md",
     "Public",

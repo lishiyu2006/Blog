@@ -4,3 +4,4 @@
 2.组成：生成器Generator和判断器Discriminator
 
 ## 介绍组成部分：
+1.生成器：
