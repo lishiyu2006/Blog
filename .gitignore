@@ -1,3 +1,51 @@
- .idea  
- .obsidian  
- .vscode
+# 忽略自动生成的缓存和临时文件
+.cache/
+.tmp/
+temp/
+*.swp
+*.log
+*.log.*
+*.tmp
+*.bak
+*.cache
+
+# 忽略本地生成的笔记文件备份
+*~
+
+# 忽略IDE生成的文件和文件夹
+.idea/
+.vscode/
+.obsidian/
+*.iml
+*.ipr
+*.iws
+
+# 忽略编译生成的文件
+*.class
+*.war
+*.ear
+*.jar
+
+# 忽略node.js和npm生成的文件夹
+node_modules/
+npm-debug.log
+
+# 忽略Jupyter Notebook生成的文件和文件夹
+.ipynb_checkpoints/
+
+# 忽略编译输出目录
+build/
+dist/
+
+# 忽略Mac OS生成的临时文件
+.DS_Store
+
+# 忽略Windows生成的临时文件
+Thumbs.db
+
+#
+# git files that we don't want to ignore even if they are dot-files
+#
+!.gitignore
+!.mailmap
+!.cocciconfig

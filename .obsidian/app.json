@@ -1,4 +1,14 @@
 {
   "newFileLocation": "current",
-  "attachmentFolderPath": "./"
+  "attachmentFolderPath": "Public",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/@algolia/",
+    "node_modules/@babel/",
+    "node_modules/domhandler/",
+    "node_modules/@chevrotain/",
+    "node_modules/@antfu/"
+  ]
 }

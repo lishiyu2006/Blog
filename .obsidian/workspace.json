@@ -182,8 +182,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bb39569f4dda34e3",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
+    "Public",
+    "新建文件夹",
     "LLM/preface.md",
     "LLM/GAN.md",
     "tool/preface.md",
@@ -208,7 +210,6 @@
     "question/preface.md",
     "back-end",
     "blog/欢迎.md",
-    "blog",
-    "question"
+    "blog"
   ]
 }
