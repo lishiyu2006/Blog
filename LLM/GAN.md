@@ -3,4 +3,4 @@
 1.目标；解决生成类问题
 2.组成：生成器Generator和判断器Discriminator
 
-jie'h
+## 介绍组成部分：
