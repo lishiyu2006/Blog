@@ -45,10 +45,10 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: 'LLM', link: '/LLM/preface' },
-      { text: '好玩的东西', link: '/project/preface' },
-      { text: '**', link: '/diary/preface' },
-      { text: '工具', link: '/tool/preface' },
+      { text: 'LLM', link: '/LLM/1.preface' },
+      { text: '好玩的东西', link: '/project/1.preface' },
+      { text: '**', link: '/diary/1.preface' },
+      { text: '工具', link: '/tool/1.preface' },
       { text: '主页', link: '/' }
     ],
 

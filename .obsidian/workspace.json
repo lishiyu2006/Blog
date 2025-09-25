@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/GAN.md",
+                "file": "diary/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GAN"
+              "title": "1.preface"
             }
           }
         ],
@@ -182,17 +182,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc0b8b4051c66274",
+  "active": "bb39569f4dda34e3",
   "lastOpenFiles": [
+    "project/1.preface.md",
+    "question/1.preface.md",
+    "tool/1.preface.md",
+    "diary/1.preface.md",
+    "LLM/1.preface.md",
+    "LLM/GAN.md",
     "Public",
     "新建文件夹",
-    "LLM/preface.md",
-    "LLM/GAN.md",
-    "tool/preface.md",
     "about.md",
     "index.md",
     "logo.png",
-    "diary/preface.md",
     "新建文本文档.txt",
     "【哲风壁纸】守岸-鸣潮.png",
     "docs/LLM/preface.md",
@@ -206,10 +208,7 @@
     "docs/diary/preface.md",
     "docs/diary",
     "docs",
-    "project/preface.md",
-    "question/preface.md",
     "back-end",
-    "blog/欢迎.md",
-    "blog"
+    "blog/欢迎.md"
   ]
 }
