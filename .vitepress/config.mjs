@@ -48,7 +48,8 @@ const baseVitePressConfig = {
       { text: 'LLM', link: '/LLM/preface' },
       { text: '好玩的东西', link: '/project/preface' },
       { text: '**', link: '/diary/preface' },
-      { text: '工具', link: '/tool/preface' }
+      { text: '工具', link: '/tool/preface' },
+      { text: '主页', link: '/' }
     ],
 
     socialLinks: [
