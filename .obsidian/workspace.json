@@ -27,16 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/GAN.md",
+                "file": "LLM/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GAN"
+              "title": "1.preface"
+            }
+          },
+          {
+            "id": "0973a060786ce29f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "question/1.preface.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1.preface"
+            }
+          },
+          {
+            "id": "922439598cb9da89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "question/py面向对象.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "py面向对象"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -182,14 +210,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bb39569f4dda34e3",
+  "active": "922439598cb9da89",
   "lastOpenFiles": [
+    "question/1.preface.md",
+    "question/py面向对象.md",
+    "LLM/全连接神经网络.md",
+    "LLM/GAN.md",
+    "LLM/1.preface.md",
     "diary/1.preface.md",
     "project/1.preface.md",
-    "question/1.preface.md",
     "tool/1.preface.md",
-    "LLM/1.preface.md",
-    "LLM/GAN.md",
     "Public",
     "新建文件夹",
     "about.md",
