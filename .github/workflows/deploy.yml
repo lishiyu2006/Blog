@@ -43,7 +43,8 @@ jobs:
         run: npm install
 
       - name: Build with VitePress # 步骤5：构建静态网站文件
-        run: npm run docs:build # 使用 npx 来执行 vitepress 命令令
+        node node_modules/vitepress/bin/vitepress.js build
+        #run: npm run docs:build # 使用 npx 来执行 vitepress 命令令
 
       - name: Upload artifact # 步骤6：上传构建产物
         uses: actions/upload-pages-artifact@v3
