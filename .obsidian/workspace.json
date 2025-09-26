@@ -4,81 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "871e379a5b3b52dd",
+        "id": "a9a801be91197e42",
         "type": "tabs",
         "children": [
           {
-            "id": "45d864cfc548abe7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/preface.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "preface"
-            }
-          },
-          {
-            "id": "bb39569f4dda34e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/1.preface.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1.preface"
-            }
-          },
-          {
-            "id": "0973a060786ce29f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "question/1.preface.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1.preface"
-            }
-          },
-          {
-            "id": "922439598cb9da89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/2.模型、网络/GAN.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GAN"
-            }
-          },
-          {
-            "id": "36c33afb4cdc97a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/1.preface.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1.preface"
-            }
-          },
-          {
-            "id": "558b868462f77d1b",
+            "id": "310b084530064654",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -91,8 +21,7 @@
               "title": "扩散模型"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -238,15 +167,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "558b868462f77d1b",
+  "active": "310b084530064654",
   "lastOpenFiles": [
+    "LLM/2.模型、网络/[简述马尔可夫链【通俗易懂】.md",
+    "LLM/2.模型、网络/扩散模型.md",
+    "LLM/2.模型、网络/简述马尔可夫链【通俗易懂】.md",
+    "question/1.preface.md",
     "LLM/2.模型、网络/GAN.md",
+    "LLM/2.模型、网络/CNN.md",
     "LLM/1.preface.md",
     "project/1.preface.md",
     "tool/1.preface.md",
-    "question/1.preface.md",
-    "LLM/2.模型、网络/扩散模型.md",
-    "LLM/2.模型、网络/CNN.md",
     "LLM/3.层",
     "LLM/1.框架",
     "LLM/2.模型、网络",
