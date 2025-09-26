@@ -93,9 +93,9 @@ class ChildClass(ParentClass):
     # 子类的属性和方法（可以继承父类的，也可以新增或重写）
     pass
 ```
-### 示例 1：
+### 示例 1：简单的父类和子类
 父类有分支子类；
-这些分支子类有重写，继承等功能。
+这些分支子类有重写，继承（**多层继承**：子类可以继承自 "子类的子类"；**多继承**：一个子类可以同时继承多个父类（用逗号分隔））等功能。
 ```python
 # 父类：动物
 class Animal:
@@ -138,3 +138,37 @@ cat.meow()  # 子类自己的方法：咪宝 在喵喵叫
 # 访问父类的类属性
 print(dog.category)  # 生物（子类继承了父类的类属性）
 ```
+### 示例 2：多层继承和多继承
+```python
+# 祖父类
+class GrandParent:
+    def grand_method(self):
+        print("这是祖父类的方法")
+
+# 父类（继承自祖父类）
+class Parent(GrandParent):
+    def parent_method(self):
+        print("这是父类的方法")
+
+# 子类（继承自父类，同时继承祖父类的方法）
+class Child(Parent):
+    def child_method(self):
+        print("这是子类的方法")
+
+# 多继承示例（同时继承两个父类）
+class Father:
+    def father_say(self):
+        print("我是父亲")
+
+class Mother:
+    def mother_say(self):
+        print("我是母亲")
+
+class Child(Father, Mother):
+    pass  # 继承两个父类的所有方法
+
+child = Child()
+child.father_say()  # 我是父亲
+child.mother_say()  # 我是母亲
+```
+`pass` 是一个**空语句**，它的核心作用是 “占位”—— 表示 “这里需要有代码，但暂时什么都不做
