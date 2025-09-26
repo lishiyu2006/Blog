@@ -10,4 +10,5 @@ class name():
         self.attribute2 = parameter2  # 实例属性2
         
     def name_method(self)
+    
 ```
