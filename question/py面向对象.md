@@ -2,7 +2,7 @@
 
 ## 1.定义:
 ```python
-class name():
+class Person():
 	# 构造方法,初始化对象,(表示属性装配),初始化调用方法
 	def __init__(self,name,): 
         # self 表示类的实例本身
@@ -21,7 +21,7 @@ p.greet()  # 调用时无需传递 self，输出：Hello, I'm Alice
 第一个参数**必须**是 `cls`（约定名称），指代当前类本身，而非实例。调用时不需要手动传递 `cls`
 ```python
 class Person: 
-	species = "Human" # 类属性 
+	species = "Human" # 类属性，相当于上面定义了一个self.species,所以不用__init__
 	
 	# 类方法：第一个参数是 cls @classmethod 
 	def show_species(cls): 
