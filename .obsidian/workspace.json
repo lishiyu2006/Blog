@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型、网络/扩散模型.md",
+                "file": "LLM/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "扩散模型"
+              "title": "1.preface"
             }
           }
         ],
@@ -241,18 +241,18 @@
   "active": "558b868462f77d1b",
   "lastOpenFiles": [
     "project/1.preface.md",
-    "LLM/2.模型、网络/CNN.md",
+    "tool/1.preface.md",
+    "question/1.preface.md",
     "LLM/1.preface.md",
+    "LLM/2.模型、网络/扩散模型.md",
+    "LLM/2.模型、网络/CNN.md",
     "LLM/3.层",
     "LLM/1.框架",
     "LLM/2.模型、网络",
     "LLM/2.模型、网络/全连接神经网络.md",
     "LLM/2.模型、网络/GAN.md",
-    "LLM/2.模型、网络/扩散模型.md",
-    "question/1.preface.md",
     "question/py面向对象.md",
     "diary/1.preface.md",
-    "tool/1.preface.md",
     "Public",
     "新建文件夹",
     "about.md",
