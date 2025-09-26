@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型、网络/RNN.md",
+                "file": "LLM/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RNN"
+              "title": "1.preface"
             }
           }
         ],
@@ -212,10 +212,10 @@
   },
   "active": "bfa7e10c2a42bc60",
   "lastOpenFiles": [
-    "LLM/2.模型、网络/HMM.md",
+    "LLM/2.模型、网络/扩散模型.md",
     "LLM/2.模型、网络/MCMC.md",
     "LLM/2.模型、网络/RNN.md",
-    "LLM/2.模型、网络/扩散模型.md",
+    "LLM/2.模型、网络/HMM.md",
     "LLM/2.模型、网络/[简述马尔可夫链【通俗易懂】.md",
     "LLM/2.模型、网络/简述马尔可夫链【通俗易懂】.md",
     "question/1.preface.md",
