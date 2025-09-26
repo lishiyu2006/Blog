@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/GAN.md",
+                "file": "LLM/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GAN"
+              "title": "1.preface"
             }
           }
         ],
@@ -224,12 +224,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "36c33afb4cdc97a3",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
-    "LLM/全连接神经网络.md",
-    "LLM/扩散模型.md",
-    "LLM/GAN.md",
     "未命名",
+    "模型、网络",
+    "LLM/全连接神经网络.md",
+    "LLM/GAN.md",
+    "LLM/扩散模型.md",
     "question/1.preface.md",
     "question/py面向对象.md",
     "LLM/1.preface.md",
