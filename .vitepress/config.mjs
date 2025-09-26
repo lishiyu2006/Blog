@@ -49,6 +49,7 @@ const baseVitePressConfig = {
       { text: '好玩的东西', link: '/project/1.preface' },
       { text: '**', link: '/diary/1.preface' },
       { text: '工具', link: '/tool/1.preface' },
+      { text: 'py', link: '/question/1.preface' },
       { text: '主页', link: '/' }
     ],
 
@@ -129,18 +130,18 @@ const sidebarConfigs = [
     prefixSeparator: '.',
     collapsed: true,
     collapseDepth: 2,
-  },
+  }, 
   {
-    documentRootPath: '/',
+    documentRootPath: '/', // 使用 '/' 表示文档根目录
     scanStartPath: 'question',
     basePath: '/question/',
     resolvePath: '/question/',
-    rootGroupText: '刷某库',
+    rootGroupText: 'xx',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
     collapseDepth: 2,
-  },
+  }
 ];
 
 // 1. 使用 withSidebar 包装基础配置，生成包含侧边栏的配置对象
