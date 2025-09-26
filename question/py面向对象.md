@@ -42,3 +42,14 @@ class Calculator:
 # 可以通过类或实例调用
 print(Calculator.add(2, 3))  # 输出：5
 ```
+
+## 其他参数
+### 类的方法：
+```python
+class people: 
+	#定义基本属性 
+	name = ''
+	age = 0
+	#定义私有属性,私有属性在类外部无法直接进行访问
+	__weight = 0
+```
