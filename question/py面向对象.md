@@ -44,7 +44,7 @@ print(Calculator.add(2, 3))  # 输出：5
 ```
 
 ## 其他参数
-### 类的方法：
+### 一~类的私有性：
 ```python
 class people: 
 	#定义基本属性 
@@ -52,4 +52,89 @@ class people:
 	age = 0
 	#定义私有属性,私有属性在类外部无法直接进行访问
 	__weight = 0
+```
+
+#### 1.类外部直接访问时受限
+私有属性的主要作用就是限制在类的外部直接访问
+```python
+class MyClass:
+    def __init__(self):
+        self.__private = "我是私有属性"  # 私有实例属性
+
+obj = MyClass()
+print(obj.__private)  # 报错：AttributeError: 'MyClass' object has no attribute '__private'
+```
+
+#### 2.子类中不能直接访问父类的私有属性
+父类的私有属性会被 "隐藏"，子类无法直接通过属性名访问，即使子类继承了父类也不行。
+```python
+class Parent:
+    def __init__(self):
+        self.__private = "父类私有属性"
+
+class Child(Parent):
+    def get_parent_private(self):
+        return self.__private  # 报错：无法直接访问父类的私有属性
+
+child = Child()
+child.get_parent_private()  # AttributeError: 'Child' object has no attribute '__private'
+```
+
+### 二~父类（基类）和子类（派生类）
+#### 基本语法：
+```python
+# 定义父类（基类）
+class ParentClass:
+    # 父类的属性和方法
+    pass
+
+# 定义子类（派生类），继承自父类
+class ChildClass(ParentClass):
+    # 子类的属性和方法（可以继承父类的，也可以新增或重写）
+    pass
+```
+### 示例 1：
+父类有分支子类；
+这些分支子类有重写，继承等功能。
+```python
+# 父类：动物
+class Animal:
+    # 类属性
+    category = "生物"
+    
+    # 初始化方法
+    def __init__(self, name):
+        self.name = name  # 实例属性
+    
+    # 父类的方法
+    def eat(self):
+        print(f"{self.name} 在吃东西")
+
+# 子类：狗（继承自动物）
+class Dog(Animal):
+    # 子类新增的方法
+    def bark(self):
+        print(f"{self.name} 在汪汪叫")
+
+# 子类：猫（继承自动物）
+class Cat(Animal):
+    # 子类重写父类的方法
+    def eat(self):
+        print(f"{self.name} 优雅地吃着猫粮")
+    
+    # 子类新增的方法
+    def meow(self):
+        print(f"{self.name} 在喵喵叫")
+
+# 使用子类
+dog = Dog("旺财")
+dog.eat()   # 继承父类的方法：旺财 在吃东西
+dog.bark()  # 子类自己的方法：旺财 在汪汪叫
+
+cat = Cat("咪宝")
+cat.eat()   # 重写后的方法：咪宝 优雅地吃着猫粮
+cat.meow()  # 子类自己的方法：咪宝 在喵喵叫
+
+# 访问父类的类属性
+print(dog.category)  # 生物（子类继承了父类的类属性）
 ```
