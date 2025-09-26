@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/1.preface.md",
+                "file": "LLM/2.模型、网络/扩散模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.preface"
+              "title": "扩散模型"
             }
           }
         ],
@@ -212,6 +212,7 @@
   },
   "active": "bfa7e10c2a42bc60",
   "lastOpenFiles": [
+    "LLM/1.preface.md",
     "LLM/2.模型、网络/扩散模型.md",
     "LLM/2.模型、网络/MCMC.md",
     "LLM/2.模型、网络/RNN.md",
@@ -221,7 +222,6 @@
     "question/1.preface.md",
     "LLM/2.模型、网络/GAN.md",
     "LLM/2.模型、网络/CNN.md",
-    "LLM/1.preface.md",
     "project/1.preface.md",
     "tool/1.preface.md",
     "LLM/3.层",
