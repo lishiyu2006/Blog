@@ -1,5 +1,6 @@
 # py面向对象
 
+
 ## 1.定义:
 ```python
 class Person():
@@ -16,6 +17,7 @@ class Person():
 p = Person("Alice")
 p.greet()  # 调用时无需传递 self，输出：Hello, I'm Alice
 ```
+
 ## 2.其他用法:
 ### (1).类方法（用 `@classmethod` 装饰）
 第一个参数**必须**是 `cls`（约定名称），指代当前类本身，而非实例。调用时不需要手动传递 `cls`
@@ -43,6 +45,7 @@ class Calculator:
 print(Calculator.add(2, 3))  # 输出：5
 ```
 
+
 ## 其他参数
 ### 一~类的私有性：
 ```python
@@ -53,7 +56,6 @@ class people:
 	#定义私有属性,私有属性在类外部无法直接进行访问
 	__weight = 0
 ```
-
 #### 1.类外部直接访问时受限
 私有属性的主要作用就是限制在类的外部直接访问
 ```python
@@ -64,7 +66,6 @@ class MyClass:
 obj = MyClass()
 print(obj.__private)  # 报错：AttributeError: 'MyClass' object has no attribute '__private'
 ```
-
 #### 2.子类中不能直接访问父类的私有属性
 父类的私有属性会被 "隐藏"，子类无法直接通过属性名访问，即使子类继承了父类也不行。
 ```python
@@ -79,6 +80,7 @@ class Child(Parent):
 child = Child()
 child.get_parent_private()  # AttributeError: 'Child' object has no attribute '__private'
 ```
+
 
 ### 二~父类（基类）和子类（派生类）
 #### 基本语法：
@@ -172,6 +174,7 @@ child.father_say()  # 我是父亲
 child.mother_say()  # 我是母亲
 ```
 `pass` 是一个**空语句**，它的核心作用是 “占位”—— 表示 “这里需要有代码，但暂时什么都不做
+
 ### 类的专有方法：
 
 - **__init__ :** 构造函数，在生成对象时调用
@@ -188,5 +191,25 @@ child.mother_say()  # 我是母亲
 - **__truediv__:** 除运算
 - **__mod__:** 求余运算
 - **__pow__:** 乘方
-- **__str__：**
+- **__str__:** print（）时返回字符串
+
 ### 重载
+”重载” 指的是为同一个个运算符（如 `+`、`-`、`*` 等）定义不同的行为，使其能适用于不同类型的对象
+```python
+class Vector:
+   def __init__(self, a, b):
+      self.a = a
+      self.b = b
+ 
+   def __str__(self):
+      return 'Vector (%d, %d)' % (self.a, self.b)
+   
+   def __add__(self,other):
+      return Vector(self.a + other.a, self.b + other.b)
+ 
+v1 = Vector(2,10)
+v2 = Vector(5,-2)
+print (v1 + v2)
+```
+其中，`__add__` 方法就是对 `+` 运算符的重载
+
