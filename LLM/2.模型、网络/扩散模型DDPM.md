@@ -6,7 +6,6 @@
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509262221782.png)
 attention：无论是前向过程还是反向过程都是一个参数化的[马尔可夫链](https://zhuanlan.zhihu.com/p/448575579)（Markov chain）（即当经过一定的训练负责还原或者加噪1%的这部分），其中反向过程可用于生成数据样本（它的作用类似GAN中的生成器，只不过GAN生成器会有维度变化，而DDPM的反向过程没有维度变化）
 ## 可以使用的神经网络：U-Net，Transformer
-
 这里采用Unet实现正向的预测，整个训练过程其实就是在训练Unet网络的参数
 
 ### Unet职责:
