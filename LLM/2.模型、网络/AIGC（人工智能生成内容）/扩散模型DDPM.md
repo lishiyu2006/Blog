@@ -16,7 +16,7 @@
     
 - **Width (W)**：图像的宽度（像素数）。 
 ## 步骤：
-1. **前向扩散**:前向过程是加噪的过程，前向过程中图像 $x_t$ 只和上一时刻的 $x_{t-1}$ 有关, 该过程可以视为马尔科夫过程 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291011820.png)
+1. **前向扩散**:前向过程是加噪的过程，前向过程中图像 $x_t$ 只和上一时刻的 $x_{t-1}$ 有关, 该过程可以视为[马尔可夫链](https://zhuanlan.zhihu.com/p/448575579)![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291011820.png)
 
 首先推出 $x_t$ 和 $x_{t-1}$ 的关系是：
 $x_t = \sqrt{α_t} * x_{t-1} + \sqrt{1 - α_t} * ε_{t-1}$
@@ -75,9 +75,6 @@ $q(x_t|x_{t-1}) = \mathcal{N}(x_t; \sqrt{1 - \beta_t}x_{t-1}, \beta_t I)$
 
 $q(x_{1:T}|x_0)$表示的是从原始图像 $x_0$ 开始，经过 $T$ 步加噪过程后得到噪声图像 $x_t$ 的**概率分布**。
 每一步 $q(x_t|x_{t-1})$ 表示:第 $t$ 步的噪声图像 $x_t$ ，是通过将第 $t-1$ 步的图像 $x_{t-1}$ 的像素值稍微缩小一点，然后给每个像素独立地添加一个强度为 $\beta_t$ 的[高斯噪声](../../高斯噪声.md)得到的。
-
-$x_t$ 和 $x_0$ 的关系：
-
 
 
 
