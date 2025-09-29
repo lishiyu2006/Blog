@@ -79,8 +79,8 @@ eg.一维高斯分布函数
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291700117.png)
 
-逆向过程是去噪的过程,如果得到逆向过程 $q(x_{t-1}|x_t)$ ，就可以通过随机噪声 逐步还原出一张图像。DDPM使用神经网络  拟合逆向过程  。
-$q(x_{t-1}|x_t, x_0) = N(x_{t-1} | \tilde{\mu}_t(x_t, x_0), \tilde{\beta}_t I)$ ,可以推导出:
+逆向过程是去噪的过程,如果得到逆向过程 $q(x_{t-1}|x_t)$ ，就可以通过随机噪声 逐步还原出一张图像。DDPM使用神经网络  拟合逆向过程。
+真实过程是$q(x_{t-1}|x_t, x_0) = N(x_{t-1} | \tilde{\mu}_t(x_t, x_0), \tilde{\beta}_t I)$ ,可以推导出:逆向过程 
 $p_θ(x_{t-1}|x_t) = N(x_{t-1} | \mu_θ(x_t, t), Σ_θ(x_t, t))$
 
 这里的均值 $\tilde{\mu}_t$ 和方差 $\tilde{\beta}_t$ 是属于**逆向过程后验分布**（reverse process posterior）的参数，它们是通过数学推导得出的“真实”去噪步骤的参数，而不是我们之前在前向（加噪）过程中定义的原始参数 $β_t$。
