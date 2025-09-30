@@ -208,14 +208,14 @@ class GaussianDiffusion:
         beta_schedule='linear'
     ):
         self.timesteps = timesteps
-        
+        #Calculate beta
         if beta_schedule == 'linear':
             betas = linear_beta_schedule(timesteps)
         elif beta_schedule == 'cosine':
             betas = cosine_beta_schedule(timesteps)
         else:
             raise ValueError(f'unknown beta schedule {beta_schedule}')
-            
+        #Calculate alpha list, ᾱ_t cumulative product and ᾱ_{t-1} cumulative product
         alphas = 1. - betas
         alphas_cumprod = np.cumprod(alphas, axis=0)
         alphas_cumprod_prev = np.append(1., alphas_cumprod[:-1])
