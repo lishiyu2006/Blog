@@ -139,9 +139,10 @@ $=||\epsilon - \epsilon_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}\epsilon, t)||²$
 在得到预估噪声 $\epsilon_θ(x_t, t)$ 后，就可以按公式（3）逐步得到最终的图片 $x_0$ ，整个过程表示如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291937148.png)
 
-从一个标准正态分布（高斯分布）中随机采样一个样本 $x_T$%。
-
-
+从一个标准正态分布（高斯分布）中随机采样一个样本 $x_T$。
+然后开始一个**从后往前**的循环，时间步 $t$ 从 $T$（最嘈杂）一直递减到 1（最清晰）
+如果不是最后一步（$t>1$），就采样一个新的随机噪声 $z$。如果是最后一步（$t=1$），则令 $z$ 为零
+$x_{t-1} = 1/\sqrt{α_t} * (x_t - (1-α_t)/\sqrt{1-ᾱ_t} * \epsilon_θ(x_t, t)) + σ_tz$
 
 网上有很多DDPM的实现，包括[论文中基于tensorflow的实现](https://link.zhihu.com/?target=https%3A//github.com/hojonathanho/diffusion)，还有[基于pytorch的实现](https://link.zhihu.com/?target=https%3A//github.com/xiaohu2015/nngen/blob/main/models/diffusion_models/ddpm_mnist.ipynb)，但是由于代码结构复杂，很难上手。为了便于理解以及快速运行，我们将代码合并在一个文件里面，基于tf2.5实现，直接copy过去就能运行。代码主要分为3个部分：DDPM前向和反向过程（都在GaussianDiffusion一个类里面实现）、模型训练过程、新图片生成过程。
 
