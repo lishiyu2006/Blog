@@ -130,7 +130,8 @@ $=||ε - ε_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}ε, t)||²$
 论文中的DDPM训练过程如下所示：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291903786.png)
 ## DDPM如何生成图片
-在得到预估噪声  后，就可以按公式（3）逐步得到最终的图片  ，整个过程表示如下：
+在得到预估噪声 $ε_θ(x_t, t)$ 后，就可以按公式（3）逐步得到最终的图片 $x_0$ ，整个过程表示如下：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291937148.png)
 
 网上有很多DDPM的实现，包括[论文中基于tensorflow的实现](https://link.zhihu.com/?target=https%3A//github.com/hojonathanho/diffusion)，还有[基于pytorch的实现](https://link.zhihu.com/?target=https%3A//github.com/xiaohu2015/nngen/blob/main/models/diffusion_models/ddpm_mnist.ipynb)，但是由于代码结构复杂，很难上手。为了便于理解以及快速运行，我们将代码合并在一个文件里面，基于tf2.5实现，直接copy过去就能运行。代码主要分为3个部分：DDPM前向和反向过程（都在GaussianDiffusion一个类里面实现）、模型训练过程、新图片生成过程。
 
