@@ -126,16 +126,22 @@ $=||\epsilon - \epsilon_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}\epsilon, t)||²$
 论文中的DDPM训练过程如下所示：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291903786.png)
 
- 从你的真实数据分布 $q(x_0)$ 中随机采样一个样本 $x_0$。
+从你的真实数据分布 $q(x_0)$ 中随机采样一个样本 $x_0$。
 从 1 到 T 的所有时间步中，**随机**均匀地选择一个 $t$ (因为在每个batch中的每个照片的训练次数是不固定的, 是在序列 $t$ 中随机挑选的,嫁假如一个batchl里有4张照片,t是200,这第一张可能训练30次,第二张可能150次...)
 采样噪声 $\epsilon$ 严格服从标准正态分布
 算法的核心:
 - $∇_θ$：根据这个误差，计算损失函数关于模型参数 θ 的梯度，并使用梯度下降法（如 Adam 优化器）更新模型的权重，使得下次预测的噪声能更接近真实的噪声。
-- || ε - ε_θ(...) ||²：计算**真实噪声 ε** (我们在第4步生成的) 和**模型预测的噪声**之间的**均方误差 (Mean Squared Error, MSE)**。
-- 
+- $|| \epsilon - \epsilon_θ(...) ||²$：计算**真实噪声 $\epsilon$**  和**模型预测的噪声**之间的**均方误差 (Mean Squared Error, MSE)**。
+- $\sqrt{ᾱ_t}x_0 + \sqrt{1-ᾱ_t} \epsilon$:构造出加噪后的图像 $x_t$
+- $\epsilon_θ(..., t)$：将上一步生成的 $x_t$ 和时间步 $t$ 作为输入，送入我们的神经网络 $\epsilon_θ$ 计算出一个预测的噪声
+**until converged** : 重复以上步骤，直到模型的性能不再提升（即收敛）。
 ## DDPM如何生成图片
 在得到预估噪声 $\epsilon_θ(x_t, t)$ 后，就可以按公式（3）逐步得到最终的图片 $x_0$ ，整个过程表示如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291937148.png)
+
+从一个标准正态分布（高斯分布）中随机采样一个样本 $x_T$%。
+
+
 
 网上有很多DDPM的实现，包括[论文中基于tensorflow的实现](https://link.zhihu.com/?target=https%3A//github.com/hojonathanho/diffusion)，还有[基于pytorch的实现](https://link.zhihu.com/?target=https%3A//github.com/xiaohu2015/nngen/blob/main/models/diffusion_models/ddpm_mnist.ipynb)，但是由于代码结构复杂，很难上手。为了便于理解以及快速运行，我们将代码合并在一个文件里面，基于tf2.5实现，直接copy过去就能运行。代码主要分为3个部分：DDPM前向和反向过程（都在GaussianDiffusion一个类里面实现）、模型训练过程、新图片生成过程。
 
