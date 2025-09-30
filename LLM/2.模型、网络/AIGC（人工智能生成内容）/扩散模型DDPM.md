@@ -26,11 +26,12 @@ $q(x_{t-1} | x_t)$ (真实的逆向过程 - 无条件)
 $p_θ(x_{t-1} | x_t)$ (学习的逆向过程)
 ## 步骤：
 ## 一.前向过程
- **前向扩散**:前向过程是加噪的过程，前向过程中图像 $x_t$ 只和上一时刻的 $x_{t-1}$ 有关, 该过程可以视为[马尔可夫链](https://zhuanlan.zhihu.com/p/448575579)![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291011820.png)
+ **前向扩散**:前向过程是加噪的过程，前向过程中图像 $x_t$ 只和上一时刻的 $x_{t-1}$ 有关
+ , 该过程可以视为[马尔可夫链](https://zhuanlan.zhihu.com/p/448575579)![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291011820.png)
 ### 微观：
-首先推出 $x_t$ 和 $x_{t-1}$ 的关系是：
+首先推出 $x_t$ 和 $x_{t-1}$ 的关系是$x_{t-1}$ ：
 $x_t = \sqrt{α_t} * x_{t-1} + \sqrt{1 - α_t} * ε_{t-1}$                                                                             （1）
-因为是一个马尔科夫过程，所以最后都会归为一个稳定的状态，由此推断 $x_0$ 和 $x_t$ 也与一个稳定的公式，验证得到：
+验证得到：
 $x_t = \sqrt{\bar{α}_t} * x_0 + \sqrt{1 - \bar{α}_t} * ε$                                                                                     （2）
 **参数解释**：
 1. $x_0$ (原始图像)
