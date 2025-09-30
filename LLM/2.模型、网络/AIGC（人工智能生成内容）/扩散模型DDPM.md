@@ -94,6 +94,7 @@ $= exp( -1/2 * [ (x_t² - 2√α_t*x_t*x_{t-1} + α_t*x_{t-1}²) / β_t + ... ] 
 
 按 $x_{t-1}$ 的幂次合并同类项
 $= exp( -1/2 * [ (α_t/β_t + 1/(1-ᾱ_{t-1}))x_{t-1}² - (2√α_t/β_t * x_t + ...)x_{t-1} + C(x_t, x_0) ] )$ 
+$C(x_t, x_0)$ 是常数项
 
 一旦我们完成了第三步，我们就得到了 $x_{t-1}²$ 的系数（我们称之为 $A$）和 $x_{t-1}$ 的系数（我们称之为 $B$）。
 $A = α_t/β_t + 1/(1-ᾱ_{t-1})$  
@@ -110,28 +111,26 @@ $μ̃_t = 1/\sqrt{α_t} * (x_t - βₜ/\sqrt{1 - ᾱ_t} * z_t)$
 
 但是这里面又得到未知数,即噪声 $z$ ,科学家们发现这个数值无法推导出来,所以使用model去预测这个数值,称为 $\epsilon$ 
 
-
-
-
-
-### 微观：
-现在只知道一个 $x_T$ 怎么得到 $x_{T-1}$ 根据
-$x_{t-1} = (1 / \sqrt{α_t}) * (x_t - ((1 - α_t) / \sqrt{1 - ᾱ_t}) * ε_θ(x_t, t)) + σ_t * z$                                  （3）
-
+但是这得到了原理怎么训练吗?算出 $z_θ$ (model训练出来的)和 $z$ (前向过程的)计算loss;
+然后调参,再计算,再调参...直到可以得出一个较小的loss
 
 attention：
 1.无论是前向过程还是反向过程都是一个参数化的[马尔可夫链](https://zhuanlan.zhihu.com/p/448575579)（Markov chain），其中反向过程可用于生成数据样本（它的作用类似GAN中的生成器，只不过GAN生成器会有维度变化，而DDPM的反向过程没有维度变化）
 ## 训练
-DDPM 论文中通过神经网络（通常是 U-Net）拟合噪声预测模型 $ε_θ(x_t, t)$ ，以计算 $x_{t-1}$ 。那么损失函数可以使用MSE误差，表示如下：
-$Loss = ||ε - ε_θ(x_t, t)||²$
-$=||ε - ε_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}ε, t)||²$
+DDPM 论文中通过神经网络（通常是 U-Net）拟合噪声预测模型 $\epsilon_θ(x_t, t)$ ，以计算 $x_{t-1}$ 。那么损失函数可以使用MSE误差，表示如下：
+$Loss = ||\epsilon - \epsilon_θ(x_t, t)||²$
+$=||\epsilon - \epsilon_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}\epsilon, t)||²$
 整个训练过程可以表示如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291902220.png)
 
 论文中的DDPM训练过程如下所示：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291903786.png)
+
+先选一个数据 $x_0$ 
+然后窗机一个时间序列 $t$ (因为在每个batch中的每个照片的训练次数是不固定的, 是在序列 $t$ 中)
+
 ## DDPM如何生成图片
-在得到预估噪声 $ε_θ(x_t, t)$ 后，就可以按公式（3）逐步得到最终的图片 $x_0$ ，整个过程表示如下：
+在得到预估噪声 $\epsilon_θ(x_t, t)$ 后，就可以按公式（3）逐步得到最终的图片 $x_0$ ，整个过程表示如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509291937148.png)
 
 网上有很多DDPM的实现，包括[论文中基于tensorflow的实现](https://link.zhihu.com/?target=https%3A//github.com/hojonathanho/diffusion)，还有[基于pytorch的实现](https://link.zhihu.com/?target=https%3A//github.com/xiaohu2015/nngen/blob/main/models/diffusion_models/ddpm_mnist.ipynb)，但是由于代码结构复杂，很难上手。为了便于理解以及快速运行，我们将代码合并在一个文件里面，基于tf2.5实现，直接copy过去就能运行。代码主要分为3个部分：DDPM前向和反向过程（都在GaussianDiffusion一个类里面实现）、模型训练过程、新图片生成过程。
