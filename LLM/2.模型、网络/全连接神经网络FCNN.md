@@ -23,8 +23,15 @@
 
 当我们列完函数方程之后，做的第一件事就是对这个函数求偏导，也就是对X，Y分别求导，在求导过程中，把其他的未知量当成常数即可。
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302101890.png)
-我们每走一步，坐标就会更新：
 
+我们每移动一步，坐标就会更新：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302102493.png)
+
+当然，这是三维空间中的，假如我们在多维空间漫步呢，其实也是一样的，也就是对各个维度求偏导，更新自己的坐标。
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302102828.png)
+
+其中，w的上标 i 表示第几个w，下标n表示第几步，α是学习率，后面会介绍α的作用。所以，我们可以将整个求解过程看做下山（求偏导过程），为此，我们先初始化自己的初始位置。
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302105140.png)
 
 利用微积分中的链式法则，从输出层开始，逐层向后计算损失函数对网络中每个权重和偏置的梯度（偏导数）。 “反向传播”这个名字也正源于此，即误差从后向前传播。
 
