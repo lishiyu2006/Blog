@@ -107,7 +107,7 @@ $B = - (2\sqrt{α_t}/β_t * x_t + 2\sqrt{ᾱ_{t-1}}/(1-ᾱ_{t-1}) * x_0)$
 $x_0 = 1/\sqrt{ᾱ_t} * (x_t - \sqrt{1 - ᾱ_t} * z_t)$
 
 $x_0$ 带入可以得到方差是:
-$μ̃_t = 1/\sqrt{α_t} * (x_t - βₜ/\sqrt{1 - ᾱ_t} * z_t)$
+$μ̃_t = 1/\sqrt{α_t} * (x_t - β_t/\sqrt{1 - ᾱ_t} * z_t)$
 
 但是这里面又得到未知数,即噪声 $z$ ,科学家们发现这个数值无法推导出来,所以使用model去预测这个数值,称为 $\epsilon$ 
 
@@ -142,6 +142,7 @@ $=||\epsilon - \epsilon_θ(\sqrt{ᾱ_t}x_0 + \sqrt{1 - ᾱ_t}\epsilon, t)||²$
 从一个标准正态分布（高斯分布）中随机采样一个样本 $x_T$。
 然后开始一个**从后往前**的循环，时间步 $t$ 从 $T$（最嘈杂）一直递减到 1（最清晰）
 如果不是最后一步（$t>1$），就采样一个新的随机噪声 $z$。如果是最后一步（$t=1$），则令 $z$ 为零
+因为符合高斯分布,所以 $x_{t-1}$ 等于均值加上噪声乘上噪声
 $x_{t-1} = 1/\sqrt{α_t} * (x_t - (1-α_t)/\sqrt{1-ᾱ_t} * \epsilon_θ(x_t, t)) + σ_tz$
 
 网上有很多DDPM的实现，包括[论文中基于tensorflow的实现](https://link.zhihu.com/?target=https%3A//github.com/hojonathanho/diffusion)，还有[基于pytorch的实现](https://link.zhihu.com/?target=https%3A//github.com/xiaohu2015/nngen/blob/main/models/diffusion_models/ddpm_mnist.ipynb)，但是由于代码结构复杂，很难上手。为了便于理解以及快速运行，我们将代码合并在一个文件里面，基于tf2.5实现，直接copy过去就能运行。代码主要分为3个部分：DDPM前向和反向过程（都在GaussianDiffusion一个类里面实现）、模型训练过程、新图片生成过程。
