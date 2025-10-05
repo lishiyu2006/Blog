@@ -44,4 +44,8 @@ CLIP 模型里有专门的图像编码器（Image Encoder）和文本编码器�
 
 上面讲到了CLIP模型的**Image Encoder** 和 **Text Encoder**两个模块，在**Stable Diffusion中只用到了Text Encoder模块**。
 
-**CLIP Text Encoder模型将输入的文本Prompt进行编码，转换成Text Embeddings（文本的语义信息），**作为UNet网络的Context输入，并在**UNet网络中的CrossAttention模块中**，结合提取特征F**对生成图像的内容进行一定程度的控制与引导**；
+**CLIP Text Encoder模型将输入的文本Prompt进行编码，转换成Text Embeddings（文本的语义信息），作为UNet网络的Context输入，并在**UNet网络中的CrossAttention模块中，结合提取特征F**对生成图像的内容进行一定程度的控制与引导**；
+## **E. Text Encoder 网络结构**
+
+目前SD中用到的是CLIP ViT-L/14中的 Text-Encoder模型，网络结构如下：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510051705948.png)
