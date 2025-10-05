@@ -1,5 +1,19 @@
 # CLIP Text Encode(prompt) - CLIP文本编码器
-**CLIP（Contrastive Language - Image Pre - training，对比语言 - 图像预训练）模型**的核心工作流程。
+
+## A. 概述
+SD使用的是OpenAi的CLIP预训练模型，即别人训练好的拿来就用。
+
+我们需要给出提示词Prompt， 然后利用CLIP模型将文本转换成嵌入表示Context，作为UNet的一个输入。
+
+CLIP的作用，就是将文本转换为语言信息并使其与图像信息在UNet中采用Attention更好的偶合到一起，成为了文本和图像之间的连接通道。
+
+CLIP的训练 用到了Text-Image配对的数据集，大概4亿张，主要是通过网络爬取图片以及相应的标签。如下图所示：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510051655198.png)
+
+## **B. 整体结构**
+
+**CLIP的网络结构**由两部分组成：**图像 Image Encoder** **+** **文字 Text Encoder**。
+## C.核心工作流程
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510051631035.png)
 
 ### 步骤 1：嵌入图像和文本（Embed image and text）
@@ -25,3 +39,9 @@ CLIP 模型里有专门的图像编码器（Image Encoder）和文本编码器�
 输入配对的图片和文字，两个 encoder 就可以输出相似的 embedding 向量，余弦相似度接近于1；
 
 输入不匹配的图片和文字，两个 encoder 输出向量的余弦相似度就会接近于 0。
+
+## **D. SD中的应用**
+
+上面讲到了CLIP模型的**Image Encoder** 和 **Text Encoder**两个模块，在**Stable Diffusion中只用到了Text Encoder模块**。
+
+**CLIP Text Encoder模型将输入的文本Prompt进行编码，转换成Text Embeddings（文本的语义信息），**作为UNet网络的Context输入，并在**UNet网络中的CrossAttention模块中**，结合提取特征F**对生成图像的内容进行一定程度的控制与引导**；
