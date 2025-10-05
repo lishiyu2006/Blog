@@ -53,7 +53,7 @@ CLIP 模型里有专门的图像编码器（Image Encoder）和文本编码器�
 由上图可见，Text Encoder 是由Transformer中的SelfAttention + FeedForward组成，一共有12个TextEncoder_Block模块，模型参数大小为123M,其中特征维度为768，token数量为77，故输出的Text_Embedding的维度为77x768。
 ## **F. Text Encoder代码**
 ```python
-import torch
+import torch 
 import torch.nn as nn
 from transformers import CLIPTokenizer,CLIPTextModel
 
@@ -94,11 +94,11 @@ class Text_Encoder(nn.Module):
 
 ### **G. 注意事项**
 
+<1>
 CLIP在训练时设定的最大Token数量为77，故SD在前向推理时：
-
 - 如输入的Prompt的Token数量超过77，则会采取**切片操作**，只取前77个；  
 - 如输入Token数量小于77，则采取**Padding操作**，得到77x768;
 
+<2>
 在SD模型训练过程中，CLIP 的Text Encoder的模型参数是冻结Freeze的，无需重新训练；
-
 **原因**：预训练的CLIP模型已经足以满足后面的任务需求。
