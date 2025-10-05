@@ -69,16 +69,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
+                "file": "LLM/2.模型、网络/隐式马尔可夫模型HMM（声学模型）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "stable duffusion"
+              "title": "隐式马尔可夫模型HMM（声学模型）"
+            }
+          },
+          {
+            "id": "447b963fdc413b31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LLM/2.模型、网络/CLIP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CLIP"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -228,18 +242,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5617f61ecaa382a7",
+  "active": "447b963fdc413b31",
   "lastOpenFiles": [
+    "LLM/2.模型、网络/隐式马尔可夫模型HMM（声学模型）.md",
+    "LLM/2.模型、网络/CLIP.md",
+    "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "tool/gu.md",
     "tool/1.preface.md",
-    "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族",
     "diary/1.preface.md",
     "diary/python之禅.md",
     "LLM/2.模型、网络/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/3.层/嵌入层 Embedding层.md",
-    "LLM/2.模型、网络/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/2.模型、网络/卷积接神经网络CNN.md",
     "LLM/2.模型、网络/全连接神经网络FCNN.md",
     "LLM/2.模型、网络/循环神经网络RNN.md",
@@ -266,7 +281,6 @@
     "docs/LLM/preface.md",
     "docs/LLM",
     "docs/tool/preface.md",
-    "docs/tool",
-    "docs/question/preface.md"
+    "docs/tool"
   ]
 }
