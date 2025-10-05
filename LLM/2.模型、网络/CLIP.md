@@ -49,3 +49,57 @@ CLIP 模型里有专门的图像编码器（Image Encoder）和文本编码器�
 
 目前SD中用到的是CLIP ViT-L/14中的 Text-Encoder模型，网络结构如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510051705948.png)
+
+由上图可见，Text Encoder 是由Transformer中的SelfAttention + FeedForward组成，一共有12个TextEncoder_Block模块，模型参数大小为123M,其中特征维度为768，token数量为77，故输出的Text_Embedding的维度为77x768。
+## **F. Text Encoder代码**
+```python
+import torch 
+import torch.nn as nn             
+from transformers import CLIPTokenizer,CLIPTextModel
+
+
+class Text_Encoder(nn.Module):
+    '''
+    clip-vit-large-patch14为模型参数,需要提前单独下载并保存于本地
+    '''
+    def __init__(self,version='/本地路径/clip-vit-large-patch14',device='cuda',max_length=77,freeze=True):
+        super(Text_Encoder,self).__init__()
+        # 定义文本的tokenizer和transformer
+        self.tokenizer = CLIPTokenizer.from_pretrained(version)
+        self.transformer = CLIPTextModel.from_pretrained(version).to(device)
+        
+        self.device = device 
+        self.max_length = max_length
+        # 冻结模型参数
+        if freeze:
+            self.freeze()
+            
+    
+    def freeze(self):
+        self.transformer = self.transformer.eval()
+        for param in self.parameters():
+            param.requires_grad = False                      
+            
+            
+    def forward(self,text):
+        # 对输入图片进行分词并编码,长度不足时直接padding到77
+        batch_encoding = self.tokenizer(text,truncation=True,max_length=self.max_length,return_length=True,
+                                        return_overflowing_tokens=False,padding='max_length',return_tensors='pt')
+        # 拿出input_ids然后传入transformer进行特征提取
+        tokens = batch_encoding['input_ids'].to(self.device)
+        outputs = self.transformer(input_ids=tokens,output_hidden_states=False)
+        out = outputs.last_hidden_state
+        return out 
+```
+
+### **G. 注意事项**
+
+CLIP在训练时设定的最大Token数量为77，故SD在前向推理时：
+
+- 如输入的Prompt的Token数量超过77，则会采取**切片操作**，只取前77个；  
+    
+- 如输入Token数量小于77，则采取**Padding操作**，得到77x768;
+
+在SD模型训练过程中，CLIP 的Text Encoder的模型参数是冻结Freeze的，无需重新训练；
+
+**原因**：预训练的CLIP模型已经足以满足后面的任务需求。
