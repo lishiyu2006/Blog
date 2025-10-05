@@ -17,4 +17,3 @@ Stable Diffusion是一个完全开源的项目（模型、代码、训练数据�
 
 Stable Diffusion（SD）模型是由Stability AI和LAION等公司共同开发的**生成式模型**，总共有**1B左右的参数量**，可以用于文生图，图生图，图像inpainting，ControlNet控制生成，图像超分等丰富的任务，本节中我们以文生图（txt2img）和图生图（img2img）任务展开对Stable Diffusion模型的工作流程进行通俗的讲解。
 
-
