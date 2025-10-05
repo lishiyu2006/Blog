@@ -50,14 +50,13 @@ CLIP 模型里有专门的图像编码器（Image Encoder）和文本编码器�
 目前SD中用到的是CLIP ViT-L/14中的 Text-Encoder模型，网络结构如下：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510051705948.png)
 
+由上图可见，Text Encoder 是由 Transformer 中的 SelfAttention + FeedForward 组成，一共有12个 TextEncoder_Block 模块，模型参数大小为123M,其中特征维度为768，token数量为77，故输出的 Text_Embedding 的维度为77x768。
 
-由上图可见，Text Encoder 是由Transformer中的SelfAttention + FeedForward组成，一共有12个TextEncoder_Block模块，模型参数大小为123M,其中特征维度为768，token数量为77，故输出的Text_Embedding的维度为77x768。
 ## **F. Text Encoder代码**
 ```python
 import torch 
 import torch.nn as nn
 from transformers import CLIPTokenizer,CLIPTextModel
-
 
 class Text_Encoder(nn.Module):
     '''
