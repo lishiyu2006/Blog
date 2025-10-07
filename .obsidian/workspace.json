@@ -83,7 +83,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型、网络/预训练语言模型/CLIP.md",
+                "file": "LLM/2.模型、网络/预训练语言模型/静态的/CLIP.md",
                 "mode": "source",
                 "source": false
               },
@@ -97,7 +97,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型、网络/预训练语言模型/CLIP.md",
+                "file": "LLM/2.模型、网络/预训练语言模型/静态的/CLIP.md",
                 "mode": "source",
                 "source": false
               },
@@ -256,11 +256,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b9db157755af86b6",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
+    "LLM/2.模型、网络/预训练语言模型/静态的",
     "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/2.模型、网络/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
-    "LLM/2.模型、网络/预训练语言模型/CLIP.md",
+    "LLM/2.模型、网络/预训练语言模型/静态的/CLIP.md",
     "LLM/2.模型、网络/未命名.md",
     "LLM/2.模型、网络/预训练语言模型",
     "LLM/2.模型、网络/隐式马尔可夫模型HMM（声学模型）.md",
@@ -294,7 +295,6 @@
     "logo.png",
     "新建文本文档.txt",
     "【哲风壁纸】守岸-鸣潮.png",
-    "docs/LLM/preface.md",
     "docs/LLM"
   ]
 }
