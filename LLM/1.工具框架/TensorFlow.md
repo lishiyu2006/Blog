@@ -46,3 +46,37 @@ tensor通过`node:src_output`的形式展示，其中node就是tensor的name，s
   ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510072145894.png)
 ### shape
 shape是纬度，它描述了tensor的纬度信息
+```python
+# 定义两个二维数组
+v1 = tf.constant(1,name='v1',shape=(2,2),dtype=tf.float32)
+v2 = tf.constant(2,name='v2',shape=(2,2),dtype=tf.float32)
+
+add = v1 + v2
+
+with tf.Session() as sess:
+    '''[[1. 1.]
+       [1. 1.]]'''
+    print(sess.run(v1)) 
+    '''[[2. 2.]
+       [2. 2.]]'''
+    print(sess.run(v2))
+    '''[[3. 3.]
+       [3. 3.]]'''
+    print(sess.run(add))
+
+```
+上面的这个就是一个二维的张量相加，(eg.shape（2,3）表示一个大数组里面3个小数组，每个小数组里面2个数。)
+### type
+每一个tensor会有一个唯一的类型。TensorFlow会对参与计算的所有张量进行类型检测，当类型发生不匹配时会报错。
+```python
+#TypeError: Input 'v2' of 'Add' Op has type float32
+#that does not match type int32 of argument 'v1'
+v1 = tf.constant(1,name='v1',shape=(1,2),dtype=tf.int32)
+v2 = tf.constant(2,name='v2',shape=(2,1),dtype=tf.float32)
+add = v1 + v2
+```
+
+
+
+
+[参考].(https://juejin.cn/post/6844903879520288781)
