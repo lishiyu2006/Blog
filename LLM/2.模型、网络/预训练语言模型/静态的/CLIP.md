@@ -56,7 +56,7 @@ CLIP 的训练目标是最小化**对比损失**，让匹配的图文对$(i=j)$�
 
 ##### 1. 单样本损失（对第 i 个图文对）
 
-对于文本 \(t_i\)，其正样本是对应的图像 \(i_i\)，负样本是其他所有图像（\(i_1, ..., i_{i-1}, i_{i+1}, ..., i_N\)）。文本视角的损失：\(L_i^{\text{text}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ij} / \tau)} \right)\)
+对于文本 $t_i$，其正样本是对应的图像 $i_i$，负样本是其他所有图像$i_1, ..., i_{i-1}, i_{i+1}, ..., i_N$。文本视角的损失：$L_i^{\text{text}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ij} / \tau)} \right)$
 
 同理，对于图像 \(i_i\)，其正样本是对应的文本 \(t_i\)，负样本是其他所有文本，图像视角的损失：\(L_i^{\text{image}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ji} / \tau)} \right)\)
 
