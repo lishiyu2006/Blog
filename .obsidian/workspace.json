@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.模型框架/Transformer.md",
+                "file": "LLM/3.模型、网络/卷积接神经网络CNN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Transformer"
+              "title": "卷积接神经网络CNN"
             }
           }
         ],
@@ -244,9 +244,9 @@
   },
   "active": "2c099e6c32a42f78",
   "lastOpenFiles": [
+    "LLM/2.模型框架/Transformer.md",
     "LLM/1.工具框架/PyTorch.md",
     "LLM/1.工具框架/TensorFlow.md",
-    "LLM/2.模型框架/Transformer.md",
     "LLM/3.模型、网络/预训练语言模型/静态的/CLIP.md",
     "LLM/3.模型、网络/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/3.模型、网络/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
