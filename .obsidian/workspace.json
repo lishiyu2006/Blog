@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
+                "file": "LLM/1.工具框架/TensorFlow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLIP"
+              "title": "TensorFlow"
             }
           }
         ],
@@ -244,9 +244,9 @@
   },
   "active": "2c099e6c32a42f78",
   "lastOpenFiles": [
+    "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/4.预训练模型/图像分割模型/UNet.md",
-    "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/4.预训练模型/图像分割模型",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
