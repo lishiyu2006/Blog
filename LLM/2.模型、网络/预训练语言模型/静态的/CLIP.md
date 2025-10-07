@@ -58,15 +58,15 @@ CLIP 的训练目标是最小化**对比损失**，让匹配的图文对$(i=j)$�
 
 对于文本 $t_i$，其正样本是对应的图像 $i_i$，负样本是其他所有图像$i_1, ..., i_{i-1}, i_{i+1}, ..., i_N$。文本视角的损失：$L_i^{\text{text}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ij} / \tau)} \right)$
 
-同理，对于图像 \(i_i\)，其正样本是对应的文本 \(t_i\)，负样本是其他所有文本，图像视角的损失：\(L_i^{\text{image}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ji} / \tau)} \right)\)
+同理，对于图像 $i_i$，其正样本是对应的文本 $t_i$，负样本是其他所有文本，图像视角的损失：$L_i^{\text{image}} = -\log \left( \frac{\exp(s_{ii} / \tau)}{\sum_{j=1}^N \exp(s_{ji} / \tau)} \right)$
 
-其中 \(\tau\) 是**温度参数**（通常取 0.07），用于缩放相似度得分，控制分布的陡峭程度（\(\tau\) 越小，对差异的惩罚越敏感）。
+其中 $\tau$ 是**温度参数**（通常取 0.07），用于缩放相似度得分，控制分布的陡峭程度$\tau$ 越小，对差异的惩罚越敏感）。
 
 ##### 2. 批量总损失
 
-对所有 N 个样本的文本和图像视角损失取平均，得到总损失：\(L = \frac{1}{2N} \sum_{i=1}^N \left( L_i^{\text{text}} + L_i^{\text{image}} \right)\)
+对所有 N 个样本的文本和图像视角损失取平均，得到总损失：$L = \frac{1}{2N} \sum_{i=1}^N \left( L_i^{\text{text}} + L_i^{\text{image}} \right)$
 
-代入单样本损失公式后展开：\(L = -\frac{1}{2N} \sum_{i=1}^N \left[ \log \left( \frac{\exp(s_{ii}/\tau)}{\sum_{j=1}^N \exp(s_{ij}/\tau)} \right) + \log \left( \frac{\exp(s_{ii}/\tau)}{\sum_{j=1}^N \exp(s_{ji}/\tau)} \right) \right]\)
+代入单样本损失公式后展开：$L = -\frac{1}{2N} \sum_{i=1}^N \left[ \log \left( \frac{\exp(s_{ii}/\tau)}{\sum_{j=1}^N \exp(s_{ij}/\tau)} \right) + \log \left( \frac{\exp(s_{ii}/\tau)}{\sum_{j=1}^N \exp(s_{ji}/\tau)} \right) \right]$
 
 #### 四、推导逻辑与目标
 
