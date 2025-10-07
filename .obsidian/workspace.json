@@ -83,7 +83,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/4.预训练模型/预训练语言模型 1/静态的/CLIP.md",
+                "file": "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
                 "mode": "source",
                 "source": false
               },
@@ -245,6 +245,9 @@
   "active": "2c099e6c32a42f78",
   "lastOpenFiles": [
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
+    "LLM/4.预训练模型/图像分割模型/UNet.md",
+    "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
+    "LLM/4.预训练模型/图像分割模型",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
@@ -259,11 +262,10 @@
     "LLM/4.预训练模型",
     "LLM/2.基础网络组件",
     "LLM/1.工具框架/PyTorch.md",
-    "LLM/4.预训练模型/预训练语言模型 1/静态的/CLIP.md",
     "LLM/2.模型框架",
     "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "LLM/1.preface.md",
-    "LLM/4.预训练模型/预训练语言模型 1/静态的",
+    "LLM/4.预训练模型/跨模态预训练模型",
     "LLM/3.通用模型架构/未命名.md",
     "LLM/4.预训练模型/预训练语言模型 1",
     "tool/gu.md",
@@ -278,7 +280,6 @@
     "LLM/2.模型、网络/简述马尔可夫链【通俗易懂】.md",
     "question/1.preface.md",
     "LLM/6.层",
-    "LLM/1.工具框架",
     "logo.png",
     "【哲风壁纸】守岸-鸣潮.png"
   ]
