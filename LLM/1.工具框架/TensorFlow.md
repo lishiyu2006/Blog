@@ -1,6 +1,6 @@
 # TensorFlow
 
-## 含义
+## 简单定义
 Tensor表示张量，表示里面的数据是用张量的表示的。
 一、TensorFlow的计算模型——计算图
 计算图是TensorFlow中最基本的一个概念，TensorFlow中的所有计算都会被转化为计算图上的节点，依据节点中传递的值，进行数值的“Flow”。
@@ -76,7 +76,30 @@ v2 = tf.constant(2,name='v2',shape=(2,1),dtype=tf.float32)
 add = v1 + v2
 ```
 
+等等[参考](https://juejin.cn/post/6844903879520288781)
 
+# Session
+TensorFlow中的会话用于执行定义好的运算。会话拥有并管理 TensorFlow程序运 行时的所有资源。所有计算完成之后需要关闭会话来帮助系统回收资源，否则就可能出现资源泄漏的问题。
 
+简单的理解TensorFlow在定义好变量和计算的时候，并不会马上进行计算，需要通过session来进行执行，这就好比我们搭电路图，当电路连接完，当插头通电的时候，整个电路才开始运作。
 
-[参考].(https://juejin.cn/post/6844903879520288781)
+```python
+# 定义tensor
+v1 = tf.constant(value=1,name='v1',shape=(1,2),dtype=tf.float32)
+v2 = tf.constant(value=2,name='v1',shape=(1,2),dtype=tf.float32)
+# 定义计算
+add = v1 + v2
+# 创建session
+sess = tf.Session()
+# 执行计算
+result = sess.run(add)
+print(reslut)
+# 关闭session，避免资源泄漏
+sess.close()
+
+# 输出结果：[[3. 3.]]
+
+```
+使用这种方式调用session需要明确调用`Session.close()`来关闭session并释放资源避免资源泄漏问题。
+
+当然，我们更多用到的是通过Python的上下文管理器来使用session，来自动释放所有资源。
