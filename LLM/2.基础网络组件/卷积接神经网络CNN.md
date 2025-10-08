@@ -20,3 +20,22 @@
 这张图中蓝色的框就是指一个数据窗口，红色框为卷积核（滤波器），最后得到的绿色方形就是卷积的结果（数据窗口中的数据与卷积核逐个元素相乘再求和）
 
 ![](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510081614281.png)
+
+## 卷积计算过程：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510081628167.png)
+
+卷积需要注意哪些问题？
+a.步长stride：每次滑动的位置步长。
+
+b. 卷积核的个数：决定输出的depth厚度。同时代表卷积核的个数。
+
+c. 填充值zero-padding：在外围边缘补充若干圈0，方便从初始位置以步长为单位可以刚好滑倒末尾位置，通俗地讲就是为了总长能被步长整除。
+
+以上图为例，那么：
+
+• 数据窗口每次移动两个步长取 3*3 的局部数据，即 stride=2 。
+• 两个神经元，即 depth=2 ，意味着有两个滤波器。
+• zero-padding=1 。
+
+为什么
