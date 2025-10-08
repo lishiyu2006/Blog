@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.基础网络组件/卷积接神经网络CNN.md",
+                "file": "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "卷积接神经网络CNN"
+              "title": "stable duffusion"
             }
           }
         ],
@@ -244,15 +244,15 @@
   },
   "active": "2c099e6c32a42f78",
   "lastOpenFiles": [
-    "LLM/1.工具框架/TensorFlow.md",
-    "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
-    "LLM/3.通用模型架构/Transformer.md",
-    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/4.预训练模型/图像分割模型/UNet.md",
-    "LLM/4.预训练模型/图像分割模型",
+    "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
+    "LLM/1.工具框架/TensorFlow.md",
+    "LLM/3.通用模型架构/Transformer.md",
+    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
+    "LLM/4.预训练模型/图像分割模型",
     "LLM/2.基础网络组件/全连接神经网络FCNN.md",
     "LLM/2.基础网络组件/循环神经网络RNN.md",
     "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
