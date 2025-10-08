@@ -103,3 +103,18 @@ sess.close()
 使用这种方式调用session需要明确调用`Session.close()`来关闭session并释放资源避免资源泄漏问题。
 
 当然，我们更多用到的是通过Python的上下文管理器来使用session，来自动释放所有资源。
+
+```python
+# 定义tensor
+v1 = tf.constant(value=1,name='v1',shape=(1,2),dtype=tf.float32)
+v2 = tf.constant(value=2,name='v1',shape=(1,2),dtype=tf.float32)
+# 定义计算
+add = v1 + v2
+# 创建session
+with tf.Session() as sess:
+    # 执行计算
+    sess.run(add)
+
+```
+
+ 这样我们就可以不用手动的调用`Session.close()`来关闭会话了。
