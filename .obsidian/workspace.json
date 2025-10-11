@@ -83,16 +83,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.基础网络组件/卷积接神经网络CNN.md",
+                "file": "question/py面向对象.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "卷积接神经网络CNN"
+              "title": "py面向对象"
+            }
+          },
+          {
+            "id": "38617009edad4fbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "question/枚举 and 拉链.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "枚举 and 拉链"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -242,14 +256,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2c099e6c32a42f78",
+  "active": "38617009edad4fbe",
   "lastOpenFiles": [
+    "question/py面向对象.md",
+    "question/枚举 and 拉链.md",
+    "diary/python之禅.md",
+    "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/4.预训练模型/图像分割模型/UNet.md",
     "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
-    "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/1.工具框架/TensorFlow.md",
     "LLM/3.通用模型架构/Transformer.md",
     "LLM/4.预训练模型/图像分割模型",
@@ -271,14 +288,11 @@
     "tool/gu.md",
     "tool/1.preface.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族",
-    "diary/python之禅.md",
     "LLM/6.层/嵌入层 Embedding层.md",
-    "question/py面向对象.md",
     "LLM/高斯噪声.md",
     "LLM/5.AIGC（人工智能生成内容）",
     "LLM/2.模型、网络/[简述马尔可夫链【通俗易懂】.md",
     "LLM/2.模型、网络/简述马尔可夫链【通俗易懂】.md",
-    "question/1.preface.md",
     "LLM/6.层",
     "logo.png",
     "【哲风壁纸】守岸-鸣潮.png"

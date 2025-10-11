@@ -17,6 +17,9 @@ class Person():
 p = Person("Alice")
 p.greet()  # 调用时无需传递 self，输出：Hello, I'm Alice
 ```
+插入面向过程
+
+
 
 ## 2.其他用法:
 ### (1).类方法（用 `@classmethod` 装饰）
