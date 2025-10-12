@@ -179,3 +179,16 @@ y_test = y_test.values.reshape(-1, 1)
 
 如果将输入特征和输出预测值均以向量表示， 输入特征x有 13 个分量，y有 1 个分量， 那么参数权重的形状是 13× 1：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121252691.png)
+```python
+class Network(object):
+    def __init__(self, num_of_weights):
+        # 随机产生 w 的初始值
+        # 为了保持程序每次运行结果的一致性， 此处设置固定的随机数种子
+        np.random.seed(0)
+        self.w = np.random.randn(num_of_weights, 1) #数学中向量数据是按列存储的
+        self.b = 0
+ 
+    def forward(self, x):
+        z = np.dot(x, self.w) + self.b
+        return z
+```
