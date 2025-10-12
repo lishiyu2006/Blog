@@ -260,10 +260,10 @@
   "lastOpenFiles": [
     "LLM/2.基础网络组件/循环神经网络RNN.md",
     "LLM/2.基础网络组件/全连接神经网络FCNN.md",
+    "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "question/枚举 and 拉链.md",
     "question/py面向对象.md",
     "diary/python之禅.md",
-    "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
