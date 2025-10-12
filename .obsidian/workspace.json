@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/枚举 and 拉链.md",
+                "file": "LLM/2.基础网络组件/全连接神经网络FCNN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "枚举 and 拉链"
+              "title": "全连接神经网络FCNN"
             }
           }
         ],
@@ -258,8 +258,9 @@
   },
   "active": "38617009edad4fbe",
   "lastOpenFiles": [
-    "question/py面向对象.md",
+    "LLM/2.基础网络组件/循环神经网络RNN.md",
     "question/枚举 and 拉链.md",
+    "question/py面向对象.md",
     "diary/python之禅.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
@@ -271,7 +272,6 @@
     "LLM/3.通用模型架构/Transformer.md",
     "LLM/4.预训练模型/图像分割模型",
     "LLM/2.基础网络组件/全连接神经网络FCNN.md",
-    "LLM/2.基础网络组件/循环神经网络RNN.md",
     "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/3.通用模型架构/MCMC.md",
     "diary/1.preface.md",
