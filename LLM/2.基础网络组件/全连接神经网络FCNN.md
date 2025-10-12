@@ -156,17 +156,20 @@ data_list = (data_list - data_list.mean()) / data_list.std()
 将数据集划分成训练集和测试集， 其中训练集用于确定模型的参数， 测试集用于评判模型的效果。
 ```python
 train_size = int(len(data_list) * ratio)
-# 生成一个随机排列的整数数组
+# 生成一个随机排列的整数数组，比例（`ratio`，如 0.8 表示 80%）
 random_indices = np.random.permutation(len(data_list))
 # 使用随机排列的索引列表重新设定 DataFrame 的行顺序
 data_list = data_list.iloc[random_indices]
+# 通过随机索引重新排列数据集
 trainset = data_list[:train_size]
+# 取前`train_size`个样本作为训练集。
 ```
 #### 4、数据形状变换
 
 如果读取的数据维数与我们的模型输入的输入维数不一致， 我们就需要进行数据形状的变换
 ```python
 X_train = X_train.values
+
 y_train = trainset["MEDV"]
 y_train = y_train.values.reshape(-1, 1) #1维变2维，-1表示自动计算行数，1表示列数
 X_test = testset.drop("MEDV", axis=1)
