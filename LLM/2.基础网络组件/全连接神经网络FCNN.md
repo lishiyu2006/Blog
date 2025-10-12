@@ -147,6 +147,10 @@ data_list = pd.read_csv(filepath)
 ```python
 data_list = (data_list - data_list.mean()) / data_list.std()
 ```
+数据归一化是一种将数据按比例缩放，使其落入特定区间的预处理方法
+
+常见的数据归一化方法有最小 - 最大归一化（Min - Max Normalization）、Z - score 归一化（Standardization）等 ，具体使用哪种方法可以根据数据特点和模型需求来选择。
+
 #### 3、数据集划分
 
 将数据集划分成训练集和测试集， 其中训练集用于确定模型的参数， 测试集用于评判模型的效果。
@@ -158,3 +162,20 @@ random_indices = np.random.permutation(len(data_list))
 data_list = data_list.iloc[random_indices]
 trainset = data_list[:train_size]
 ```
+#### 4、数据形状变换
+
+如果读取的数据维数与我们的模型输入的输入维数不一致， 我们就需要进行数据形状的变换
+```python
+X_train = X_train.values
+y_train = trainset["MEDV"]
+y_train = y_train.values.reshape(-1, 1) #1维变2维，-1表示自动计算行数，1表示列数
+X_test = testset.drop("MEDV", axis=1)
+X_test = X_test.values
+y_test = testset["MEDV"]
+y_test = y_test.values.reshape(-1, 1)
+```
+
+### 4.2 模型设计
+
+如果将输入特征和输出预测值均以向量表示， 输入特征x有 13 个分量，y有 1 个分量， 那么参数权重的形状是 13× 1：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121252691.png)
