@@ -1,8 +1,10 @@
 # 全连接神经网络（Full Connect Neural Network）
 ## 全连接神经网络原理
+##### 1、全连接神经网络的整体结构：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302019307.png)
 
 就是这么一个东西，左边输入，中间计算，右边输出。
+圆圈里面是下面这个过程：
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302020910.png)
 
@@ -10,11 +12,36 @@
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302022631.png)
 
-每一级都是利用前一级的输出做输入，再经过圆圈内的组合计算，输出到下一级。
+4.1是正常的一个线性计算
+而4.2是一个激活函数，是一种非线性函数；
+
+##### 2、激活函数
 看到这里，可能很多人会疑惑，为什么要加上f(z)这个运算，这个运算的目的是为了将输出的值域压缩到（0，1），也就是所谓的归一化（标准化），因为每一级输出的值都将作为下一级的输入，只有将上一个输出归一化了，才会避免下一个输入无穷大，导致其输入无效，最终网络训练效果非常不好。
+
+2.1、**Sigmoid函数**
+Sigmoid函数最早是在逻辑回归中提到的，它作为解决二分类的问题出场。其值域是在[0,1]之间，输出的值可以作为分类的概率。
+
+Sigmoid函数的公式和导数如下式所示：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121143969.png)
+
+Sigmoid函数优点：  
+  1、简单、非常适用分类任务；  
+Sigmoid函数缺点：  
+  1、反向传播训练时有梯度消失的问题；  
+  2、输出值区间为(0,1)，关于0不对称；  
+  3、梯度更新在不同方向走得太远，使得优化难度增大，训练耗时；
+
+
+
+
+
+
+
+##### 3.常规问题
+3.1梯度xiao's'j'h
 为了解决这个问题设计了，一个反向传播算法，反向传播的过程：![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302035780.png)
 1. 前向传播 (Forward Propagation): 将训练数据输入网络，从输入层开始，逐层计算，直到输出层得到预测结果。
-2. 反向传播 (Backward Propagation):
+2. 反向传播 (Backward Propagation):通过计算误差关于权重的梯度，使得权重朝着能减小损失函数值的方向更新，不断迭代这个过程，从而让神经网络的预测结果逐渐逼近真实值。
 
 计算误差: 将网络的预测结果与真实标签进行比较，计算出损失函数的值，计算方差的过程。
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302051048.png)
