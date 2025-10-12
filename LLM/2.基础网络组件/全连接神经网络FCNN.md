@@ -1,4 +1,4 @@
-# 全连接神经网络（Full Connect Neural Network）
+# 全连接神经网络（Full Connect Neural Network）（前馈神经网络）
 ## 全连接神经网络原理
 ##### 1、全连接神经网络的整体结构：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302019307.png)
