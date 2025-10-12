@@ -18,7 +18,7 @@
 ##### 2、激活函数
 看到这里，可能很多人会疑惑，为什么要加上f(z)这个运算，这个运算的目的是为了将输出的值域压缩到（0，1），也就是所谓的归一化（标准化），因为每一级输出的值都将作为下一级的输入，只有将上一个输出归一化了，才会避免下一个输入无穷大，导致其输入无效，最终网络训练效果非常不好。
 
-2.1、**Sigmoid函数**
+###### 2.1、**Sigmoid函数**
 Sigmoid函数最早是在逻辑回归中提到的，它作为解决二分类的问题出场。其值域是在[0,1]之间，输出的值可以作为分类的概率。
 
 Sigmoid函数的公式和导数如下式所示：
@@ -31,19 +31,67 @@ Sigmoid函数缺点：
   2、输出值区间为(0,1)，关于0不对称；  
   3、梯度更新在不同方向走得太远，使得优化难度增大，训练耗时；
 
+###### 2.2、Tanh函数
+Tanh函数，其输出值在区间 [-1, 1]
 
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121145630.png)
 
+Tanh函数优点：  
+1、解决了Sigmoid函数输出值非0对称的问题；  
+2、训练比Sigmoid函数快，更容易收敛；  
+Tanh函数缺点：  
+1、反向传播训练时有梯度消失的问题；  
+2、Tanh函数和Sigmoid函数非常相似；
 
+###### 2.3、ReLU函数
 
+ReLU函数是目前在神经网络使用最流行的激活函数。其函数表达式和其对应的导数非常简单：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121145682.png)
 
+ReLU函数优点：  
+  1、解决了梯度消失的问题；  
+  2、计算更为简单，没有Sigmoid函数和Tanh函数的指数运算；  
+ReLU函数缺点：  
+  1、训练时可能出现神经元死亡；
+
+###### 2.4、Leaky ReLU函数
+
+Leaky ReLU函数是ReLU函数的变体。其函数和对应导数的表达式为：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121146344.png)
+
+Leaky ReLU函数优点：  
+  1、解决了ReLU的神经元死亡问题；  
+Leaky ReLU函数缺点：  
+  1、无法为正负输入值提供一致的关系预测（不同区间函数不同）；
+
+###### 2.5、SoftMax激活函数
+
+SoftMax函数通常被用在多分类网络模型中，其表达式如下
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121148536.png)
+
+SoftMax函数的值域是在[0,1]之间的，并且存在多个输出，例如是一个5分类的任务，那么SoftMax函数最终的输出是对应每个类别的的概率，同时这5个类别对应的概率相加最终的结果为1。
+
+因此在**多分类任务**的场景下，神经网络的最后一层一般都是使用SoftMax函数来作为激活函数。
 
 ##### 3.常规问题
-3.1梯度xiao's'j'h
-为了解决这个问题设计了，一个反向传播算法，反向传播的过程：![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302035780.png)
+
+3.1梯度消失
+
+3.2神经元死亡
+
+##### 5.计算误差: 将网络的预测结果与真实标签进行比较，计算出损失函数的值，计算方差的过程。
+##### 4、反向传播：
+但是这样的算出的不准确所以设计了反向传播
+神经网络的反向传播不断更新神经网络的w和b，从而使得神经网络的输出和真实label不断的逼近，损失函数也不断的逼近0，所以我们常常将模型的训练轮次和损失值变化画图，显示出来，如果损失值在一定的轮次后趋于平缓不再下降，那么就认为模型的训练已经收敛了；
+
+反向传播的作用，就是用来不断更新神经网络的w和b，从提高神经网络的预测准确率；
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302035780.png)
 1. 前向传播 (Forward Propagation): 将训练数据输入网络，从输入层开始，逐层计算，直到输出层得到预测结果。
 2. 反向传播 (Backward Propagation):通过计算误差关于权重的梯度，使得权重朝着能减小损失函数值的方向更新，不断迭代这个过程，从而让神经网络的预测结果逐渐逼近真实值。
 
-计算误差: 将网络的预测结果与真实标签进行比较，计算出损失函数的值，计算方差的过程。
+
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302051048.png)
 公式经过化简，我们可以看到A、B、C、D、E、F都是常系数，未知数就是w 和b ，也就是为了让Loss 最小，我们要求解出最佳的w 和b 。这时我们稍微想象一下，如果这是个二维空间，那么我们相当于要找一条曲线，让它与坐标轴上所有样本点距离最小。如下![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302051238.png)
 
