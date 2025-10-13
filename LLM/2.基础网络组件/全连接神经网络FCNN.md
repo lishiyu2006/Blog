@@ -170,7 +170,7 @@ trainset = data_list[:train_size]
 ```python
 X_train = X_train.values
 
-y_train = trainset["MEDV"]
+y_train = trainset["MEDV"] #提取标签“MEDV”
 y_train = y_train.values.reshape(-1, 1) #1维变2维，-1表示自动计算行数，1表示列数
 X_test = testset.drop("MEDV", axis=1)
 X_test = X_test.values
@@ -178,7 +178,7 @@ y_test = testset["MEDV"]
 y_test = y_test.values.reshape(-1, 1)
 ```
 
-### 4.2 模型设计
+### 2.2 模型设计
 
 如果将输入特征和输出预测值均以向量表示， 输入特征x有 13 个分量，y有 1 个分量， 那么参数权重的形状是 13× 1：
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510121252691.png)
