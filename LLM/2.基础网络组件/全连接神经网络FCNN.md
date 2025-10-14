@@ -124,6 +124,9 @@ SoftMax函数的值域是在[0,1]之间的，并且存在多个输出，例如�
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302035780.png)
 1. 前向传播 (Forward Propagation): 将训练数据输入网络，从输入层开始，逐层计算，直到输出层得到预测结果。
 2. 反向传播 (Backward Propagation):通过计算误差关于权重的梯度，使得权重朝着能减小损失函数值的方向更新，不断迭代这个过程，从而让神经网络的预测结果逐渐逼近真实值。
+#### Hadamard乘积
+反向传播算法基于常规的线性代数运算 —— 诸如向量加法，向量矩阵乘法等。但是有一个运算不大常⻅。特别地，假设![s](https://math.jianshu.com/math?formula=s)和![t](https://math.jianshu.com/math?formula=t)是两个同样维度的向量。那么我们使用![s ⊙ t](https://math.jianshu.com/math?formula=s%20%E2%8A%99%20t)来表示按元素的乘积。所以$s ⊙ t$的元素就是$（s ⊙ t)_j = s_jt_j$。举个例子如下:
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510132249475.png)
 
 ### 6、构建神经网络模型的基本步骤：
 
