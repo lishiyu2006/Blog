@@ -144,6 +144,18 @@ SoftMax函数的值域是在[0,1]之间的，并且存在多个输出，例如�
 ```python
 data_list = pd.read_csv(filepath)
 ```
+生成数据集
+```python
+import numpy as np
+import torch
+from torch.utils import data
+from d2l import torch as d2l
+
+true_w = torch.tensor([2, -3.4])
+true_b = 4.2
+features, labels = d2l.synthetic_data(true_w, true_b, 1000)
+
+```
 #### 2、数据归一化处理
 
 使用Z-Score 归一化
