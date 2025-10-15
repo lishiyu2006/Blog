@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/2.基础网络组件/全连接神经网络FCNN.md",
+                "file": "LLM/6.层/嵌入层 Embedding层.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "全连接神经网络FCNN"
+              "title": "嵌入层 Embedding层"
             }
           }
         ],
@@ -258,9 +258,9 @@
   },
   "active": "38617009edad4fbe",
   "lastOpenFiles": [
+    "LLM/2.基础网络组件/全连接神经网络FCNN.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/2.基础网络组件/循环神经网络RNN.md",
-    "LLM/2.基础网络组件/全连接神经网络FCNN.md",
     "question/枚举 and 拉链.md",
     "question/py面向对象.md",
     "diary/python之禅.md",
