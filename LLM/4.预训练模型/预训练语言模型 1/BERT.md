@@ -59,6 +59,7 @@ position_embeds = self.position_embeddings[position_ids]  # 形状：[1, seq_len
 position_embeds = np.tile(position_embeds, (batch_size, 1, 1))  # 扩展到batch_size
 ```
 `np.arange(seq_len)`：生成一个从 0 到 `seq_len-1` 的连续整数数组，长度为 `seq_len`（即序列中 token 的数量）。
+
 `.reshape(1, -1)`：将生成的一维数组转换为二维数组，形状为 `(1, seq_len)`。其中 `1` 表示批次维度（这里临时用 1 表示单条数据），`-1` 表示自动计算该维度的长度（保持与原数组元素总数一致）。
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151808827.png)
 
