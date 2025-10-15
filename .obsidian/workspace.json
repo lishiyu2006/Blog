@@ -125,12 +125,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/jupyter手册.md",
+                "file": "LLM/6.层/嵌入层 Embedding层.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "jupyter手册"
+              "title": "嵌入层 Embedding层"
             }
           }
         ],
@@ -286,10 +286,10 @@
   },
   "active": "f39f41ace82c3a78",
   "lastOpenFiles": [
+    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
     "diary/python之禅.md",
     "diary/jupyter手册.md",
     "LLM/6.层/嵌入层 Embedding层.md",
-    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/2.基础网络组件/全连接神经网络FCNN.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",

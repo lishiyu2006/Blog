@@ -19,7 +19,7 @@ conda install -cconda-forge jupyterlab
 这里还有一种就是，用anaconda的应用：
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151635255.png)
-## **运行Jupyter Lab**
+## 二、**运行Jupyter Lab**
 
 在安装Jupyter Lab后，接下来要做的是运行它(软件版安装以后默认在c盘打开，建议终端安装，手动输入地址打开)。
 
@@ -54,4 +54,11 @@ c.ServerApp.notebook_dir ='你想要设置的路径'
 2.单引号里写路径，有的说要写双斜杠，实测单斜杠就可以  
 3.有说设置c.ServerApp.root_dir的，这个不要设置，我设置完了之后c.ServerApp.notebook_dir 就失效了，工作目录又变回默认的用户文件夹下面了。
 4.发现有个问题，这样设置在命令行中启动juputer notebook没问题，但是通过快捷方式启动还是不行，需要修改快捷方式的属性：
+
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151721202.png)
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740291.png)
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740520.png)
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740565.png)
