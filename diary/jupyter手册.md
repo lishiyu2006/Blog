@@ -21,7 +21,7 @@ conda install -cconda-forge jupyterlab
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151635255.png)
 ## **运行Jupyter Lab**
 
-在安装Jupyter Lab后，接下来要做的是运行它。  
+在安装Jupyter Lab后，接下来要做的是运行它(软件版安装以后默认在c盘打开，建议终端安装，手动输入地址打开)。  
 你可以在命令行使用jupyter-lab或jupyter lab命令，然后默认浏览器会自动打开Jupyter Lab。
 
 目录：windows
