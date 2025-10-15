@@ -8,119 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f878c1dca4af2c8a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "tool/1.preface.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1.preface"
-            }
-          },
-          {
-            "id": "5617f61ecaa382a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/2.模型、网络/隐式马尔可夫模型HMM（声学模型）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "隐式马尔可夫模型HMM（声学模型）"
-            }
-          },
-          {
-            "id": "447b963fdc413b31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/3.模型、网络/预训练语言模型/静态的/CLIP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CLIP"
-            }
-          },
-          {
-            "id": "b9db157755af86b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/3.模型、网络/预训练语言模型/静态的/CLIP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CLIP"
-            }
-          },
-          {
-            "id": "76b6f89ee6b5cf4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/1.工具框架/TensorFlow.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TensorFlow"
-            }
-          },
-          {
-            "id": "2c099e6c32a42f78",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "question/py面向对象.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "py面向对象"
-            }
-          },
-          {
-            "id": "38617009edad4fbe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "预训练语言模型（Pre-trained Language Models, PLMs）"
-            }
-          },
-          {
-            "id": "86bf0bc284c41b1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "diary/python之禅.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "python之禅"
-            }
-          },
-          {
-            "id": "f39f41ace82c3a78",
+            "id": "a398d56db185ee38",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -132,23 +20,8 @@
               "icon": "lucide-file",
               "title": "BERT"
             }
-          },
-          {
-            "id": "a398d56db185ee38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "diary/jupyter手册.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "jupyter手册"
-            }
           }
-        ],
-        "currentTab": 9
+        ]
       }
     ],
     "direction": "vertical"
@@ -300,22 +173,24 @@
   },
   "active": "a398d56db185ee38",
   "lastOpenFiles": [
-    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
-    "LLM/4.预训练模型/预训练语言模型 1/LLM.md",
     "LLM/6.层/嵌入层 Embedding层.md",
-    "diary/python之禅.md",
-    "diary/jupyter手册.md",
+    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
+    "tool/1.preface.md",
+    "LLM/1.工具框架/TensorFlow.md",
+    "question/py面向对象.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
-    "LLM/2.基础网络组件/全连接神经网络FCNN.md",
+    "diary/python之禅.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
+    "LLM/1.工具框架/PyTorch.md",
+    "diary/jupyter手册.md",
+    "LLM/4.预训练模型/预训练语言模型 1/LLM.md",
+    "LLM/2.基础网络组件/全连接神经网络FCNN.md",
     "LLM/2.基础网络组件/循环神经网络RNN.md",
     "question/枚举 and 拉链.md",
-    "question/py面向对象.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/4.预训练模型/图像分割模型/UNet.md",
     "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
-    "LLM/1.工具框架/TensorFlow.md",
     "LLM/3.通用模型架构/Transformer.md",
     "LLM/4.预训练模型/图像分割模型",
     "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
@@ -324,7 +199,6 @@
     "LLM/4.预训练模型/预训练语言模型",
     "LLM/4.预训练模型",
     "LLM/2.基础网络组件",
-    "LLM/1.工具框架/PyTorch.md",
     "LLM/2.模型框架",
     "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "LLM/1.preface.md",
@@ -332,7 +206,6 @@
     "LLM/3.通用模型架构/未命名.md",
     "LLM/4.预训练模型/预训练语言模型 1",
     "tool/gu.md",
-    "tool/1.preface.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族",
     "LLM/5.AIGC（人工智能生成内容）",
     "LLM/6.层",
