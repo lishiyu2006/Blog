@@ -35,9 +35,23 @@ jupyter-lab
 
 
 目录：windows
-- **默认情况**：JupyterLab 默认根目录是当前用户的主目录，比如 `C:\Users\你的用户名` 。你可以打开文件资源管理器，在地址栏输入 `%USERPROFILE%` 并回车，就能快速跳转到该目录。
+- **默认情况**：JupyterLab 默认根目录是当前用户的主目录，比如 `C:\Users\你的用户名` 。
 - **查看或修改方法**：通过运行 `jupyter --config-dir` 命令，会得到配置文件所在目录，进入该目录找到 `jupyter_notebook_config.py` 文件（如果没有则可以创建） ，打开后查找或添加以下配置项：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151719829.png)
+
+Ctrl+F搜索找到c.ServerApp.notebook_dir = ''这一行
 ```python
-c.NotebookApp.notebook_dir = '你想要设置的路径'
+# c.ServerApp.notebook_dir =''
+```
+改成
+```python
+c.ServerApp.notebook_dir ='你想要设置的路径'
 ```
 例如 `c.NotebookApp.notebook_dir = 'D:/my_jupyter_workspace'` ，保存文件后，重启 JupyterLab，新的根目录设置就会生效。
+
+注意：  
+1.前面的#必须去掉，不然不生效  
+2.单引号里写路径，有的说要写双斜杠，实测单斜杠就可以  
+3.有说设置c.ServerApp.root_dir的，这个不要设置，我设置完了之后c.ServerApp.notebook_dir 就失效了，工作目录又变回默认的用户文件夹下面了。
+4.发现有个问题，这样设置在命令行中启动juputer notebook没问题，但是通过快捷方式启动还是不行，需要修改快捷方式的属性：
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151721202.png)
