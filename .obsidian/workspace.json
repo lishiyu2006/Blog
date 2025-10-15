@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/6.层/嵌入层 Embedding层.md",
+                "file": "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "嵌入层 Embedding层"
+              "title": "BERT"
             }
           }
         ]
@@ -173,10 +173,10 @@
   },
   "active": "a398d56db185ee38",
   "lastOpenFiles": [
+    "LLM/6.层/嵌入层 Embedding层.md",
     "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
-    "LLM/6.层/嵌入层 Embedding层.md",
     "tool/1.preface.md",
     "LLM/1.工具框架/TensorFlow.md",
     "question/py面向对象.md",

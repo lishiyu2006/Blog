@@ -26,6 +26,14 @@ segment_ids: 段标识（0或1），形状为[batch_size, seq_len]
 假如输入文本 ”I like dog“。下图则为 Token Embeddings 层实现过程。输入文本在送入 Token Embeddings 层之前要先进性 tokenization 处理，且两个特殊的 Token 会插入在文本开头 [CLS] 和结尾 [SEP]。[CLS]表示该特征用于分类模型，对非分类模型，该符号可以省去。[SEP]表示分句符号，用于断开输入语料中的两个句子。
 
 Bert 在处理英文文本时只需要 30522 个词（词表大小），Token Embeddings 层会将每个词转换成 768 维向量，例子中 5 个Token 会被转换成一个 (5, 768) 的矩阵或 (1, 5, 768) 的张量。
+以 BERT 的 30522 尺寸词表为例，每个 Token 都对应一个 0~30521 的唯一索引，格式类似：
+
+| Token   | 索引  | Token    | 索引   |
+| ------- | --- | -------- | ---- |
+| `[PAD]` | 0   | `apple`  | 6207 |
+| `[UNK]` | 100 | `中国`     | 704  |
+| `[CLS]` | 101 | `[MASK]` | 103  |
+| `[SEP]` | 102 | `run`    | 2143 |
 
 ```python
 # 1. Token Embeddings：通过索引获取词向量
