@@ -2,7 +2,9 @@
 ## 结构：级联去噪模型
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509262221782.png)
 ## 前提
-1.任何一张图像 $x$（无论是 $x_0$, $x_t$ 还是噪声 $z$）都会被转换成一个张量。
+1.任何一张图像 $x$（无论是 $x_0$, $x_t$ 还是噪声 $z$）都会被转   
+
+换成一个张量。
 一个典型的图像张量包含以下维度信息：
 
 **(Batch Size, Channels, Height, Width)**

@@ -52,6 +52,13 @@ segment_embeds = self.segment_embeddings[segment_ids]  # 形状：[batch_size, s
 
 在 RNN 中，第二个 ”I“ 和 第一个 ”I“ 表达的意义不一样，因为它们的隐状态不一样。对第二个 ”I“ 来说，隐状态经过 ”I think therefore“ 三个词，包含了前面三个词的信息，而第一个 ”I“ 只是一个初始值。因此，RNN 的隐状态保证在不同位置上相同的词有不同的输出向量表示。
 
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151808827.png)
+
+RNN 能够让模型隐式的编码序列的顺序信息（RNN 能让模型在处理序列（比如文字、语音、时间序列数据）时，**自动记住前面元素的信息，并把这些信息用在对后面元素的处理中**，无需人工额外标注 “顺序”，这就是 “隐式编码顺序信息”）
+相比之下，Transformer 的自注意力层 (Self-Attention) 对不同位置出现相同词给出的是同样的输出向量表示。尽管 Transformer 中两个 ”I“ 在不同的位置上，但是表示的向量是相同的。
+
+Transformer 中通过植入关于 Token 的相对位置或者绝对位置信息来表示序列的顺序信息。作者测试用学习的方法来得到 Position Embeddings，最终发现固定位置和相对位置效果差不多，所以最后用的是固定位置的，而正弦可以处理更长的 Sequence，且可以用前面位置的值线性表示后面的位置。
+
 ```python
 # 3. Position Embeddings：获取位置向量
 position_ids = np.arange(seq_len).reshape(1, -1)  # 生成位置索引：[1, seq_len]
@@ -61,21 +68,14 @@ position_embeds = np.tile(position_embeds, (batch_size, 1, 1))  # 扩展到batch
 `np.arange(seq_len)`：生成一个从 0 到 `seq_len-1` 的连续整数数组，长度为 `seq_len`（即序列中 token 的数量）。
 
 `.reshape(1, -1)`：将生成的一维数组转换为二维数组，形状为 `(1, seq_len)`。其中 `1` 表示批次维度（这里临时用 1 表示单条数据），`-1` 表示自动计算该维度的长度（保持与原数组元素总数一致）。例如，`[0,1,2,3,4]` 会被转换为 `[[0, 1, 2, 3, 4]]`。
-![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151808827.png)
-
-```python
-# 三者相加得到最终嵌入
-final_embeds = token_embeds + segment_embeds + position_embeds
-```
-
-RNN 能够让模型隐式的编码序列的顺序信息（RNN 能让模型在处理序列（比如文字、语音、时间序列数据）时，**自动记住前面元素的信息，并把这些信息用在对后面元素的处理中**，无需人工额外标注 “顺序”，这就是 “隐式编码顺序信息”）
-相比之下，Transformer 的自注意力层 (Self-Attention) 对不同位置出现相同词给出的是同样的输出向量表示。尽管 Transformer 中两个 ”I“ 在不同的位置上，但是表示的向量是相同的。
-
-Transformer 中通过植入关于 Token 的相对位置或者绝对位置信息来表示序列的顺序信息。作者测试用学习的方法来得到 Position Embeddings，最终发现固定位置和相对位置效果差不多，所以最后用的是固定位置的，而正弦可以处理更长的 Sequence，且可以用前面位置的值线性表示后面的位置。
 
 BERT 中处理的最长序列是 512 个 Token，长度超过 512 会被截取，BERT 在各个位置上学习一个向量来表示序列顺序的信息编码进来，这意味着 Position Embeddings 实际上是一个 (512, 768) 的 lookup 表，表第一行是代表第一个序列的每个位置，第二行代表序列第二个位置。
 
 最后，BERT 模型将 Token Embeddings (1, n, 768) + Segment Embeddings(1, n, 768) + Position Embeddings(1, n, 768) 求和的方式得到一个 Embedding(1, n, 768) 作为模型的输入。
+```python
+# 三者相加得到最终嵌入
+final_embeds = token_embeds + segment_embeds + position_embeds
+```
 
 **[CLS]的作用**
 
