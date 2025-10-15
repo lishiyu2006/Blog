@@ -133,3 +133,34 @@ embedding的又一个作用体现了。对低维的数据进行升维时，可�
 注① Word2Vec: Google 在 2013年提出的模型，用于生成词向量
 
 注② BERT: Google 在 2018年提出的模型,首次实现了真正意义上的上下文感知的词向量表示
+#### 四、大模型生成embedding怎么做?
+
+大模型embedding VS 小模型embedding
+
+##### 1.简介:
+
+BERT: 更适合需要双向上下文理解的任务，通过微调获得高性能
+
+LLM: 在零样本场景和生成任务中表现优越，但需设计合理的Embedding提取策略
+
+##### 2.原理与结构差异
+
+1）BERT
+
+BERT的Embedding生成原理:
+模型结构: 基于Transformer编码器，使用双向自注意力机制。
+预训练任务: Masked Language Model(MLM)和 Next Sentence Prediction (NSP)。
+
+Embedding来源:
+Token-level: 每个token的隐藏状态(最后一层或多层平均)。
+
+Sentence-level: 通常取[CLS]token的隐藏状态作为句子表示，或通过池化(平均/最大池化)所有token的隐藏状态
+
+2）LLM
+
+LLM(如Qwen)的Embedding生成原理:
+模型结构: 基于Transformer解码器，使用单向自注意力(仅关注左侧上下文)
+预训练任务: 自回归语言建模(预测下一个token)。
+
+Embedding来源:
+通常取最后一层所有token的隐藏状态，或最后一个token的隐藏状态作为序列表示(需根据任务调整)
