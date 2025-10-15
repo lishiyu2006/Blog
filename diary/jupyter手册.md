@@ -21,8 +21,18 @@ conda install -cconda-forge jupyterlab
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151635255.png)
 ## **运行Jupyter Lab**
 
-在安装Jupyter Lab后，接下来要做的是运行它(软件版安装以后默认在c盘打开，建议终端安装，手动输入地址打开)。  
-你可以在命令行使用jupyter-lab或jupyter lab命令，然后默认浏览器会自动打开Jupyter Lab。
+在安装Jupyter Lab后，接下来要做的是运行它(软件版安装以后默认在c盘打开，建议终端安装，手动输入地址打开)。
+
+打开：
+```shell
+jupyter-lab
+# or jupyter lab
+```
+
+关闭：
+1. 关闭浏览器中的 Jupyter Lab 页面；
+2. 回到命令行窗口，按 `Ctrl+C` 两次，或输入 `y` 确认关闭服务，命令行显示 `Shutting down server` 即表示成功关闭。
+
 
 目录：windows
 - **默认情况**：JupyterLab 默认根目录是当前用户的主目录，比如 `C:\Users\你的用户名` 。你可以打开文件资源管理器，在地址栏输入 `%USERPROFILE%` 并回车，就能快速跳转到该目录。
