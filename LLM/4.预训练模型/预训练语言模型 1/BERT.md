@@ -80,3 +80,32 @@ final_embeds = token_embeds + segment_embeds + position_embeds
 **[CLS]的作用**
 
 BERT在第一句前会加一个[CLS]标志，最后一层该位对应向量可以作为整句话的语义表示，从而用于下游的分类任务等。因为与文本中已有的其它词相比，这个无明显语义信息的符号会更“公平”地融合文本中各个词的语义信息，从而更好的表示整句话的语义。 具体来说，self-attention是用文本中的其它词来增强目标词的语义表示，但是目标词本身的语义还是会占主要部分的，因此，经过BERT的12层（BERT-base为例），每次词的embedding融合了所有词的信息，可以去更好的表示自己的语义。而[CLS]位本身没有语义，经过12层，句子级别的向量，相比其他正常词，可以更好的表征句子语义。
+### **2.2 Transformer Encoder**
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510152211754.png)
+BERT是用了Transformer的encoder侧的网络，如上图的transformer的Encoder部分，关于transformer的encoder的详细介绍可以参考链接：[https://paddlepedia.readthedocs.io](https://link.zhihu.com/?target=https%3A//paddlepedia.readthedocs.io/en/latest/tutorials/pretrain_model/transformer.html)
+
+在Transformer中，模型的输入会被转换成512维的向量，然后分为8个head，每个head的维度是64维，但是BERT的维度是768维度，然后分成12个head，每个head的维度是64维，这是一个微小的差别。Transformer中position Embedding是用的三角函数，BERT中也有一个Postion Embedding是随机初始化，然后从数据中学出来的。
+
+在Transformer中，模型的输入会被转换成512维的向量，然后分为8个head，每个head的维度是64维，但是BERT的维度是768维度，然后分成12个head，每个head的维度是64维，这是一个微小的差别。Transformer中position Embedding是用的三角函数，BERT中也有一个Postion Embedding是随机初始化，然后从数据中学出来的。
+
+BERT模型分为24层和12层两种，其差别就是使用transformer encoder的层数的差异，BERT-base使用的是12层的Transformer Encoder结构，BERT-Large使用的是24层的Transformer Encoder结构。
+
+### **2.3 BERT可视化**
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510152216743.png)
+
+如上图将注意力看做不同的连线，它们用来连接被更新的位置（左半边）与被注意的位置（右半边）。不同的颜色分别代表相应的注意头，而线条颜色的深浅代表被注意的强度。
+#### 注意力六种模式
+
+为了方便演示，这里采用以下例句：
+
+> 句子A：I went to the store.句子B：At the store, I bought fresh strawberries.
+
+BERT 用 WordPiece工具来进行分词，并插入特殊的分离符（[CLS]，用来分隔样本）和分隔符（[SEP]，用来分隔样本内的不同句子）。
+
+因此实际输入序列为： [CLS] i went to the store . [SEP] at the store , i bought fresh straw ##berries . [SEP]
+
+### **模式1：注意下一个词**
+
+在这种模式中，每个位置主要注意序列中的下一个词（token）。下面将看到第2层0号头的一个例子。（所选头部由顶部颜色条中突出的显示色块表示。）
+![Uploading file...6p3x5]()
