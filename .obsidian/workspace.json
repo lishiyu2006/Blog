@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/1.工具框架/TensorFlow.md",
+                "file": "LLM/7.外部组件/RAG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TensorFlow"
+              "title": "RAG"
             }
           }
         ]
@@ -171,11 +171,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc0b8b4051c66274",
+  "active": "a398d56db185ee38",
   "lastOpenFiles": [
-    "LLM/未命名",
-    "LLM/1.工具框架/PyTorch.md",
     "LLM/1.工具框架/TensorFlow.md",
+    "LLM/7.外部组件/RAG.md",
+    "LLM/7.外部组件",
+    "LLM/1.工具框架/PyTorch.md",
     "diary/jupyter手册.md",
     "diary/python之禅.md",
     "question/枚举 and 拉链.md",
@@ -208,7 +209,6 @@
     "LLM/4.预训练模型/预训练语言模型 1",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族",
     "LLM/5.AIGC（人工智能生成内容）",
-    "LLM/6.层",
     "logo.png",
     "【哲风壁纸】守岸-鸣潮.png"
   ]
