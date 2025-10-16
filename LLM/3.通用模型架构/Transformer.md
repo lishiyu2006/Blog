@@ -57,6 +57,66 @@ Transformer 中单词的输入表示 **x**由**单词 Embedding** 和**位置 
 
 单词的 Embedding 有很多种方式可以获取，例如可以采用 Word2Vec、Glove 等算法预训练得到，也可以在 Transformer 中训练得到。
 
+```python
+self.embedding = nn.Embedding(vocabulary, dim)
+```
+功能解释：
+
+1. **作用**：将离散的整数索引（单词ID）转换为连续的向量表示
+    
+2. **输入**：形状为 `[sequence_length]` 的整数张量
+    
+3. **输出**：形状为 `[sequence_length, dim]` 的浮点数张量（![X_{n\times d}](https://latex.csdn.net/eq?X_%7Bn%5Ctimes%20d%7D)，n是序列长度，d是特征维度）
+    
+参数详解：
+
+| 参数           | 含义    | 示例值   | 说明                |
+| ------------ | ----- | ----- | ----------------- |
+| `vocabulary` | 词汇表大小 | 10000 | 表示模型能处理的不同单词/符号总数 |
+| `dim`        | 嵌入维度  | 512   | 每个单词被表示成的向量长度     |
+
+工作原理：
+
+1. 创建一个可学习的嵌入矩阵[vocabulary, dim]，例如当 `vocabulary=10000`, `dim=512` 时，是一个 `10000×512` 的矩阵；
+    
+2. 每个整数索引对应矩阵中的一行：
+```python
+# 假设单词"apple"的ID=42
+apple_vector = embedding_matrix[42]  # 形状 [512]
+```
+
+在Transformer中的具体作用：
+```python
+# 输入：src = torch.randint(0, 10000, (2, 10))
+# 形状：[batch_size=2, seq_len=10]
+ 
+src_embedded = self.embedding(src)
+ 
+# 输出形状变为：[2, 10, 512]
+# 每个整数单词ID被替换为512维的向量
+```
+
+可视化表现：
+```python
+原始输入 (单词ID)：
+[ [ 25,  198, 3000, ... ],   # 句子1
+  [ 1,   42,  999,  ... ] ]  # 句子2
+ 
+经过嵌入层后 (向量表示)：
+[ [ [0.2, -0.5, ..., 1.3],   # ID=25的向量
+    [0.8, 0.1, ..., -0.9],   # ID=198的向量
+    ... ],
+  [ [0.9, -0.2, ..., 0.4],   # ID=1的向量
+    [0.3, 0.7, ..., -1.2],   # ID=42的向量
+    ... ] ]
+```
+为什么需要词嵌入：
+
+- **语义表示**：相似的单词会有相似的向量表示
+    
+- **降维**：将离散的ID映射到连续空间（one-hot编码需要10000维 → 嵌入只需512维）
+    
+- **可学习**：在训练过程中，这些向量会不断调整以更好地表示语义关系
 ### 2.2 位置 Embedding
 
 Transformer 中除了单词的 Embedding，还需要使用位置 Embedding 表示单词出现在句子中的位置。**因为 Transformer 不采用 RNN 的结构，而是使用全局信息，不能利用单词的顺序信息，而这部分信息对于 NLP 来说非常重要。**所以 Transformer 中使用位置 Embedding 保存单词在序列中的相对或绝对位置。
@@ -70,9 +130,39 @@ $PE_{(pos, 2i+1)} = \cos\left(pos / 10000^{2i/d}\right)$
 
 - 使 PE 能够适应比训练集里面所有句子更长的句子，假设训练集里面最长的句子是有 20 个单词，突然来了一个长度为 21 的句子，则使用公式计算的方法可以计算出第 21 位的 Embedding。
 - 可以让模型容易地计算出相对位置，对于固定长度的间距 k，**PE(pos+k)** 可以用 **PE(pos)** 计算得到。因为 Sin(A+B) = Sin(A)Cos(B) + Cos(A)Sin(B), Cos(A+B) = Cos(A)Cos(B) - Sin(A)Sin(B)。
+特点：
+- **波长几何级数**：覆盖不同频率
+- **相对位置可学习**：位置偏移的线性变换 $PE_{pos+k}$ 可表示为 $PE_{pos}$ 的线性函数
+- **泛化性强**：可处理比训练时更长的序列
+- **对称性**：sin/cos 组合允许模型学习相对位置
 
 将单词的词 Embedding 和位置 Embedding 相加，就可以得到单词的表示向量 **x**，**x** 就是 Transformer 的输入。
 
+代码实现：
+```python
+class PositionalEncoding(nn.Module):
+    # Sine-cosine positional coding
+    def __init__(self, emb_dim, max_len, freq=10000.0):
+        super(PositionalEncoding, self).__init__()
+        assert emb_dim > 0 and max_len > 0, 'emb_dim and max_len must be positive'
+        self.emb_dim = emb_dim
+        self.max_len = max_len
+        self.pe = torch.zeros(max_len, emb_dim)
+ 
+        pos = torch.arange(0, max_len).unsqueeze(1)
+        # pos: [max_len, 1]
+        div = torch.pow(freq, torch.arange(0, emb_dim, 2) / emb_dim)
+        # div: [ceil(emb_dim / 2)]
+        self.pe[:, 0::2] = torch.sin(pos / div)
+        # torch.sin(pos / div): [max_len, ceil(emb_dim / 2)]
+        self.pe[:, 1::2] = torch.cos(pos / (div if emb_dim % 2 == 0 else div[:-1]))
+        # torch.cos(pos / div): [max_len, floor(emb_dim / 2)]
+ 
+    def forward(self, x, len=None):
+        if len is None:
+            len = x.size(-2)
+        return x + self.pe[:len, :]
+```
 ## 3. Self-Attention（自注意力机制）
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606390.png)
@@ -230,5 +320,3 @@ Softmax 根据输出矩阵的每一行预测下一个单词：
 - Transformer 本身是不能利用单词的顺序信息的，因此需要在输入中添加位置 Embedding，否则 Transformer 就是一个词袋模型了。
 - Transformer 的重点是 Self-Attention 结构，其中用到的 **Q, K, V**矩阵通过输出进行线性变换得到。
 - Transformer 中 Multi-Head Attention 中有多个 Self-Attention，可以捕获单词之间多种维度上的相关系数 attention score。
-
-## 7. Code
