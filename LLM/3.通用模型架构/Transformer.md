@@ -215,3 +215,20 @@ Decoder block 第二个 Multi-Head Attention 变化不大， 主要的区别在�
 ### 5.3 Softmax 预测输出单词
 
 Decoder block 最后的部分是利用 Softmax 预测下一个单词，在之前的网络层我们可以得到一个最终的输出 Z，因为 Mask 的存在，使得单词 0 的输出 Z0 只包含单词 0 的信息，如下：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162116186.png)
+
+Softmax 根据输出矩阵的每一行预测下一个单词：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162116903.png)
+
+这就是 Decoder block 的定义，与 Encoder 一样，Decoder 是由多个 Decoder block 组合而成。
+
+## 6. Transformer 总结
+
+- Transformer 与 RNN 不同，可以比较好地并行训练。
+- Transformer 本身是不能利用单词的顺序信息的，因此需要在输入中添加位置 Embedding，否则 Transformer 就是一个词袋模型了。
+- Transformer 的重点是 Self-Attention 结构，其中用到的 **Q, K, V**矩阵通过输出进行线性变换得到。
+- Transformer 中 Multi-Head Attention 中有多个 Self-Attention，可以捕获单词之间多种维度上的相关系数 attention score。
+
+## 7. Code
