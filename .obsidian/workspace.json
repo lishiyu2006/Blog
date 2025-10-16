@@ -173,9 +173,9 @@
   },
   "active": "a398d56db185ee38",
   "lastOpenFiles": [
-    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
-    "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/高斯噪声.md",
+    "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
+    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/7.外部组件/RAG.md",
     "LLM/1.工具框架/TensorFlow.md",
     "LLM/7.外部组件",
