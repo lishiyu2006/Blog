@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/7.外部组件/RAG.md",
+                "file": "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG"
+              "title": "扩散模型DDPM（deosising diffusion probabilistic models）"
             }
           }
         ]
@@ -173,8 +173,8 @@
   },
   "active": "a398d56db185ee38",
   "lastOpenFiles": [
-    "LLM/1.工具框架/TensorFlow.md",
     "LLM/7.外部组件/RAG.md",
+    "LLM/1.工具框架/TensorFlow.md",
     "LLM/7.外部组件",
     "LLM/1.工具框架/PyTorch.md",
     "diary/jupyter手册.md",
