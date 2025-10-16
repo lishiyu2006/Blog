@@ -100,4 +100,13 @@ $\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 - **$\text{softmax}$**：把相似度分数转化为 0 到 1 之间的权重，权重总和为 1，代表每个 “键 - 值” 对在当前 “查询” 下的重要程度。
 - 最后乘以V：用得到的权重对 “值” 进行加权求和，得到最终的注意力输出，也就是结合了不同 “键 - 值” 对重要性的信息聚合结果。
 
-公式中计算矩阵$Q$和$K$每一行向量的内积，为了防止内积过大，因此除以 $d_k$ 的平方根。$Q$乘以$K$的转置后，得到的矩阵行列数都为 $n$，$n$ 为句子单词数，这个矩阵可以表示单词之间的 attention 强度。下图为$Q$乘以  ，1234 表示的是句子中的单词。
+公式中计算矩阵 $Q$ 和 $K$ 每一行向量的内积，为了防止内积过大，因此除以 $d_k$ 的平方根。$Q$ 乘以 $K$ 的转置后，得到的矩阵行列数都为 $n$，$n$ 为句子单词数，这个矩阵可以表示单词之间的 attention 强度。下图为 $Q$ 乘以 $K^T$ ，1234 表示的是句子中的单词。
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161925495.png)
+
+得到 $QK^T$ 之后，使用 Softmax 计算每一个单词对于其他单词的 attention 系数，公式中的 Softmax 是对矩阵的每一行进行 Softmax，即每一行的和都变为 1.
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161926929.png)
+
+得到 Softmax 矩阵之后可以和$V$相乘，得到最终的输出$Z$。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161926802.png)
