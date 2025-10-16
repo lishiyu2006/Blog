@@ -150,3 +150,6 @@ Add & Norm 层由 Add 和 Norm 两部分组成，其计算公式如下：
 其中 **X**表示 Multi-Head Attention 或者 Feed Forward 的输入，MultiHeadAttention(**X**) 和 FeedForward(**X**) 表示输出 (输出与输入 **X** 维度是一样的，所以可以相加)。
 
 **Add**指 **X**+MultiHeadAttention(**X**)，是一种残差连接，通常用于解决多层网络训练的问题，可以让网络只关注当前差异的部分，在 ResNet 中经常用到：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161957381.png)
+
