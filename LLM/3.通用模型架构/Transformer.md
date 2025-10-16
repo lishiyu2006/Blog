@@ -70,3 +70,32 @@ $PE_{(pos, 2i+1)} = \cos\left(pos / 10000^{2i/d}\right)$
 将单词的词 Embedding 和位置 Embedding 相加，就可以得到单词的表示向量 **x**，**x** 就是 Transformer 的输入。
 
 ## 3. Self-Attention（自注意力机制）
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606390.png)
+
+上图是论文中 Transformer 的内部结构图，左侧为 Encoder block，右侧为 Decoder block。红色圈中的部分为 Multi-Head Attention，是由多个 Self-Attention组成的，可以看到 Encoder block 包含一个 Multi-Head Attention，而 Decoder block 包含两个 Multi-Head Attention (其中有一个用到 Masked)。Multi-Head Attention 上方还包括一个 Add & Norm 层，Add 表示残差连接 (Residual Connection) 用于防止网络退化，Norm 表示 Layer Normalization，用于对每一层的激活值进行归一化。
+
+因为 Self-Attention是 Transformer 的重点，所以我们重点关注 Multi-Head Attention 以及 Self-Attention，首先详细了解一下 Self-Attention 的内部逻辑。
+
+### 3.1 Self-Attention 结构
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606609.png)
+上图是 Self-Attention 的结构，在计算的时候需要用到矩阵**Q(查询),K(键值),V(值)**。在实际中，Self-Attention 接收的是输入(单词的表示向量x组成的矩阵X) 或者上一个 Encoder block 的输出。而**Q,K,V**正是通过 Self-Attention 的输入进行线性变换得到的。
+
+### 3.2 Q, K, V 的计算
+
+Self-Attention 的输入用矩阵X进行表示，则可以使用线性变阵矩阵**WQ,WK,WV**计算得到**Q,K,V**。计算如下图所示，**注意 X, Q, K, V 的每一行都表示一个单词。**
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606713.png)
+
+### 3.3 Self-Attention 的输出
+
+得到矩阵 Q, K, V之后就可以计算出 Self-Attention 的输出了，计算的公式如下：
+
+$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$ 
+### 公式含义通俗解释
+
+- **$Q$（Query，查询）**：可以理解为 “我现在要找什么信息”，比如你在搜索时输入的关键词对应的向量表示。
+- **$K$（Key，键）**：相当于 “各个信息条目本身的标识”，就像数据库里每条数据的索引键对应的向量。
+- **$V$（Value，值）**：是 “各个信息条目实际包含的内容”，即数据库里每条索引键对应的具体数据向量。
+- **$QK^T$**：计算$Q$和$K$的相似度，得到每个 “查询” 与各个 “键” 的匹配程度分数。
+- **$\sqrt{d_k}$**：是缩放因子，$d_k$是$Q、K$向量的维度。除以它是为了缓解内积计算后数值过大，导致 $softmax$ 梯度消失的问题，让注意力分布更平稳。
+- **$\text{softmax}$**：把相似度分数转化为 0 到 1 之间的权重，权重总和为 1，代表每个 “键 - 值” 对在当前 “查询” 下的重要程度。
+- 最后乘以V：用得到的权重对 “值” 进行加权求和，得到最终的注意力输出，也就是结合了不同 “键 - 值” 对重要性的信息聚合结果。
