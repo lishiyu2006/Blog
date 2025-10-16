@@ -225,3 +225,75 @@ BERT 的输入序列开头有一个特殊符号 `[CLS]`，它的向量会**融�
 - BERT 会将 `[CLS]` 位置的输出向量，输入到一个**二分类器**（比如全连接层 + Softmax）；
 - 分类器输出两个概率：“IsNext” 的概率 和 “NotNext” 的概率；
 - 最终根据概率大小，预测 “句子 B 是否是句子 A 的下文”。
+
+**注意**
+
+- 在此后的研究（论文《Crosslingual language model pretraining》等）中发现，NSP任务可能并不是必要的，消除NSP损失在下游任务的性能上能够与原始BERT持平或略有提高。这可能是由于BERT以单句子为单位输入，模型无法学习到词之间的远程依赖关系。针对这一点，后续的[RoBERTa](https://zhida.zhihu.com/search?content_id=177795576&content_type=Article&match_order=1&q=RoBERTa&zhida_source=entity)、[ALBERT](https://zhida.zhihu.com/search?content_id=177795576&content_type=Article&match_order=1&q=ALBERT&zhida_source=entity)、[spanBERT](https://zhida.zhihu.com/search?content_id=177795576&content_type=Article&match_order=1&q=spanBERT&zhida_source=entity)都移去了NSP任务。
+
+BERT预训练模型最多只能输入512个词，这是因为在BERT中，Token，Position，Segment Embeddings 都是通过学习来得到的。在直接使用Google 的BERT预训练模型时，输入最多512个词（还要除掉[CLS]和[SEP]），最多两个句子合成一句。这之外的词和句子会没有对应的embedding。
+
+如果有足够的硬件资源自己重新训练BERT，可以更改 BERT config，设置更大max_position_embeddings 和 type_vocab_size值去满足自己的需求。
+
+## **3.2 BERT的微调**
+
+在海量的语料上训练完BERT之后，便可以将其应用到NLP的各个任务中了。 微调(Fine-Tuning)的任务包括：基于句子对的分类任务，基于单个句子的分类任务，问答任务，命名实体识别等。
+
+- 基于句子对的分类任务：  
+    
+
+- MNLI：给定一个前提 (Premise) ，根据这个前提去推断假设 (Hypothesis) 与前提的关系。该任务的关系分为三种，蕴含关系 (Entailment)、矛盾关系 (Contradiction) 以及中立关系 (Neutral)。所以这个问题本质上是一个分类问题，我们需要做的是去发掘前提和假设这两个句子对之间的交互信息。  
+    
+
+- QQP：基于Quora，判断 Quora 上的两个问题句是否表示的是一样的意思。
+- QNLI：用于判断文本是否包含问题的答案，类似于我们做阅读理解定位问题所在的段落。
+- STS-B：预测两个句子的相似性，包括5个级别。
+- MRPC：也是判断两个句子是否是等价的。
+- RTE：类似于MNLI，但是只是对蕴含关系的二分类判断，而且数据集更小。
+- SWAG：从四个句子中选择为可能为前句下文的那个。
+
+- 基于单个句子的分类任务
+
+- SST-2：电影评价的情感分析。
+
+- CoLA：句子语义判断，是否是可接受的（Acceptable）。
+
+- 问答任务
+
+- SQuAD v1.1：给定一个句子（通常是一个问题）和一段描述文本，输出这个问题的答案，类似于做阅读理解的简答题。
+
+- 命名实体识别
+
+- CoNLL-2003 NER：判断一个句子中的单词是不是Person，Organization，Location，Miscellaneous或者other（无命名实体）。​
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510152249010.png)
+## **4 BERT,GPT,ELMO的区别**
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510152249819.png)
+
+如上图所示，图中的Trm代表的是Transformer层，E代表的是Token Embedding，即每一个输入的单词映射成的向量，T代表的是模型输出的每个Token的特征向量表示。
+
+BERT使用的是双向的Transformer，OpenAI GPT使用的是从左到右的Transformer。ELMo使用的是单独的从左到右和从右到左的LSTM拼接而成的特征。其中只有BERT在所有的层考虑了左右上下文。除此之外，BERT和OpenAI GPT是微调（fine-tuning）的方法，而ELMo是一个基于特征的方法。
+
+### **BERT 比 ELMo 效果好的原因**
+
+从网络结构以及最后的实验效果来看，BERT 比 ELMo 效果好主要集中在以下几点原因：
+
+1. LSTM 抽取特征的能力远弱于 Transformer
+2. 拼接方式双向融合的特征融合能力偏弱
+3. BERT 的训练数据以及模型参数均多于 ELMo
+
+## **5 BERT的优缺点**
+
+### **优点**
+
+- BERT 相较于原来的 RNN、LSTM 可以做到并发执行，同时提取词在句子中的关系特征，并且能在多个不同层次提取关系特征，进而更全面反映句子语义。
+- 相较于 word2vec，其又能根据句子上下文获取词义，从而避免歧义出现。
+
+### **缺点**
+
+- 模型参数太多，而且模型太大，少量数据训练时，容易过拟合。
+- BERT的NSP任务效果不明显，MLM存在和下游任务mismathch的情况。
+- BERT对生成式任务和长序列建模支持不好。
+
+## **6 总结**
+
+本文章介绍了BERT模型的结构，预训练，微调，还对BERT进行了可视化，比较了和其他模型的优缺点。
