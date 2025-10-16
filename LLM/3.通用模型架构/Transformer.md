@@ -188,3 +188,9 @@ Decoder block 的第一个 Multi-Head Attention 采用了 Masked 操作，因为
 下面的描述中使用了类似 Teacher Forcing 的概念，不熟悉 Teacher Forcing 的同学可以参考以下上一篇文章Seq2Seq 模型详解。在 Decoder 的时候，是需要根据之前的翻译，求解当前最有可能的翻译，如下图所示。首先根据输入 "< Begin >" 预测出第一个单词为 "I"，然后根据输入 "< Begin > I" 预测下一个单词 "have"。
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162009788.png)
+
+Decoder 可以在训练的过程中使用 Teacher Forcing 并且并行化训练，即将正确的单词序列 (< Begin > I have a cat) 和对应输出 (I have a cat < end >) 传递到 Decoder。那么在预测第 i 个输出时，就要将第 i+1 之后的单词掩盖住，注意 Mask 操作是在 Self-Attention 的 Softmax 之前使用的，下面用 0 1 2 3 4 5 分别表示 "< Begin > I have a cat < end >"。
+
+第一步：是 Decoder 的输入矩阵和 Mask 矩阵，输入矩阵包含 "< Begin > I have a cat" (0, 1, 2, 3, 4) 五个单词的表示向量，Mask 是一个 5×5 的矩阵。在 **Mask** 可以发现单词 0 只能使用单词 0 的信息，而单词 1 可以使用单词 0, 1 的信息，即只能使用之前的信息。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162019691.png)
