@@ -201,3 +201,17 @@ Decoder 可以在训练的过程中使用 Teacher Forcing 并且并行化训练�
 第四步：使用 **Mask** $QK^T$与矩阵 **V**相乘，得到输出 **Z**，则单词 1 的输出向量 $Z_1$ 是只包含单词 1 信息的，则单词 2 只包含单词 2 和单词 1。
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162029260.png)
+
+第五步：通过上述步骤就可以得到一个 Mask Self-Attention 的输出矩阵 $Z_i$ ，然后和 Encoder 类似，通过 Multi-Head Attention 拼接多个输出 $Z_i$ 然后计算得到第一个 Multi-Head Attention 的输出**Z**，**Z**与输入**X**维度一样。
+
+### 5.2 第二个 Multi-Head Attention
+
+Decoder block 第二个 Multi-Head Attention 变化不大， 主要的区别在于其中 Self-Attention 的 **K, V**矩阵不是使用 上一个 Decoder block 的输出计算的，而是使用 **Encoder 的编码信息矩阵 C** 计算的。
+
+根据 Encoder 的输出 **C**计算得到 **K, V**，根据上一个 Decoder block 的输出 **Z** 计算 **Q** (如果是第一个 Decoder block 则使用输入矩阵 **X** 进行计算)，后续的计算方法与之前描述的一致。
+
+这样做的好处是在 Decoder 的时候，每一位单词都可以利用到 Encoder 所有单词的信息 (这些信息无需 **Mask**)。
+
+### 5.3 Softmax 预测输出单词
+
+Decoder block 最后的部分是利用 Softmax 预测下一个单词，在之前的网络层我们可以得到一个最终的输出 Z，因为 Mask 的存在，使得单词 0 的输出 Z0 只包含单词 0 的信息，如下：
