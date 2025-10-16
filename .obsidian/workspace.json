@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/py面向对象.md",
+                "file": "LLM/6.层/嵌入层 Embedding层.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "py面向对象"
+              "title": "嵌入层 Embedding层"
             }
           }
         ]
@@ -173,8 +173,10 @@
   },
   "active": "a398d56db185ee38",
   "lastOpenFiles": [
+    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/高斯噪声.md",
+    "question/py面向对象.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/7.外部组件/RAG.md",
     "LLM/1.工具框架/TensorFlow.md",
@@ -183,11 +185,9 @@
     "diary/jupyter手册.md",
     "diary/python之禅.md",
     "question/枚举 and 拉链.md",
-    "question/py面向对象.md",
     "tool/1.preface.md",
     "tool/gu.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
-    "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
     "LLM/6.层/嵌入层 Embedding层.md",
     "LLM/2.基础网络组件/卷积接神经网络CNN.md",
     "LLM/4.预训练模型/预训练语言模型 1/LLM.md",
