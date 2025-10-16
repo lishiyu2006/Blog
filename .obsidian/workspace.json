@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a9a801be91197e42",
+        "id": "99199cf2d2db61bd",
         "type": "tabs",
         "children": [
           {
-            "id": "a398d56db185ee38",
+            "id": "0d8ad0fd04f2a407",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,8 +171,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a398d56db185ee38",
+  "active": "0d8ad0fd04f2a407",
   "lastOpenFiles": [
+    "LLM/3.通用模型架构/Transformer.md",
+    "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/6.层/嵌入层 Embedding层.md",
     "tool/1.preface.md",
     "tool/gu.md",
@@ -196,9 +198,7 @@
     "LLM/2.基础网络组件/循环神经网络RNN.md",
     "LLM/4.预训练模型/图像分割模型/UNet.md",
     "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
-    "LLM/3.通用模型架构/Transformer.md",
     "LLM/4.预训练模型/图像分割模型",
-    "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/3.通用模型架构/MCMC.md",
     "diary/1.preface.md",
     "LLM/4.预训练模型/预训练语言模型",
