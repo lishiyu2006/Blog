@@ -5,12 +5,10 @@
 #### 1. 整体结构：编码器（Encoder）+ 解码器（Decoder）
 
 Transformer 本质是 “编码器 - 解码器架构”，但不同任务可灵活选择使用部分结构（如文本理解用编码器，文本生成用解码器）：
-```plaintext
-[输入序列] → 词嵌入+位置编码 → [编码器层×N] → [编码器输出]
-											  ↓
-[目标序列] → 词嵌入+位置编码 → [解码器层×N] → [输出序列（如翻译结果）]
-```
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161447577.png)
 可以看到 **Transformer 由 Encoder 和 Decoder 两个部分组成**，Encoder 和 Decoder 都包含 6 个 block。Transformer 的工作流程大体如下：
 
-**第一步：**获取输入句子的每一个单词的表示向量 X*、，**X**由单词的 Embedding（Embedding就是从原始数据提取出来的Feature） 和单词位置的 Embedding 相加得到。
+第一步：获取输入句子的每一个单词的表示向量 X、，**X**由单词的 Embedding（Embedding就是从原始数据提取出来的Feature） 和单词位置的 Embedding 相加得到。
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161526517.png)
+
+第二步：将得到的单词表示向量矩阵 (如上图所示，每一行是一个单词的表示 **x**) 传入 Encoder 中，经过 6 个 Encoder block 后可以得到句子所有单词的编码信息矩阵 **C**，如下图。单词向量矩阵用  表示， n 是句子中单词个数，d 是表示向量的维度 (论文中 d=512)。每一个 Encoder block 输出的矩阵维度与输入完全一致。
