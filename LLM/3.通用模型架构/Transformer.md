@@ -78,16 +78,16 @@ $PE_{(pos, 2i+1)} = \cos\left(pos / 10000^{2i/d}\right)$
 
 ### 3.1 Self-Attention 结构
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606609.png)
-上图是 Self-Attention 的结构，在计算的时候需要用到矩阵**Q(查询),K(键值),V(值)**。在实际中，Self-Attention 接收的是输入(单词的表示向量x组成的矩阵X) 或者上一个 Encoder block 的输出。而**Q,K,V**正是通过 Self-Attention 的输入进行线性变换得到的。
+上图是 Self-Attention 的结构，在计算的时候需要用到矩阵**Q(查询),K(键值),V(值)**。在实际中，Self-Attention 接收的是输入(单词的表示向量x组成的矩阵$X$) 或者上一个 Encoder block 的输出。而$Q,K,V$正是通过 Self-Attention 的输入进行线性变换得到的。
 
 ### 3.2 Q, K, V 的计算
 
-Self-Attention 的输入用矩阵X进行表示，则可以使用线性变阵矩阵**WQ,WK,WV**计算得到**Q,K,V**。计算如下图所示，**注意 X, Q, K, V 的每一行都表示一个单词。**
+Self-Attention 的输入用矩阵X进行表示，则可以使用线性变阵矩阵$WQ,WK,WV$计算得到$Q,K,V$。计算如下图所示，注意 $X, Q, K, V$的每一行都表示一个单词。
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606713.png)
 
 ### 3.3 Self-Attention 的输出
 
-得到矩阵 Q, K, V之后就可以计算出 Self-Attention 的输出了，计算的公式如下：
+得到矩阵 $Q, K, V$之后就可以计算出 Self-Attention 的输出了，计算的公式如下：
 
 $\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$ 
 ### 公式含义通俗解释
@@ -110,3 +110,28 @@ $\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 得到 Softmax 矩阵之后可以和$V$相乘，得到最终的输出$Z$。
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161926802.png)
+
+上图中 Softmax 矩阵的第 1 行表示单词 1 与其他所有单词的 attention 系数，最终单词 1 的输出 $Z_i$ 等于所有单词 $i$ 的值 $V_i$ 根据 attention 系数的比例加在一起得到，如下图所示：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161931102.png)
+
+### 3.4 Multi-Head Attention
+
+在上一步，我们已经知道怎么通过 Self-Attention 计算得到输出矩阵 $Z$，而 Multi-Head Attention 是由多个 Self-Attention 组合形成的，下图是论文中 Multi-Head Attention 的结构图。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161931195.png)
+
+从上图可以看到 Multi-Head Attention 包含多个 Self-Attention 层，首先将输入$X$分别传递到 h 个不同的 Self-Attention 中，计算得到 h 个输出矩阵$Z$。下图是 h=8 时候的情况，此时会得到 8 个输出矩阵$Z$。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161932653.png)
+
+得到 8 个输出矩阵 $Z_1$ 到 $Z_8$ 之后，Multi-Head Attention 将它们拼接在一起 **(Concat)**，然后传入一个**Linear**层，得到 Multi-Head Attention 最终的输出$Z$。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161936397.png)
+
+可以看到 Multi-Head Attention 输出的矩阵**Z**与其输入的矩阵**X**的维度是一样的。
+
+## 4. Encoder 结构
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161936357.png)
+
+上图红色部分是 Transformer 的 Encoder block 结构，可以看到是由 Multi-Head Attention, **Add & Norm, Feed Forward, Add & Norm** 组成的。刚刚已经了解了 Multi-Head Attention 的计算过程，现在了解一下 Add & Norm 和 Feed Forward 部分。
