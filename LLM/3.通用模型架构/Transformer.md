@@ -33,13 +33,17 @@ Transformer 本质是 “编码器 - 解码器架构”，但不同任务可灵�
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161526517.png)
 
 第二步：将得到的单词表示向量矩阵 (如上图所示，每一行是一个单词的表示 **x**) 传入 Encoder 中，经过 6 个 Encoder block 后可以得到句子所有单词的编码信息矩阵 **C**，如下图。单词向量矩阵用  表示， n 是句子中单词个数，d 是表示向量的维度 (论文中 d=512)。每一个 Encoder block 输出的矩阵维度与输入完全一致。
+
+多个编码器的效果 : 提高模型泛化能力
+- **参数学习**：堆叠多个 Encoder block 增加了模型的参数数量，更多的参数意味着模型有更强的拟合能力，可以学习到更多不同类型的模式和特征。在大规模数据集上训练时，这些额外的参数可以让模型更好地捕捉数据的分布规律，减少过拟合风险，进而提高模型在不同任务和数据集上的泛化能力。
+- **正则化效果**：在一定程度上，堆叠多个 Encoder block 也起到了类似正则化的效果。 随着层数的增加，模型对输入数据的微小变化更加鲁棒，使得模型在面对新的、未见过的数据时，也能有较好的表现。
+
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161530022.png)
 
 **第三步**：将 Encoder 输出的编码信息矩阵 **C**传递到 Decoder 中，Decoder 依次会根据当前翻译过的单词 1~ i 翻译下一个单词 i+1，如下图所示。在使用的过程中，翻译到单词 i+1 的时候需要通过 **Mask (掩盖)** 操作遮盖住 i+1 之后的单词。
 
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161546044.png)
-
 
 上图 Decoder 接收了 Encoder 的编码矩阵 **C**，然后首先输入一个翻译开始符 "< Begin >"，预测第一个单词 "I"；然后输入翻译开始符 "< Begin >" 和单词 "I"，预测单词 "have"，以此类推。这是 Transformer 使用时候的大致流程，接下来是里面各个部分的细节。
 
@@ -70,6 +74,7 @@ $PE_{(pos, 2i+1)} = \cos\left(pos / 10000^{2i/d}\right)$
 将单词的词 Embedding 和位置 Embedding 相加，就可以得到单词的表示向量 **x**，**x** 就是 Transformer 的输入。
 
 ## 3. Self-Attention（自注意力机制）
+
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606390.png)
 
  上图是论文中 Transformer 的内部结构图，左侧为 Encoder block，右侧为 Decoder block。红色圈中的部分为 Multi-Head Attention，是由多个 Self-Attention组成的，可以看到 Encoder block 包含一个 Multi-Head Attention，而 Decoder block 包含两个 Multi-Head Attention (其中有一个用到 Masked)。Multi-Head Attention 上方还包括一个 Add & Norm 层，Add 表示残差连接 (Residual Connection) 用于防止网络退化，Norm 表示 Layer Normalization，用于对每一层的激活值进行归一化。
@@ -135,3 +140,13 @@ $\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161936357.png)
 
 上图红色部分是 Transformer 的 Encoder block 结构，可以看到是由 Multi-Head Attention, **Add & Norm, Feed Forward, Add & Norm** 组成的。刚刚已经了解了 Multi-Head Attention 的计算过程，现在了解一下 Add & Norm 和 Feed Forward 部分。
+
+### 4.1 Add & Norm
+
+Add & Norm 层由 Add 和 Norm 两部分组成，其计算公式如下：
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161949394.png)
+
+其中 **X**表示 Multi-Head Attention 或者 Feed Forward 的输入，MultiHeadAttention(**X**) 和 FeedForward(**X**) 表示输出 (输出与输入 **X** 维度是一样的，所以可以相加)。
+
+**Add**指 **X**+MultiHeadAttention(**X**)，是一种残差连接，通常用于解决多层网络训练的问题，可以让网络只关注当前差异的部分，在 ResNet 中经常用到：
