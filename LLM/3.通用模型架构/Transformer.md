@@ -191,12 +191,13 @@ Decoder block 的第一个 Multi-Head Attention 采用了 Masked 操作，因为
 
 Decoder 可以在训练的过程中使用 Teacher Forcing 并且并行化训练，即将正确的单词序列 (< Begin > I have a cat) 和对应输出 (I have a cat < end >) 传递到 Decoder。那么在预测第 i 个输出时，就要将第 i+1 之后的单词掩盖住，注意 Mask 操作是在 Self-Attention 的 Softmax 之前使用的，下面用 0 1 2 3 4 5 分别表示 "< Begin > I have a cat < end >"。
 
-第一步： Decoder 的输入矩阵得到了一个5×5的 $Z$ 矩阵,将其遮盖变成Mask矩阵的，输入矩阵包含 "< Begin > I have a cat" (0, 1, 2, 3, 4) 五个单词的表示向量，Mask 是一个 5×5 的矩阵。在 **Mask** 可以发现单词 0 只能使用单词 0 的信息，而单词 1 可以使用单词 0, 1 的信息，即只能使用之前的信息。
+第一步： Decoder 的输入矩阵得到了一个5×5的   矩阵,将其遮盖变成Mask $QK^T$ 矩阵，遮盖的地方是-♾️。输入矩阵包含 "< Begin > I have a cat" (0, 1, 2, 3, 4) 五个单词的表示向量，Mask 是一个 5×5 的矩阵。
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162019691.png)
 
 得到 **Mask** $QK^T$ 之后在 **Mask**$QK^T$ 上进行 Softmax，每一行的和都为 1。但是单词 0 在单词 1, 2, 3, 4 上的 attention score 都为 0。
 
-第四步：使用 **Mask** $QK^T$与矩阵 **V**相乘，得到输出 **Z**，则单词 1 的输出向量 $Z_1$ 是只包含单词 1 信息的。
+第四步：使用 **Mask** $QK^T$与矩阵 **V**相乘，得到输出 **Z**，则单词 1 的输出向量 $Z_1$ 是只包含单词 1 信息的，。
+第四步：使用 **Mask** $QK^T$与矩阵 **V**相乘，得到输出 **Z**，则单词 1 的输出向量 $Z_1$ 是只包含单词 1 信息的，则单词 2 只包含单词 2 和单词 1。
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162029260.png)
