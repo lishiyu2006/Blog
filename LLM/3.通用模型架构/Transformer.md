@@ -153,3 +153,38 @@ Add & Norm 层由 Add 和 Norm 两部分组成，其计算公式如下：
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161957381.png)
 
+**Norm**指 Layer Normalization，通常用于 RNN 结构，Layer Normalization 会将每一层神经元的输入都转成均值方差都一样的，这样可以加快收敛
+### 4.2 Feed Forward
+
+Feed Forward 层比较简单，是一个两层的全连接层，第一层的激活函数为 Relu，第二层不使用激活函数，对应的公式如下。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162005062.png)
+
+**X**是输入，Feed Forward 最终得到的输出矩阵的维度与**X**一致。
+
+### 4.3 组成 Encoder
+
+通过上面描述的 Multi-Head Attention, Feed Forward, Add & Norm 就可以构造出一个 Encoder block，Encoder block 接收输入矩阵  ，并输出一个矩阵  。通过多个 Encoder block 叠加就可以组成 Encoder。
+
+第一个 Encoder block 的输入为句子单词的表示向量矩阵，后续 Encoder block 的输入是前一个 Encoder block 的输出，最后一个 Encoder block 输出的矩阵就是**编码信息矩阵 C**，这一矩阵后续会用到 Decoder 中。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162005165.png)
+
+## 5. Decoder 结构
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162005991.png)
+
+上图红色部分为 Transformer 的 Decoder block 结构，与 Encoder block 相似，但是存在一些区别：
+
+- 包含两个 Multi-Head Attention 层。
+- 第一个 Multi-Head Attention 层采用了 Masked 操作。
+- 第二个 Multi-Head Attention 层的**K, V**矩阵使用 Encoder 的**编码信息矩阵C**进行计算，而**Q**使用上一个 Decoder block 的输出计算。
+- 最后有一个 Softmax 层计算下一个翻译单词的概率。
+
+### 5.1 第一个 Multi-Head Attention
+
+Decoder block 的第一个 Multi-Head Attention 采用了 Masked 操作，因为在翻译的过程中是顺序翻译的，即翻译完第 i 个单词，才可以翻译第 i+1 个单词。通过 Masked 操作可以防止第 i 个单词知道 i+1 个单词之后的信息。下面以 "我有一只猫" 翻译成 "I have a cat" 为例，了解一下 Masked 操作。
+
+下面的描述中使用了类似 Teacher Forcing 的概念，不熟悉 Teacher Forcing 的同学可以参考以下上一篇文章Seq2Seq 模型详解。在 Decoder 的时候，是需要根据之前的翻译，求解当前最有可能的翻译，如下图所示。首先根据输入 "< Begin >" 预测出第一个单词为 "I"，然后根据输入 "< Begin > I" 预测下一个单词 "have"。
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510162009788.png)
