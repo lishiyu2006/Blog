@@ -32,5 +32,6 @@ huggingface-cli download --resume-download stable-diffusion-v1-5/stable-diffusio
 ```
  注意修改保存的地址
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161417983.png)
-5. 最后，调用下载好的模型就可以了，把之前的model_id更换为你下载模型的本地路径。至于为什么能这样替换，如果你点进from_pretrained看看方法定义，你会发现第一个参数名字叫“pretrained_model_name_or_path”
+5. 最后，调用下载好的模型就可以了，把之前的（及原本的下载方式，这里没展示）model_id更换为你下载模型的本地路径。至于为什么能这样替换，如果你点进from_pretrained看看方法定义，你会发现第一个参数名字叫“pretrained_model_name_or_path”
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161419161.png)
+[参考](https://blog.csdn.net/qq_61829672/article/details/143195653)
