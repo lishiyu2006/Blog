@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
+                "file": "diary/python之禅.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "生成对抗网络GAN"
+              "title": "python之禅"
             }
           }
         ]
@@ -173,6 +173,10 @@
   },
   "active": "0d8ad0fd04f2a407",
   "lastOpenFiles": [
+    "LLM/1.工具框架/TensorFlow.md",
+    "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
+    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
+    "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "LLM/3.通用模型架构/Transformer.md",
     "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/3.通用模型架构/未命名.md",
@@ -185,11 +189,8 @@
     "tool/hugging.md",
     "LLM/7.外部组件/RAG.md",
     "LLM/4.预训练模型/预训练语言模型 1/BERT.md",
-    "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/高斯噪声.md",
     "question/py面向对象.md",
-    "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
-    "LLM/1.工具框架/TensorFlow.md",
     "LLM/7.外部组件",
     "LLM/1.工具框架/PyTorch.md",
     "diary/jupyter手册.md",
@@ -200,7 +201,6 @@
     "LLM/4.预训练模型/图像分割模型/UNet.md",
     "LLM/4.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/4.预训练模型/图像分割模型",
-    "LLM/3.通用模型架构/MCMC.md",
     "LLM/4.预训练模型/预训练语言模型",
     "LLM/4.预训练模型",
     "LLM/2.基础网络组件",
