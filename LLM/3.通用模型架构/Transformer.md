@@ -173,6 +173,7 @@ class PositionalEncoding(nn.Module):
 
 ### 3.1 Self-Attention 结构
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510161606609.png)
+
 上图是 Self-Attention 的结构，在计算的时候需要用到矩阵**Q(查询),K(键值),V(值)**。在实际中，Self-Attention 接收的是输入(单词的表示向量x组成的矩阵$X$) 或者上一个 Encoder block 的输出。而$Q,K,V$正是通过 Self-Attention 的输入进行线性变换得到的。
 
 ### 3.2 Q, K, V 的计算
