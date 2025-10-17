@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/python之禅.md",
+                "file": "LLM/1.工具框架/TensorFlow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "python之禅"
+              "title": "TensorFlow"
             }
           }
         ]
@@ -173,6 +173,7 @@
   },
   "active": "0d8ad0fd04f2a407",
   "lastOpenFiles": [
+    "diary/python之禅.md",
     "LLM/1.工具框架/TensorFlow.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
@@ -194,7 +195,6 @@
     "LLM/7.外部组件",
     "LLM/1.工具框架/PyTorch.md",
     "diary/jupyter手册.md",
-    "diary/python之禅.md",
     "question/枚举 and 拉链.md",
     "LLM/4.预训练模型/预训练语言模型 1/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "LLM/4.预训练模型/预训练语言模型 1/LLM.md",
