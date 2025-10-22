@@ -41,7 +41,7 @@ print(G.has_edge(1, 2))  # 输出：True（存在边 1-2）
 print(G.has_edge(1, 3))  # 输出：False（不存在边 1-3）
 ```
 
-将 **NetworkX 图对象** 转换为 **igraph 图对象**
+将 **NetworkX 图对象** 转换为 **igraph 图对象**(这个存在的目的是小项目,但是啊要用Leiden算的发检测社区)
 
 ```python
 import networkx as nx
