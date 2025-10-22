@@ -203,6 +203,8 @@
   "active": "842cb4a8ab5f59ba",
   "lastOpenFiles": [
     "question/list.md",
+    "LLM/3.通用模型架构/Transformer.md",
+    "LLM/1.工具框架/TensorFlow.md",
     "question/graph.md",
     "question/枚举 and 拉链.md",
     "diary/jupyter手册.md",
@@ -217,9 +219,7 @@
     "about.md",
     "index.md",
     "logo.png",
-    "LLM/1.工具框架/TensorFlow.md",
     "LLM/1.工具框架/PyTorch.md",
-    "LLM/3.通用模型架构/Transformer.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
     "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",

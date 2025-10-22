@@ -15,7 +15,7 @@
 创建一个**无向图（Undirected Graph）**
 
 ```python
-# 创建空的无向图
+# 创建空的无向图NETworkX对象
 G = nx.Graph()
 
 # 添加节点
@@ -31,7 +31,36 @@ print("节点：", G.nodes())  # 输出：节点：[1, 2, 3, 4]
 print("边：", G.edges())    # 输出：边：[(1, 2), (2, 3), (3, 4), (4, 1)]
 ```
 
+检查边函数
+
+```python
+G = nx.Graph()
+G.add_edges_from([(1, 2), (2, 3)])
+
+print(G.has_edge(1, 2))  # 输出：True（存在边 1-2）
+print(G.has_edge(1, 3))  # 输出：False（不存在边 1-3）
+```
+
 将 **NetworkX 图对象** 转换为 **igraph 图对象**
+
+```python
+import networkx as nx
+import igraph as ig
+
+# 1. 用 NetworkX 创建带属性的图
+G = nx.Graph()
+G.add_node(1, label="A")  # 节点 1 带属性 label="A"
+G.add_node(2, label="B")
+G.add_edge(1, 2, weight=5)  # 边带权重属性
+
+# 2. 转换为 igraph 图
+g_ig = ig.Graph.from_networkx(G)
+
+# 3. 查看转换结果
+print("igraph 节点 ID：", g_ig.vs["name"])  # 节点 ID 保留（默认与 NetworkX 一致）
+print("节点属性 label：", g_ig.vs["label"])  # 节点属性同步
+print("边权重：", g_ig.es["weight"])  # 边属性同步
+```
 
 ### 使用场景对比
 
@@ -47,15 +76,7 @@ print("边：", G.edges())    # 输出：边：[(1, 2), (2, 3), (3, 4), (4, 1)]
     - 处理百万级以上节点 / 边的大图（如社交网络、交通网络）。
     - 需要高效的批量属性操作或高性能计算。
 
-检查边函数
 
-```python
-G = nx.Graph()
-G.add_edges_from([(1, 2), (2, 3)])
-
-print(G.has_edge(1, 2))  # 输出：True（存在边 1-2）
-print(G.has_edge(1, 3))  # 输出：False（不存在边 1-3）
-```
 
 # 库PyVis
 
