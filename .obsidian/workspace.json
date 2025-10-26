@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/python之禅.md",
+                "file": "LLM/1.工具框架/TensorFlow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "python之禅"
+              "title": "TensorFlow"
             }
           }
         ],
@@ -216,6 +216,7 @@
   },
   "active": "7e2f299667d9733a",
   "lastOpenFiles": [
+    "diary/python之禅.md",
     "diary/jupyter手册.md",
     "diary/1.preface.md",
     "question/setdefault.md",
@@ -224,7 +225,6 @@
     "question/py面向对象.md",
     "about.md",
     "未命名.canvas",
-    "diary/python之禅.md",
     "question/graph.md",
     "LLM/3.通用模型架构/Transformer.md",
     "question/枚举 and 拉链.md",
