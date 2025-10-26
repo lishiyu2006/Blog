@@ -5,11 +5,11 @@
 ## 简单定义
 Tensor表示张量，表示里面的数据是用张量的表示的。
 
-一、TensorFlow的计算模型——计算图
+### 一、Graph计算图——TensorFlow的计算模型
 
 计算图是TensorFlow中最基本的一个概念，TensorFlow中的所有计算都会被转化为计算图上的节点，依据节点中传递的值，进行数值的“Flow”。
 
-1、计算图的概念
+#### 1、计算图的概念
 TensorFlow是一个通过计算图的形式来表述计算的编程系统，TensorFlow中的每一个数都是计算图上的一个节点，而节点之间的边描述了节点之间的计算关系。
 
 ```python
@@ -26,11 +26,11 @@ with tf.Session() as sess:
 ```
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510072138661.png)
 
-## 张量的三个属性
+## 二、Tensor张量的三个属性
 
 tensor具有三个很重要的属性：name、shape和type。
 
-### name
+### 1.name
 name是tensor的唯一标识符。
 ```python
 # 定义tensor，第一个参数是值；第二个参数是tensor的name；
@@ -48,7 +48,7 @@ print(v2) #Tensor("Const:0", shape=(), dtype=float32)
 
 tensor通过`node:src_output`的形式展示，其中node就是tensor的name，src_output是当前tensor的第几个输出。例如：`v1:0`就是v1节点的第一个输出（src_output从0开始）
   ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510072145894.png)
-### shape
+### 2.shape
 shape是纬度，它描述了tensor的纬度信息
 ```python
 # 定义两个二维数组
@@ -70,7 +70,7 @@ with tf.Session() as sess:
 
 ```
 上面的这个就是一个二维的张量相加，(eg.shape（2,3）表示一个大数组里面3个小数组，每个小数组里面2个数。)
-### type
+### 3.type
 每一个tensor会有一个唯一的类型。TensorFlow会对参与计算的所有张量进行类型检测，当类型发生不匹配时会报错。
 ```python
 #TypeError: Input 'v2' of 'Add' Op has type float32
@@ -82,7 +82,10 @@ add = v1 + v2
 
 等等[参考](https://juejin.cn/post/6844903879520288781)
 
-# Session
+## 三、OP节点
+上图所示每个椭圆要素代表着计算图中的节点（又称 OP）操作，节点在 TensorFlow 中以张量的形式表现出来，而每个节点之间连接线代表着节点之间的流动关系。
+
+## 四、Session会议
 TensorFlow中的会话用于执行定义好的运算。会话拥有并管理 TensorFlow程序运 行时的所有资源。所有计算完成之后需要关闭会话来帮助系统回收资源，否则就可能出现资源泄漏的问题。
 
 简单的理解TensorFlow在定义好变量和计算的时候，并不会马上进行计算，需要通过session来进行执行，这就好比我们搭电路图，当电路连接完，当插头通电的时候，整个电路才开始运作。
