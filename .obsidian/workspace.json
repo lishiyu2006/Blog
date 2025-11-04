@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/3.通用模型架构/Transformer.md",
+                "file": "diary/jupyter手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Transformer"
+              "title": "jupyter手册"
             }
           }
         ],
@@ -216,8 +216,9 @@
   },
   "active": "7e2f299667d9733a",
   "lastOpenFiles": [
-    "LLM/1.工具框架/TensorFlow.md",
     "diary/python之禅.md",
+    "LLM/3.通用模型架构/Transformer.md",
+    "LLM/1.工具框架/TensorFlow.md",
     "diary/jupyter手册.md",
     "diary/1.preface.md",
     "question/setdefault.md",
@@ -226,7 +227,6 @@
     "about.md",
     "未命名.canvas",
     "question/graph.md",
-    "LLM/3.通用模型架构/Transformer.md",
     "question/枚举 and 拉链.md",
     "2025-10-22.md",
     "question/1.preface.md",

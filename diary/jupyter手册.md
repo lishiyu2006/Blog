@@ -62,3 +62,7 @@ c.ServerApp.notebook_dir ='你想要设置的路径'
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740520.png)
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740565.png)
+
+# 三、解决jupyter没法识别anaconda的环境
+
+这里关键是
