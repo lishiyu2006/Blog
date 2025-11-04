@@ -63,6 +63,22 @@ c.ServerApp.notebook_dir ='你想要设置的路径'
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202510151740565.png)
 
-# 三、解决jupyter没法识别anaconda的环境
+## 三、解决jupyter没法识别anaconda的环境
 
-这里关键是
+在本地就可以识别有cuda的GPU，在jupyter就不行，为什么呢？
+因为PyCharm里添加了对应的解释器（安装了CUDA PyTorch的虚拟环境），但是在jupyter notebook里使用的仍然是普通的python解释器，没有应用虚拟环境
+
+### 解决方法：
+要进行以下操作
+终端进行以下操作：
+```python
+pip install ipykernel
+```
+然后，将本地环境导入到jupyter里面
+```python
+python -m ipykernel install --name python3  # basic_py为环境名
+```
+在这里-name后面，是jupyter内核的名字，查找方法：
+```bash
+jupyter kernelspec list
+```
