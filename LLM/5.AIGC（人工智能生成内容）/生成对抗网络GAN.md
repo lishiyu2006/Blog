@@ -9,8 +9,11 @@
 
 ## 训练策略：
 1.先让当前的生G()生成一张fig
+
 2.然后在用当前的A()去判别，根据判别的结果不断调整，直到A()的参数不错
+
 3.然后根据A(G())->1的结果，对G()反向传播
+
 4.重复前三个步骤
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202509302014790.png)
