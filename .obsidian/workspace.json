@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/1.工具框架/TensorFlow.md",
+                "file": "diary/python之禅.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TensorFlow"
+              "title": "python之禅"
+            }
+          },
+          {
+            "id": "500e7b44447e0c31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "diary/conda.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conda"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,12 +186,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7e2f299667d9733a",
+  "active": "500e7b44447e0c31",
   "lastOpenFiles": [
-    "LLM/1.工具框架/PyTorch.md",
-    "LLM/1.工具框架/TensorFlow.md",
-    "diary/jupyter手册.md",
     "diary/python之禅.md",
+    "diary/conda.md",
+    "LLM/1.工具框架/TensorFlow.md",
+    "LLM/1.工具框架/PyTorch.md",
+    "diary/jupyter手册.md",
     "diary/1.preface.md",
     "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "question/枚举 and 拉链.md",
@@ -201,7 +217,6 @@
     "logo.png",
     "LLM/5.AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/3.通用模型架构/隐式马尔可夫模型HMM（声学模型）.md",
-    "LLM/3.通用模型架构/未命名.md",
     "LLM/7.外部组件",
     "LLM/4.预训练模型/图像分割模型",
     "LLM/4.预训练模型/预训练语言模型",
