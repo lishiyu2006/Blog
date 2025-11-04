@@ -1,7 +1,9 @@
 # jupyter手册
 
 jupyter分段式，在web开发的工具
+
 首先Jupter lab是更高级的Jupter notebook，又有他的全部功能；
+
 然后讲介绍什么安装和使用：
 ## 一、安装
 ### pip安装：
