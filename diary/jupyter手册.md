@@ -76,8 +76,10 @@ pip install ipykernel
 ```
 然后，将本地环境导入到jupyter里面
 ```python
-python -m ipykernel install --name python3  # basic_py为环境名
+python -m ipykernel install --name en
 ```
+成功显示：
+Installed kernelspec jupyer_name  in D:\your_address
 在这里-name后面，是jupyter内核的名字，查找方法：
 ```bash
 jupyter kernelspec list
