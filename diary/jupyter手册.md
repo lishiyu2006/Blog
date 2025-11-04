@@ -129,3 +129,6 @@ jupyter kernelspec list
 就会出现新的环境了；
 
 ![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202511041333330.png)
+
+## 四、使用方法
+ctrl加上回车=运行

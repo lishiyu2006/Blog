@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/conda.md",
+                "file": "LLM/1.工具框架/PyTorch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conda"
+              "title": "PyTorch"
             }
           }
         ],
@@ -188,11 +188,11 @@
   },
   "active": "500e7b44447e0c31",
   "lastOpenFiles": [
-    "diary/python之禅.md",
-    "diary/conda.md",
     "LLM/1.工具框架/TensorFlow.md",
     "LLM/1.工具框架/PyTorch.md",
     "diary/jupyter手册.md",
+    "diary/conda.md",
+    "diary/python之禅.md",
     "diary/1.preface.md",
     "LLM/5.AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "question/枚举 and 拉链.md",
