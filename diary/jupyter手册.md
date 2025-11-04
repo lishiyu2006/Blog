@@ -69,28 +69,49 @@ c.ServerApp.notebook_dir ='你想要设置的路径'
 因为PyCharm里添加了对应的解释器（安装了CUDA PyTorch的虚拟环境），但是在jupyter notebook里使用的仍然是普通的python解释器，没有应用虚拟环境
 
 ### 解决方法：
-要进行以下操作
-终端进行以下操作：
-检测是否安装jupyter：
+
+#### 要进行以下操作，终端进行以下操作：
+
+1. 检测是否安装jupyter：
+
 因为就算没有这个依旧可以正常使用，Jupyter 本身可以安装在一个环境里（比如 base 环境），但内核可以注册来自其他环境（比如 `new_torch_env`）。所以即使 `new_torch_env` 里没装 Jupyter，只要 base 环境装了 Jupyter，也能启动它，只是需要把 `new_torch_env` 的内核正确注册进去
+
 ```bash
 jupyter --version
 ```
+
 显示：
+
 ```
 jupyter core : 4.12.0 jupyter-notebook : 6.5.4 ipykernel : 6.23.1 ...（其他组件版本）
 ```
+
 没有就安装（这三个主要的库）
+
 ```bash
 conda install jupyter notebook ipykernel -y
 ```
+
 然后，将本地环境导入到jupyter里面
+
 ```python
 python -m ipykernel install --name your_env_name
 ```
+
 检查正确将环境加入到jupyter里面
+
 Installed kernelspec jupyer_name  in D:\your_address
+
 在这里-name后面，是jupyter内核的名字，查找方法：
+
 ```bash
 jupyter kernelspec list
 ```
+
+有的话，就是好了，再打开jupyter
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202511041333911.png)
+
+就会出现新的环境了；
+
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202511041333330.png)
