@@ -100,6 +100,12 @@ conda install jupyter notebook ipykernel -y
 python -m ipykernel install --name your_env_name
 ```
 
+删除
+
+```shell
+jupyter kernelspec remove new_torch_env
+```
+
 检查正确将环境加入到jupyter里面
 
 Installed kernelspec jupyer_name  in D:\your_address
