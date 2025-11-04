@@ -13,7 +13,7 @@ Tensor表示张量，表示里面的数据是用张量的表示的。
 TensorFlow是一个通过计算图的形式来表述计算的编程系统，TensorFlow中的每一个数都是计算图上的一个节点，而节点之间的边描述了节点之间的计算关系。
 
 ```python
-# 定义tensor
+# 定义tensor常量（constant）
 v1 = tf.constant(1,name='v1',shape=(),dtype=tf.float32)
 v2 = tf.constant(2,name='v2',shape=(),dtype=tf.float32)
 
