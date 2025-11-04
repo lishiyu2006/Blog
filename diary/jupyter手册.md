@@ -94,13 +94,19 @@ jupyter core : 4.12.0 jupyter-notebook : 6.5.4 ipykernel : 6.23.1 ...（其他�
 conda install jupyter notebook ipykernel -y
 ```
 
+删除这三个库
+
+```bash
+conda remove jupyter notebook ipykernel -y
+```
+
 然后，将本地环境导入到jupyter里面
 
 ```python
 python -m ipykernel install --name your_env_name
 ```
 
-删除
+删除那个核
 
 ```shell
 jupyter kernelspec remove new_torch_env
