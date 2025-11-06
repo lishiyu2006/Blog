@@ -125,9 +125,8 @@ with tf.Session() as sess:
 ## 五、copy和clone的区别
 
 #### 浅拷贝：
-如
+如切片 `new_tensor = tensor[:]  tensor.view()` 是视图，新张量与原张量共享存储，修改会相互影响，且无梯度关联；只是一个view
 
-clone是（Tensor 内置方法）：
+#### 深拷贝，clone是Tensor 内置方法）：
 
-深拷贝本质：从底层全部创建立一个副本；
 
