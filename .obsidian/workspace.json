@@ -41,30 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/4.架构/3.卷积接神经网络CNN.md",
+                "file": "LLM/4.架构/1.全连接神经网络FCNN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.卷积接神经网络CNN"
-            }
-          },
-          {
-            "id": "c0b999fa4dacd5d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LLM/2.基础网络组件/嵌入层 Embedding层.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "嵌入层 Embedding层"
+              "title": "1.全连接神经网络FCNN"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -214,12 +200,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c0b999fa4dacd5d9",
+  "active": "500e7b44447e0c31",
   "lastOpenFiles": [
-    "LLM/2.基础网络组件/激活函数.md",
-    "LLM/2.基础网络组件/嵌入层 Embedding层.md",
     "LLM/4.架构/1.全连接神经网络FCNN.md",
+    "LLM/2.基础网络组件/激活函数.md",
     "LLM/4.架构/3.卷积接神经网络CNN.md",
+    "LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
+    "LLM/1.工具(库)/PyTorch.md",
+    "diary/python之禅.md",
+    "LLM/6.外部组件/高斯噪声.md",
+    "project/1.preface.md",
+    "LLM/2.基础网络组件/嵌入层 Embedding层.md",
     "LLM/4.架构/隐式马尔可夫模型HMM（声学模型）.md",
     "LLM/4.架构/Transformer.md",
     "LLM/1.preface.md",
@@ -228,23 +219,18 @@
     "LLM/4.架构/2.循环神经网络RNN.md",
     "LLM/0.食用手册/0.食用手册.md",
     "LLM/0.食用手册",
-    "LLM/1.工具(库)/PyTorch.md",
     "LLM/1.工具(库)/TensorFlow.md",
     "diary/jupyter手册.md",
     "diary/conda.md",
-    "diary/python之禅.md",
     "LLM/5.model应用/AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "question/枚举 and 拉链.md",
     "question/graph.md",
     "LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
-    "project/1.preface.md",
     "question/setdefault.md",
     "question/list.md",
     "question/py面向对象.md",
     "about.md",
     "未命名.canvas",
-    "2025-10-22.md",
-    "question/1.preface.md",
     "logo.png",
     "LLM/6.外部组件",
     "LLM/3.预训练模型/图像分割模型",
