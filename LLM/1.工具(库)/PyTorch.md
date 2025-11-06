@@ -125,8 +125,31 @@ with tf.Session() as sess:
 ## 五、copy和clone的区别
 
 #### 浅拷贝：
+
 如切片 `new_tensor = tensor[:]  tensor.view()` 是视图，新张量与原张量共享存储，修改会相互影响，且无梯度关联；只是一个view
 
+```python
+x = torch.tensor([1.0, 2.0])
+# 切片拷贝是浅拷贝，共享内存
+y = x[:]  
+y[0] = 100  # 修改 y，x 也会变
+print(x)  # 输出 tensor([100.,   2.])
+print(y)  # 输出 tensor([100.,   2.])
+```
 #### 深拷贝，clone是Tensor 内置方法）：
 
+```python
+x = torch.tensor([1.0, 2.0], requires_grad=True)
+# 手动组合：detach() 脱离计算图 + clone() 深拷贝
+y = x.detach().clone()  
+y[0] = 100  # 修改 y，x 不变
+print(x)  # 输出 tensor([1., 2.], requires_grad=True)
+print(y)  # 输出 tensor([100.,   2.])（无 requires_grad）
+
+# 反向传播：y 脱离计算图，不影响 x
+z = x ** 2
+z.backward()
+print(x.grad)  # 输出 tensor([2., 4.])
+print(y.grad)  # 输出 None（无梯度追踪）
+```
 
