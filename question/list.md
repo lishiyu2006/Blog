@@ -15,3 +15,12 @@ s2 = pd.Series(['C', 'D'])
 all_genes = pd.concat([s1, s2], ignore_index=True)
 # 结果: ['A', 'B', 'C', 'D']
 ```
+
+~~~python
+
+squares = [1,2,3]
+squares += [4,5,6]
+squares
+
+#结果：[1,2,3,4,5,6]
+~~~
