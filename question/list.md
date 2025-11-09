@@ -20,7 +20,6 @@ all_genes = pd.concat([s1, s2], ignore_index=True)
 
 squares = [1,2,3]
 squares += [4,5,6]
-squares
 
-#结果：[1,2,3,4,5,6]
+#squares结果是：[1,2,3,4,5,6]
 ~~~
