@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/字符串.md",
+                "file": "question/并行计算.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "字符串"
+              "title": "并行计算"
             }
           },
           {
@@ -230,8 +230,8 @@
   },
   "active": "ad7c8e35ea5aa47a",
   "lastOpenFiles": [
-    "question/并行计算.md",
     "question/字符串.md",
+    "question/并行计算.md",
     "未命名",
     "question/list.md",
     "question/graph.md",
