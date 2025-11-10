@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/矩阵.md",
+                "file": "question/graph.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "矩阵"
+              "title": "graph"
             }
           },
           {
@@ -258,9 +258,9 @@
   },
   "active": "291fc1f92c467070",
   "lastOpenFiles": [
+    "question/矩阵.md",
     "question/范数.md",
     "question/并行计算.md",
-    "question/矩阵.md",
     "question/list.md",
     "question/字符串.md",
     "未命名",
