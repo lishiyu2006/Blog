@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/graph.md",
+                "file": "question/枚举 and 拉链.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "graph"
+              "title": "枚举 and 拉链"
             }
           },
           {
@@ -258,13 +258,14 @@
   },
   "active": "291fc1f92c467070",
   "lastOpenFiles": [
-    "question/矩阵.md",
-    "question/范数.md",
     "question/并行计算.md",
+    "question/范数.md",
+    "question/矩阵.md",
+    "question/setdefault.md",
+    "question/graph.md",
     "question/list.md",
     "question/字符串.md",
     "未命名",
-    "question/graph.md",
     "question/py面向对象.md",
     "LLM/1.工具(库)/PyTorch.md",
     "2025-10-22.md",
@@ -286,7 +287,6 @@
     "LLM/0.食用手册/0.食用手册.md",
     "LLM/0.食用手册",
     "diary/jupyter手册.md",
-    "diary/conda.md",
     "未命名.canvas",
     "logo.png",
     "LLM/6.外部组件",
