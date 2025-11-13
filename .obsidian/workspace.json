@@ -173,6 +173,7 @@
   },
   "active": "99682d5a849cac74",
   "lastOpenFiles": [
+    "README.md",
     "LLM/2.基础网络组件/嵌入层 Embedding层.md",
     "LLM/3.预训练模型/预训练语言模型/BERT.md",
     "LLM/3.预训练模型/跨模态预训练模型/CLIP.md",
@@ -201,7 +202,6 @@
     "question/字符串.md",
     "未命名",
     "question/py面向对象.md",
-    "LLM/1.工具(库)/PyTorch.md",
     "LLM/5.model应用",
     "LLM/0.食用手册",
     "LLM/6.外部组件",
