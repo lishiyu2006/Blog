@@ -158,6 +158,6 @@ embedding的又一个作用体现了。对低维的数据进行升维时，可�
 
 ##### 1.简介:
 
-[BERT](): 更适合需要双向上下文理解的任务，通过微调获得高性能
+[BERT](https://lishiyu2006.github.io/Blog/LLM/3.%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/%E9%A2%84%E8%AE%AD%E7%BB%83%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/BERT.html): 更适合需要双向上下文理解的任务，通过微调获得高性能
 
-[LLM](): 在零样本场景和生成任务中表现优越，但需设计合理的Embedding提取策略
+[LLM](https://lishiyu2006.github.io/Blog/LLM/3.%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B/%E9%A2%84%E8%AE%AD%E7%BB%83%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/LLM.html): 在零样本场景和生成任务中表现优越，但需设计合理的Embedding提取策略
