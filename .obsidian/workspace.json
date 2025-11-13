@@ -78,23 +78,6 @@
             }
           },
           {
-            "id": "291fc1f92c467070",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "未命名.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "未命名"
-            }
-          },
-          {
             "id": "3960e5ff03b25f97",
             "type": "leaf",
             "state": {
@@ -109,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -259,10 +242,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "291fc1f92c467070",
+  "active": "caa35189c5c49db7",
   "lastOpenFiles": [
-    "2025-10-22.md",
     "未命名.canvas",
+    "2025-10-22.md",
     "about.md",
     "index.md",
     "logo.png",
