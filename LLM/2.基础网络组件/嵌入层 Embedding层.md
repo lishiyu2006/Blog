@@ -19,7 +19,7 @@
 
 或：我 从 何 处 来 要 到 哪 里 去 ——>>>[0 1 7 8 4 5 6 2 3 9]
 
-但是，我们看看one-hot编码方式（详见：https://blog.csdn.net/tengyuan93/article/details/78930285）
+但是，我们看看one-hot编码方式（[详见](https://blog.csdn.net/tengyuan93/article/details/78930285))
 
 他把上面的编码方式弄成这样
 
