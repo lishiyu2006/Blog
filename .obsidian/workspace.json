@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/jupyter手册.md",
+                "file": "未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "jupyter手册"
+              "title": "未命名"
             }
           }
         ]
@@ -173,9 +173,11 @@
   },
   "active": "99682d5a849cac74",
   "lastOpenFiles": [
-    "LLM/3.预训练模型/预训练语言模型/LLM.md",
     "README.md",
+    "未命名.md",
     "LLM/2.基础网络组件/嵌入层 Embedding层.md",
+    "diary/jupyter手册.md",
+    "LLM/3.预训练模型/预训练语言模型/LLM.md",
     "LLM/3.预训练模型/预训练语言模型/BERT.md",
     "LLM/3.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/4.架构/未命名.md",
@@ -185,7 +187,6 @@
     "project/1.preface.md",
     "LLM/0.食用手册/0.食用手册.md",
     "diary/python之禅.md",
-    "diary/jupyter手册.md",
     "diary/conda.md",
     "diary/1.preface.md",
     "index.md",
@@ -200,7 +201,6 @@
     "question/矩阵.md",
     "question/graph.md",
     "question/list.md",
-    "question/字符串.md",
     "未命名",
     "LLM/5.model应用",
     "LLM/0.食用手册",
