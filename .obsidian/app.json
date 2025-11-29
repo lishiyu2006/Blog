@@ -11,5 +11,6 @@
     "node_modules/@chevrotain/",
     "node_modules/@antfu/"
   ],
-  "promptDelete": false
+  "promptDelete": false,
+  "vimMode": false
 }
