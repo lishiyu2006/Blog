@@ -13,4 +13,27 @@
 1. $ = \\( 都是公式标记;
 2. \\\[ 是表示整行公式;
 3. \\cap 是并集
-4. 
+eg.格式:
+~~~latex
+\begin{equation}
+B(g,c) = 
+\begin{cases} 
+1 & \text{if } U(g,c) > 0, \\
+0 & \text{otherwise}.
+\end{cases}
+\end{equation}
+~~~
+## 2025.11.25
+### figure:
+格式:
+~~~latex
+% --- Figure 1 (Full width / Spanning two columns) ---
+\begin{figure}[hbt!]
+    \centering
+    % Ensure the filename matches exactly (Figure1.eps or Figure1.pdf)
+    \includegraphics[width=\linewidth]{Figure1}
+    \caption{Overview of the ScAR algorithm and validation framework. (A) Data processing workflow: The gene expression matrix is binarized to compute association metrics via matrix operations. (B) The multi-dimensional validation strategy: ScAR-derived networks are validated against known PPI networks, regulatory networks, and biological pathways. (C) Statistical verification methods used to assess the significance of the association metrics.}
+    \label{fig:1} % Label for cross-referencing
+\end{figure}
+~~~
+
