@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "project/overleaf.md",
+                "file": "question/py面向对象.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "overleaf"
+              "title": "py面向对象"
             }
           }
         ],
@@ -202,8 +202,8 @@
   },
   "active": "296e71e479c9cd7f",
   "lastOpenFiles": [
-    "project/论文写作.md",
     "project/overleaf.md",
+    "project/论文写作.md",
     "project/1.preface.md",
     "未命名",
     "tool/1.preface.md",
