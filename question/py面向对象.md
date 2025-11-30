@@ -17,9 +17,55 @@ class Person():
 p = Person("Alice")
 p.greet()  # 调用时无需传递 self，输出：Hello, I'm Alice
 ```
-插入面向过程
+插入和面向过程的对比
+~~~python
+#过程
+# 定义数据
+hero_hp = 100
+monster_hp = 50
+
+# 定义过程
+def hero_attack_monster(hero_hp, monster_hp):
+    monster_hp = monster_hp - 10
+    print("怪物掉血了")
+    return monster_hp
+
+# 游戏开始
+monster_hp = hero_attack_monster(hero_hp, monster_hp)
 
 
+
+
+#对象
+class Hero:
+    def __init__(self, name, attack_power):
+        self.name = name
+        self.attack_power = attack_power
+
+    def attack(self, enemy):
+        # 英雄只需要调用敌人的“受伤”方法
+        # 英雄不需要知道敌人怎么扣血（也许敌人有护盾，有闪避，那是敌人的事）
+        print(f"{self.name} 发起攻击！")
+        enemy.take_damage(self.attack_power)
+
+class Monster:
+    def __init__(self, hp):
+        self.hp = hp
+
+    def take_damage(self, damage):
+        self.hp -= damage
+        if self.hp <= 0:
+            print("怪物死亡！")
+        else:
+            print(f"怪物剩余血量: {self.hp}")
+
+# 游戏开始
+luban = Hero("鲁班七号", 20)
+buff = Monster(50)
+
+luban.attack(buff) # 鲁班.攻击(Buff怪)
+~~~
+及过程是将每一个方法记下来，，而对象是将共同的记下来，再对不同的单独调用共同的内容
 
 ## 2.其他用法:
 ### (1).类方法（用 `@classmethod` 装饰）
