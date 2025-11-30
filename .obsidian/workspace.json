@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "question/py面向对象.md",
+                "file": "diary/conda.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "py面向对象"
+              "title": "conda"
             }
           }
         ],
@@ -202,6 +202,7 @@
   },
   "active": "296e71e479c9cd7f",
   "lastOpenFiles": [
+    "question/py面向对象.md",
     "project/overleaf.md",
     "project/论文写作.md",
     "project/1.preface.md",
@@ -230,7 +231,6 @@
     "logo.png",
     "LLM/4.架构/2.循环神经网络RNN.md",
     "question/枚举 and 拉链.md",
-    "question/并行计算.md",
     "LLM/5.model应用",
     "LLM/0.食用手册",
     "LLM/6.外部组件",
