@@ -153,3 +153,4 @@ print(x.grad)  # 输出 tensor([2., 4.])
 print(y.grad)  # 输出 None（无梯度追踪）
 ```
 
+## 六、偏导

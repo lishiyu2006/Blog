@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "diary/conda.md",
+                "file": "LLM/1.工具(库)/PyTorch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conda"
+              "title": "PyTorch"
             }
           }
         ],
@@ -202,6 +202,7 @@
   },
   "active": "296e71e479c9cd7f",
   "lastOpenFiles": [
+    "diary/conda.md",
     "question/py面向对象.md",
     "project/overleaf.md",
     "project/论文写作.md",
@@ -221,7 +222,6 @@
     "question/setdefault.md",
     "LLM/0.食用手册/0.食用手册.md",
     "diary/python之禅.md",
-    "diary/conda.md",
     "diary/1.preface.md",
     "index.md",
     "未命名.canvas",

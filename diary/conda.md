@@ -9,8 +9,9 @@ Anaconda是一个包含了conda、Python和超过150个科学包及其依赖项�
 ## 基本操作
 
 看环境
-~~~
-
+~~~bash
+conda env list   #看有什么环境
+conda list    #看当前环境的包
 ~~~
 
 换环境
