@@ -191,7 +191,9 @@ random.shuffle(indices)
 ~~~python
 def data_iter(batch_size,featurn,lable):
 	for i in range(0,num_examples,batch_size)
-		batch-indices = torch.tensor(indeices[i:min(i + batch_size,num_exp)])
+		batch-indices = torch.tensor(indeices[i:min(i + batch_size
+									,num_example)])
+		yield feature[batch_indices],lable[batch_indices]
 
 
 ~~~
