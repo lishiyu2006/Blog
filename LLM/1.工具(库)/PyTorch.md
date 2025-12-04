@@ -148,7 +148,8 @@ print(y)  # 输出 tensor([100.,   2.])（无 requires_grad）
 
 # 反向传播：y 脱离计算图，不影响 x
 z = x ** 2
-z.backward() #因为反向传播相当于是再次计算了一遍完整的过程，所以设置了了这个函数控制s
+z.backward() #因为反向传播相当于是再次计算了一遍完整的过程，所以设置了了这个函数控制是否反向传播，来计算x的偏导也就是属性grad的值
+
 print(x.grad)  # 输出 tensor([2., 4.])
 print(y.grad)  # 输出 None（无梯度追踪）
 ```
@@ -171,4 +172,15 @@ z = u * x
 
 ## 七、loss会计算成标量的原因
 
+在 y = x * x 的时候计算出来一个$loss_i = y - y_i$ 真实值减去预测值
+假设用L2，$loss=1/n ( \sum{loss_i})$  
+如果不用L2,则loss是向量 \[$y-y_i$\]  
 
+## 八、随机打乱list里的值
+
+~~~python
+num_len = len(featurn)#这个特征值的个数
+indices = list(range(num_len))
+
+random.shuffle(indices)
+~~~
