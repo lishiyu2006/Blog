@@ -148,7 +148,7 @@ print(y)  # 输出 tensor([100.,   2.])（无 requires_grad）
 
 # 反向传播：y 脱离计算图，不影响 x
 z = x ** 2
-z.backward()
+z.backward() #因为反向传播相当于是再次计算了一遍完整的过程，所以设置了了这个函数控制s
 print(x.grad)  # 输出 tensor([2., 4.])
 print(y.grad)  # 输出 None（无梯度追踪）
 ```

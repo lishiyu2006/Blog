@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tool/并查集.md",
+                "file": "LLM/1.工具(库)/PyTorch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "并查集"
+              "title": "PyTorch"
             }
           }
         ]
@@ -174,6 +174,9 @@
   "active": "44f1ee3796bd0bf5",
   "lastOpenFiles": [
     "diary/hugging.md",
+    "diary/jupyter手册.md",
+    "diary/python之禅.md",
+    "question/1.preface.md",
     "tool/并查集.md",
     "diary/conda.md",
     "tool/gu.md",
@@ -191,15 +194,12 @@
     "tool/1.preface.md",
     "README.md",
     "LLM/2.基础网络组件/嵌入层 Embedding层.md",
-    "diary/jupyter手册.md",
     "LLM/3.预训练模型/预训练语言模型/LLM.md",
     "LLM/3.预训练模型/预训练语言模型/BERT.md",
     "LLM/3.预训练模型/跨模态预训练模型/CLIP.md",
     "LLM/4.架构/未命名.md",
     "LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "LLM/4.架构/1.全连接神经网络FCNN.md",
-    "question/setdefault.md",
-    "LLM/0.食用手册/0.食用手册.md",
     "未命名.canvas",
     "logo.png",
     "LLM/5.model应用",
