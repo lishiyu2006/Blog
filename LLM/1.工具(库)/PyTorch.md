@@ -194,6 +194,4 @@ def data_iter(batch_size,featurn,lable):
 		batch-indices = torch.tensor(indeices[i:min(i + batch_size
 									,num_example)])
 		yield feature[batch_indices],lable[batch_indices]
-
-
 ~~~
