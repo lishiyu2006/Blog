@@ -187,4 +187,10 @@ indices = list(range(num_len))
 random.shuffle(indices)
 ~~~
 
-## jiu
+## 九、分批训练
+~~~python
+def data_iter(batch_size,featurn,lable):
+	for i in range(0,num_examples,batch)
+
+
+~~~
