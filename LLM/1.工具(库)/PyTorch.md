@@ -190,7 +190,8 @@ random.shuffle(indices)
 ## 九、分批训练
 ~~~python
 def data_iter(batch_size,featurn,lable):
-	for i in range(0,num_examples,batch)
+	for i in range(0,num_examples,batch_size)
+		batch-indices = torch.tensor(indeices[i:min(i + batch_size,num_exp)])
 
 
 ~~~
