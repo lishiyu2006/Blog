@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LLM/1.工具(库)/PyTorch.md",
+                "file": "未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PyTorch"
+              "title": "未命名"
             }
           },
           {
@@ -187,8 +187,8 @@
   },
   "active": "44f1ee3796bd0bf5",
   "lastOpenFiles": [
-    "LLM/4.架构/1.全连接神经网络FCNN.md",
     "LLM/1.工具(库)/PyTorch.md",
+    "LLM/4.架构/1.全连接神经网络FCNN.md",
     "LLM/4.架构/2.循环神经网络RNN.md",
     "diary/hugging.md",
     "diary/jupyter手册.md",
