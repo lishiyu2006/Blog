@@ -97,9 +97,9 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: '此处无任何内容',
-    basePath: '/此处无任何内容/',
-    resolvePath: '/此处无任何内容/',
+    scanStartPath: '前端',
+    basePath: '/前端/',
+    resolvePath: '/前端/',
     rootGroupText: '好玩的东西',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
