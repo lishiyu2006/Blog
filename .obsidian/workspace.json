@@ -22,6 +22,34 @@
             }
           },
           {
+            "id": "33767439d3a82030",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/1.preface.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1.preface"
+            }
+          },
+          {
+            "id": "593562986ac0c646",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "随便吃点/diary/git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git"
+            }
+          },
+          {
             "id": "30fb3001ea021197",
             "type": "leaf",
             "state": {
@@ -35,7 +63,8 @@
               "title": "1.全连接神经网络FCNN"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -67,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "BERT",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -185,46 +214,46 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "44f1ee3796bd0bf5",
+  "active": "593562986ac0c646",
   "lastOpenFiles": [
-    "LLM/1.工具(库)/PyTorch.md",
-    "LLM/4.架构/1.全连接神经网络FCNN.md",
-    "LLM/4.架构/2.循环神经网络RNN.md",
-    "diary/hugging.md",
-    "diary/jupyter手册.md",
-    "diary/python之禅.md",
-    "question/1.preface.md",
-    "tool/并查集.md",
-    "diary/conda.md",
-    "tool/gu.md",
-    "diary/1.preface.md",
-    "project/论文写作.md",
-    "project/overleaf.md",
-    "node_modules/tabbable/README.md",
-    "about.md",
+    "随便吃点/diary/1.preface.md",
+    "随便吃点/diary/git.md",
+    "前端/1.preface.md",
+    "随便吃点/1.pereface.md",
     "前端.md",
+    "about.md",
+    "前端",
+    "随便吃点",
+    "随便吃点/LLM/1.工具(库)/PyTorch.md",
+    "随便吃点/LLM/4.架构/1.全连接神经网络FCNN.md",
+    "随便吃点/LLM/4.架构/2.循环神经网络RNN.md",
+    "随便吃点/diary/hugging.md",
+    "随便吃点/diary/jupyter手册.md",
+    "随便吃点/diary/python之禅.md",
+    "随便吃点/question/1.preface.md",
+    "随便吃点/tool/并查集.md",
+    "随便吃点/diary/conda.md",
+    "tool/gu.md",
+    "随便吃点/project/论文写作.md",
+    "随便吃点/project/overleaf.md",
+    "node_modules/tabbable/README.md",
     "index.md",
-    "question/py面向对象.md",
-    "project/1.preface.md",
-    "未命名",
-    "tool/1.preface.md",
+    "随便吃点/question/py面向对象.md",
+    "随便吃点/project/1.preface.md",
+    "随便吃点/tool/1.preface.md",
     "README.md",
-    "LLM/2.基础网络组件/嵌入层 Embedding层.md",
-    "LLM/3.预训练模型/预训练语言模型/LLM.md",
-    "LLM/3.预训练模型/预训练语言模型/BERT.md",
-    "LLM/3.预训练模型/跨模态预训练模型/CLIP.md",
-    "LLM/4.架构/未命名.md",
+    "随便吃点/LLM/2.基础网络组件/嵌入层 Embedding层.md",
+    "随便吃点/LLM/3.预训练模型/预训练语言模型/LLM.md",
     "未命名.canvas",
     "logo.png",
-    "LLM/5.model应用",
-    "LLM/0.食用手册",
-    "LLM/6.外部组件",
-    "LLM/3.预训练模型/图像分割模型",
+    "随便吃点/LLM/5.model应用",
+    "随便吃点/LLM/0.食用手册",
+    "随便吃点/LLM/6.外部组件",
+    "随便吃点/LLM/3.预训练模型/图像分割模型",
     "LLM/4.预训练模型/预训练语言模型",
-    "LLM/3.预训练模型",
-    "LLM/2.基础网络组件",
+    "随便吃点/LLM/3.预训练模型",
+    "随便吃点/LLM/2.基础网络组件",
     "LLM/2.模型框架",
-    "LLM/3.预训练模型/跨模态预训练模型",
     "【哲风壁纸】守岸-鸣潮.png"
   ]
 }

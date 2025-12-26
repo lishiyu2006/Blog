@@ -45,11 +45,8 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: 'LLM', link: '/LLM/1.preface' },
-      { text: '好玩的东西', link: '/project/1.preface' },
-      { text: '**', link: '/diary/1.preface' },
-      { text: '工具', link: '/tool/1.preface' },
-      { text: 'py', link: '/question/1.preface' },
+      { text: '随便吃点', link: '/随便吃点/1.preface' },
+      { text: '好玩的东西', link: '/前端/1.preface' },
       { text: '主页', link: '/' }
     ],
 
@@ -89,10 +86,10 @@ const baseVitePressConfig = {
 const sidebarConfigs = [
   {
     documentRootPath: '/', // 使用 '/' 表示文档根目录
-    scanStartPath: 'LLM',
-    basePath: '/LLM/',
-    resolvePath: '/LLM/',
-    rootGroupText: '紧跟时代',
+    scanStartPath: '随便吃点',
+    basePath: '/随便吃点/',
+    resolvePath: '/随便吃点/',
+    rootGroupText: '随便吃点',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
@@ -100,43 +97,10 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: 'project',
-    basePath: '/project/',
-    resolvePath: '/project/',
+    scanStartPath: '此处无任何内容',
+    basePath: '/此处无任何内容/',
+    resolvePath: '/此处无任何内容/',
     rootGroupText: '好玩的东西',
-    removePrefixAfterOrdering: true,
-    prefixSeparator: '.',
-    collapsed: true,
-    collapseDepth: 2,
-  },
-  {
-    documentRootPath: '/',
-    scanStartPath: 'diary',
-    basePath: '/diary/',
-    resolvePath: '/diary/',
-    rootGroupText: '杂谈',
-    removePrefixAfterOrdering: true,
-    prefixSeparator: '.',
-    collapsed: true,
-    collapseDepth: 2,
-  },
-  {
-    documentRootPath: '/',
-    scanStartPath: 'tool',
-    basePath: '/tool/',
-    resolvePath: '/tool/',
-    rootGroupText: '快捷键',
-    removePrefixAfterOrdering: true,
-    prefixSeparator: '.',
-    collapsed: true,
-    collapseDepth: 2,
-  }, 
-  {
-    documentRootPath: '/', // 使用 '/' 表示文档根目录
-    scanStartPath: 'question',
-    basePath: '/question/',
-    resolvePath: '/question/',
-    rootGroupText: 'xx',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
