@@ -15,7 +15,7 @@ border: 1px soild black;
 ~~~
 #### #border-radius边框圆角
 4个属性：border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius
-示例（类似于时钟模型，但是方向是左上->右上->右下->左下）
+示例1（类似于时钟模型，但是方向是左上->右上->右下->左下）
 ~~~css
 /*表示所有边框的的角的边长都是10*/
 border-radius： 10px;
@@ -26,4 +26,16 @@ border-radius： 10px 20px 30px;
 /**/
 border-radius： 10px 20px 30px 40px;
 ~~~
-注意：这里的2个值和上面的不一样，这个是对角线是一对的，而上面是左右
+注意：这里的2个值和上面的不一样，这个是对角线是一对的，而上面是左右是一对；
+示例2：
+~~~css
+/* /表示是4个属性的前半和后半 */
+border-radius: 4px 3px 6px / 2px 4px;
+/*
+表示：
+border-top-left-radius: 4px 2px; 
+border-top-right-radius: 3px 4px; 对角线
+border-bottom-right-radius: 6px 2px; 
+border-bottom-left-radius: 3px 4px; 对角线
+*/
+~~~
