@@ -13,9 +13,11 @@
 /*边框宽度 边框类型 边框颜色*/
 border: 1px soild black;
 ~~~
+
 #### #border-radius边框圆角
 4个属性：border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius
-示例1（类似于时钟模型，但是方向是左上->右上->右下->左下）
+说明：类似于时钟模型，但是方向是左上->右上->右下->左下
+示例1
 ~~~css
 /*表示所有边框的的角的边长都是10*/
 border-radius： 10px;
@@ -38,4 +40,15 @@ border-top-right-radius: 3px 4px; 对角线
 border-bottom-right-radius: 6px 2px; 
 border-bottom-left-radius: 3px 4px; 对角线
 */
+~~~
+
+#### #background背景
+8个属性：background-color,nackground-image,background-repeat,background-position,background-attchment,background-size,background-origin,background-clip
+说明：值的顺序比较灵活，但又遵循一定的习惯，background-size一定要跟在background-position后面，用/分隔
+示例：
+~~~css
+/*包含照片和颜色的f'z*/
+
+
+
 ~~~

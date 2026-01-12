@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#border-radius边框圆角",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
