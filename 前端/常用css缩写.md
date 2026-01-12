@@ -76,8 +76,8 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 .main {
   /* flex-grow: 2;
      flex-shrink: 1;
-     flex-basis: 300px; */
-  flex: 2 1 300px;
+     flex-basis: auto; */
+  flex: 2 1 auto;
 }
 ~~~
 
@@ -97,27 +97,23 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 说明：可用于flexbox和grid
 示例：
 ~~~css
+gap: 20px; /* 行和列间距都是 20px */
+gap: 10px 20px; /* 行间距 10px, 列间距 20px */
 ~~~
 
-##### #place-items
+##### #place-items(用的少)
 2个属性：align-content，justify-content
 说明：在grid布局中用于同时设置垂直和水平对齐
 示例：
 ~~~css
+/* 简便的居中方法 */
+place-items: center; /* 等同于 align-items: center; justify-items: center; */
 ~~~
 
-##### #place-content
+##### #place-content(同上)
 2个属性：align-content，justify-content
 说明：用于对齐grid容器内的所有网格
 示例：
 ~~~css
+place-content: center;
 ~~~
-
-
-
-
-
-
-
-
-
