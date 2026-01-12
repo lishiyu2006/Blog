@@ -47,8 +47,27 @@ border-bottom-left-radius: 3px 4px; 对角线
 说明：值的顺序比较灵活，但又遵循一定的习惯，background-size一定要跟在background-position后面，用/分隔
 示例：
 ~~~css
-/*包含照片和颜色的f'z*/
-
-
-
+/*包含照片和颜色的复杂背景*/
+background:
+	red
+	url('image.png')
+	no-repeat
+	fixed
+	center / cover; 
+	
+/**/
+/*注意中间没有分号，最后面才有*/
 ~~~
+
+#### #text文本
+6个属性：font-style,font-variant,font-weight,font-size,line-height,font-family
+说明：严格的，font-size和font-family是必须的，line-height必须跟在font-height后面，用/分隔
+语法：\[style] \[variant] \[weight] size\[/line-height] \[family]
+示例
+~~~css
+
+/* 包含粗体和斜体 */ 
+font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
+~~~
+
+
