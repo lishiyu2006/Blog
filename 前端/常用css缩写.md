@@ -54,8 +54,6 @@ background:
 	no-repeat
 	fixed
 	center / cover; 
-	
-/**/
 /*注意中间没有分号，最后面才有*/
 ~~~
 
@@ -75,7 +73,14 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 说明：这个是flexbox的核心缩写，用于子项目
 示例
 ~~~css
+.main {
+  /* flex-grow: 2;
+     flex-shrink: 1;
+     flex-basis: 300px; */
+  flex: 2 1 300px;
+}
 ~~~
+
 ##### #flex-flow
 2个属性：flex-direction，flex-wrap
 说明：用于flex容器，同时设置主轴方向和换行方向
@@ -88,9 +93,26 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 
 #### #grid布局
 ##### #gap
-2个属性：
+2个属性：row-gap，column-gap
+说明：可用于flexbox和grid
+示例：
+~~~css
+~~~
+
 ##### #place-items
+2个属性：align-content，justify-content
+说明：在grid布局中用于同时设置垂直和水平对齐
+示例：
+~~~css
+~~~
+
 ##### #place-content
+2个属性：align-content，justify-content
+说明：用于对齐grid容器内的所有网格
+示例：
+~~~css
+~~~
+
 
 
 
