@@ -69,5 +69,33 @@ background:
 /* 包含粗体和斜体 */ 
 font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 ~~~
+#### #flexbox布局
+##### #flex
+3个属性：flex-grow，flex-shrink，flex-basis
+说明：这个是flexbox的核心缩写，用于子项目
+示例
+~~~css
+~~~
+##### #flex-flow
+2个属性：flex-direction，flex-wrap
+说明：用于flex容器，同时设置主轴方向和换行方向
+~~~css
+.main{
+	/*主轴为行，允许换行，否则交换轴拉伸，主轴不拉伸*/
+	flex-flow: row wrap;
+}
+~~~
+
+#### #grid布局
+##### #gap
+2个属性：
+##### #place-items
+##### #place-content
+
+
+
+
+
+
 
 
