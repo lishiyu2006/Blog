@@ -13,6 +13,17 @@
 /*边框宽度 边框类型 边框颜色*/
 border: 1px soild black;
 ~~~
-#### #border-radio边框圆角
-
-
+#### #border-radius边框圆角
+4个属性：border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius
+示例（类似于时钟模型，但是方向是左上->右上->右下->左下）
+~~~css
+/*表示所有边框的的角的边长都是10*/
+border-radius： 10px;
+/*表示左上和右下是10px*/
+border-radius： 10px 20px;
+/**/
+border-radius： 10px 20px 30px;
+/**/
+border-radius： 10px 20px 30px 40px;
+~~~
+注意：这里的2个值和上面的不一样，这个是对角线是一对的，而上面是左右
