@@ -67,6 +67,56 @@ background:
 /* 包含粗体和斜体 */ 
 font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 ~~~
+
+#### #list-style 列表样式
+3个属性：`list-style-type`, `list-style-position`, `list-style-image`
+说明：常用于清除 `<ul>` 或 `<li>` 的默认圆点。
+示例：
+```CSS
+/* 最常见的用法：清除默认样式 */
+list-style: none;
+
+/* 详细用法：方块类型 悬挂缩进 */
+list-style: square inside;
+```
+
+#### #outline 轮廓
+3个属性：`outline-width`, `outline-style`, `outline-color`
+说明：与 `border` 类似，但不占据空间（不影响盒子模型布局），常用于 `input` 聚焦时的显示。
+示例：
+```CSS
+outline: 2px solid blue;
+outline: none; /* 清除聚焦时的蓝色外边框 */
+```
+
+#### #columns 多栏布局
+2个属性：`column-width`, `column-count`
+说明：用于将文本内容像报纸一样分成多列。
+示例：
+```CSS
+/* 设置每栏最小宽度为 200px，并自动分成最大列数 */
+columns: 200px;
+
+/* 设置固定为 3 列 */
+columns: 3;
+
+/* 混合：最小宽度 250px，且最多 3 列 */
+columns: 250px 3;
+```
+
+#### #inset 绝对定位缩写 (现代 CSS 推荐)
+4个属性：`top`, `right`, `bottom`, `left`
+说明：这是一个非常棒的新属性，它是 `top`, `right`, `bottom`, `left` 的缩写，逻辑遵循你提到的时钟模型。
+示例：
+```CSS
+/* 将一个定位元素拉满整个父容器 */
+position: absolute;
+inset: 0; /* 等同于 top:0; right:0; bottom:0; left:0; */
+
+/* 时钟模型应用 */
+inset: 10px 20px 30px 40px; 
+```
+
 #### #flexbox布局
 ##### #flex
 3个属性：flex-grow，flex-shrink，flex-basis
@@ -118,15 +168,6 @@ place-items: center; /* 等同于 align-items: center; justify-items: center; */
 place-content: center;
 ~~~
 
-##### #animation动画帧
-8个属性：name，duration，timing-function，delay，iteration-count，direction，fill-mode，play-state
-说明：可以省略部分属性
-示例：
-~~~css
-animation: move 2s infinite alternate ease-in-out;
-/*mave是名字，时间是2喵，动画次数是重复，方向是交替，运动路线是ease-in-out*/
-~~~
-
 #### #transition过渡
 4个属性：transition-property, transition-duration, transition-timing-function, transition-delay
 说明：这是最常用的动画缩写，用于设置元素状态变化时的平滑过渡。
@@ -139,79 +180,11 @@ transition: all 0.3s ease-in-out 0.1s;
 transition: transform 0.2s;
 ```
 
-
-#### #list-style 列表样式
-
-
-3个属性：`list-style-type`, `list-style-position`, `list-style-image`
-常用于清除 `<ul>` 或 `<li>` 的默认圆点。
-说明：
+##### #animation动画帧
+8个属性：name，duration，timing-function，delay，iteration-count，direction，fill-mode，play-state
+说明：可以省略部分属性
 示例：
-
-CSS
-
-```
-/* 最常见的用法：清除默认样式 */
-list-style: none;
-
-/* 详细用法：方块类型 悬挂缩进 */
-list-style: square inside;
-```
-
-### 3. #outline 轮廓
-
-与 `border` 类似，但不占据空间（不影响盒子模型布局），常用于 `input` 聚焦时的显示。
-
-- **3个属性**：`outline-width`, `outline-style`, `outline-color`
-    
-- **示例**：
-    
-
-CSS
-
-```
-outline: 2px solid blue;
-outline: none; /* 清除聚焦时的蓝色外边框 */
-```
-
-### 4. #columns 多栏布局
-
-用于将文本内容像报纸一样分成多列。
-
-- **2个属性**：`column-width`, `column-count`
-    
-- **示例**：
-    
-
-CSS
-
-```
-/* 设置每栏最小宽度为 200px，并自动分成最大列数 */
-columns: 200px;
-
-/* 设置固定为 3 列 */
-columns: 3;
-
-/* 混合：最小宽度 250px，且最多 3 列 */
-columns: 250px 3;
-```
-
-### 5. #inset 绝对定位缩写 (现代 CSS 推荐)
-
-这是一个非常棒的新属性，它是 `top`, `right`, `bottom`, `left` 的缩写，逻辑遵循你提到的**时钟模型**。
-
-- **对应属性**：`top`, `right`, `bottom`, `left`
-    
-- **示例**：
-    
-
-CSS
-
-```
-/* 将一个定位元素拉满整个父容器 */
-position: absolute;
-inset: 0; /* 等同于 top:0; right:0; bottom:0; left:0; */
-
-/* 时钟模型应用 */
-inset: 10px 20px 30px 40px; 
-```
+~~~css
+animation: move 2s infinite alternate ease-in-out;
+/*mave是名字，时间是2喵，动画次数是重复，方向是交替，运动路线是ease-in-out*/
+~~~
