@@ -92,36 +92,32 @@
     <!-- 记得把你的 logo 图片放到 public 文件夹下 -->
     <img src="/logo.png" alt="Lizzy的头像" class="profile-avatar">
 <!-- 个人介绍 -->
-<div class="profile-info">
-  <h1>Myraica</h1>
-  <p>大二在读</p>
-  <p>主攻方向: 前端</p>
-</div>
-
-
+    <div class="profile-info">
+      <h1>Myraica</h1>
+      <p>大二在读</p>
+      <p>主攻方向: 前端</p>
+    </div>
   </div>
-
   <!-- 技术栈部分 -->
   <div class="content-section">
     <h2>技术栈</h2>
-<div class="skill-category">
-  <strong>常用语言:</strong>
-  <span class="tech-icons">
-    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  </span>
-</div>
-<div class="skill-category">
-  <strong>前端开发:</strong>
-  <span class="tech-icons">
-    <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue">
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS">
-	<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-	<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-	<img src="https://img.shields.io/badge/Element_Plus-409EFF?style=for-the-badge&logo=element-plus&logoColor=white" alt="ElementPlus">
-
-</span>
-</div>
-
+    <div class="skill-category">
+      <strong>常用语言:</strong>
+      <span class="tech-icons">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+      </span>
+    </div>
+    <div class="skill-category">
+      <strong>前端开发:</strong>
+      <span class="tech-icons">
+        <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue">
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+        <img src="https://img.shields.io/badge/Element_Plus-409EFF?style=for-the-badge&logo=element-plus&logoColor=white" alt="ElementPlus">
+      </span>
+    </div>
+  </div>
  <!-- 我的兴趣 -->
   <div class="content-section">
     <h2>我的兴趣</h2>
