@@ -70,7 +70,7 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 #### #flexbox布局
 ##### #flex
 3个属性：flex-grow，flex-shrink，flex-basis
-说明：这个是flexbox的核心缩写，用于子项目
+说明：这个是flexbox的核心缩写，用于**子项目**
 示例
 ~~~css
 .main {
@@ -83,7 +83,7 @@ font: italic bold 1rem/1.6 "Helvetica Neue", Arial, sans-serif;
 
 ##### #flex-flow
 2个属性：flex-direction，flex-wrap
-说明：用于flex容器，同时设置主轴方向和换行方向
+说明：用于**flex容器**，同时设置主轴方向和换行方向
 ~~~css
 .main{
 	/*主轴为行，允许换行，否则交换轴拉伸，主轴不拉伸*/
@@ -117,3 +117,25 @@ place-items: center; /* 等同于 align-items: center; justify-items: center; */
 ~~~css
 place-content: center;
 ~~~
+
+##### #animation动画帧
+8个属性：name，duration，timing-function，delay，iteration-count，direction，fill-mode，play-state
+说明：可以省略部分
+示例：
+~~~css
+animation: move 2s infinite alternate ease-in-out;
+/*mave是名字，时间是2喵，动画次数是重复，方向是交替，运动路线是ease-in-out*/
+~~~
+
+#### #transition过渡
+4个属性：transition-property, transition-duration, transition-timing-function, transition-delay
+语法：property duration timing-function delay
+示例：
+~~~CSS
+/* 属性名 持续时间 动画曲线 延迟时间 */
+transition: all 0.3s ease-in-out 0.1s;
+
+/* 也可以只写前两个 */
+transition: transform 0.2s;
+
+

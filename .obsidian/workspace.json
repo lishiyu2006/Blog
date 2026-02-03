@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#flexbox布局",
+                "query": "tag:#place-content",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,7 +187,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d7f88d33e4a88304",
+  "active": "ef7251f68372f0d5",
   "lastOpenFiles": [
     "前端/1.preface.md",
     "前端/常用css缩写.md",
