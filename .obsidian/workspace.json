@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/常用css缩写.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用css缩写"
+              "title": "index"
             }
           }
         ],
@@ -202,8 +202,11 @@
   },
   "active": "f19fb208050ae6d5",
   "lastOpenFiles": [
-    "前端/神秘小知识.md",
+    "4749bb847d50d0f0204e4c72ec09bdb7.png",
+    "logo.png",
+    "README.md",
     "前端/常用css缩写.md",
+    "前端/神秘小知识.md",
     "前端/1.preface.md",
     "前端.md",
     "随便吃点/diary/1.preface.md",
@@ -228,10 +231,7 @@
     "index.md",
     "随便吃点/question/py面向对象.md",
     "随便吃点/project/1.preface.md",
-    "随便吃点/tool/1.preface.md",
-    "README.md",
     "未命名.canvas",
-    "logo.png",
     "随便吃点/LLM/5.model应用",
     "随便吃点/LLM/0.食用手册",
     "随便吃点/LLM/6.外部组件",
