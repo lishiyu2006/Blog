@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/常用css缩写.md",
+                "file": "随便吃点/diary/git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用css缩写"
+              "title": "git"
             }
           }
         ],
@@ -188,11 +188,11 @@
   },
   "active": "d7f88d33e4a88304",
   "lastOpenFiles": [
+    "前端/常用css缩写.md",
     "index.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "logo.png",
     "README.md",
-    "前端/常用css缩写.md",
     "前端/神秘小知识.md",
     "前端/1.preface.md",
     "前端.md",
