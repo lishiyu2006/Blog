@@ -102,12 +102,6 @@
   <div class="content-section">
     <h2>技术栈</h2>
     <div class="skill-category">
-      <strong>常用语言:</strong>
-      <span class="tech-icons">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-      </span>
-    </div>
-    <div class="skill-category">
       <strong>前端开发:</strong>
       <span class="tech-icons">
         <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue">
@@ -118,6 +112,7 @@
       </span>
     </div>
   </div>
+
  <!-- 我的兴趣 -->
   <div class="content-section">
     <h2>我的兴趣</h2>
