@@ -45,8 +45,8 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: '随便吃点', link: '/随便吃点/1.preface' },
-      { text: '好玩的东西', link: '/前端/1.preface' },
+      { text: '过往', link: '/随便吃点/1.preface' },
+      { text: '现在', link: '/前端/1.preface' },
       { text: '主页', link: '/' }
     ],
 
@@ -89,7 +89,7 @@ const sidebarConfigs = [
     scanStartPath: '随便吃点',
     basePath: '/随便吃点/',
     resolvePath: '/随便吃点/',
-    rootGroupText: '随便吃点',
+    rootGroupText: '过往',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
@@ -100,7 +100,7 @@ const sidebarConfigs = [
     scanStartPath: '前端',
     basePath: '/前端/',
     resolvePath: '/前端/',
-    rootGroupText: '好玩的东西',
+    rootGroupText: '现在',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
