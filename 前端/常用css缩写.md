@@ -1,6 +1,6 @@
 ## 常用css属性缩写
-### 对于和盒子四边相关的模型（margin和padding等）遵循时钟模型，即顺时针，上->左->右->下
-- 4个值：上 左 右 下
+### 对于和盒子四边相关的模型（margin和padding等）遵循时钟模型，即顺时针，上->右->下->左
+- 4个值：上 右 下 左
 - 3个值：上 左右 下
 - 2个值：上下 左右
 - 1个值：上左右下
@@ -28,7 +28,7 @@ border-radius： 10px 20px 30px;
 /**/
 border-radius： 10px 20px 30px 40px;
 ~~~
-注意：这里的2个值和上面的不一样，这个是对角线是一对的，而上面是左右是一对；
+注意：这里的2个值和上面的不一样，这个是对角线是一对的，第一个值控制“左上 & 右下”，第二个值控制“右上 & 左下”；
 示例2：
 ~~~css
 /* /表示是4个属性的前半和后半 */
@@ -36,9 +36,9 @@ border-radius: 4px 3px 6px / 2px 4px;
 /*
 表示：
 border-top-left-radius: 4px 2px; 
-border-top-right-radius: 3px 4px; 对角线
+border-top-right-radius: 3px 4px; 左上&右下
 border-bottom-right-radius: 6px 2px; 
-border-bottom-left-radius: 3px 4px; 对角线
+border-bottom-left-radius: 3px 4px; 右上&左下
 */
 ~~~
 
@@ -120,7 +120,7 @@ place-content: center;
 
 ##### #animation动画帧
 8个属性：name，duration，timing-function，delay，iteration-count，direction，fill-mode，play-state
-说明：可以省略部分
+说明：可以省略部分属性
 示例：
 ~~~css
 animation: move 2s infinite alternate ease-in-out;
@@ -129,13 +129,89 @@ animation: move 2s infinite alternate ease-in-out;
 
 #### #transition过渡
 4个属性：transition-property, transition-duration, transition-timing-function, transition-delay
-语法：property duration timing-function delay
+说明：这是最常用的动画缩写，用于设置元素状态变化时的平滑过渡。
 示例：
-~~~CSS
+```CSS
 /* 属性名 持续时间 动画曲线 延迟时间 */
 transition: all 0.3s ease-in-out 0.1s;
 
 /* 也可以只写前两个 */
 transition: transform 0.2s;
+```
 
 
+#### #list-style 列表样式
+
+
+3个属性：`list-style-type`, `list-style-position`, `list-style-image`
+常用于清除 `<ul>` 或 `<li>` 的默认圆点。
+说明：
+示例：
+
+CSS
+
+```
+/* 最常见的用法：清除默认样式 */
+list-style: none;
+
+/* 详细用法：方块类型 悬挂缩进 */
+list-style: square inside;
+```
+
+### 3. #outline 轮廓
+
+与 `border` 类似，但不占据空间（不影响盒子模型布局），常用于 `input` 聚焦时的显示。
+
+- **3个属性**：`outline-width`, `outline-style`, `outline-color`
+    
+- **示例**：
+    
+
+CSS
+
+```
+outline: 2px solid blue;
+outline: none; /* 清除聚焦时的蓝色外边框 */
+```
+
+### 4. #columns 多栏布局
+
+用于将文本内容像报纸一样分成多列。
+
+- **2个属性**：`column-width`, `column-count`
+    
+- **示例**：
+    
+
+CSS
+
+```
+/* 设置每栏最小宽度为 200px，并自动分成最大列数 */
+columns: 200px;
+
+/* 设置固定为 3 列 */
+columns: 3;
+
+/* 混合：最小宽度 250px，且最多 3 列 */
+columns: 250px 3;
+```
+
+### 5. #inset 绝对定位缩写 (现代 CSS 推荐)
+
+这是一个非常棒的新属性，它是 `top`, `right`, `bottom`, `left` 的缩写，逻辑遵循你提到的**时钟模型**。
+
+- **对应属性**：`top`, `right`, `bottom`, `left`
+    
+- **示例**：
+    
+
+CSS
+
+```
+/* 将一个定位元素拉满整个父容器 */
+position: absolute;
+inset: 0; /* 等同于 top:0; right:0; bottom:0; left:0; */
+
+/* 时钟模型应用 */
+inset: 10px 20px 30px 40px; 
+```
