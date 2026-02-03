@@ -1,5 +1,6 @@
 ## 常用css属性缩写
 ### 对于和盒子四边相关的模型（margin和padding等）遵循时钟模型，即顺时针，上->右->下->左
+
 - 4个值：上 右 下 左
 - 3个值：上 左右 下
 - 2个值：上下 左右
@@ -7,7 +8,9 @@
 ### 其他
 #### #border边框
 3个属性：border-width，border-style,border-color
+
 说明：三个属性可以随意调整位置
+
 示例：
 ~~~css
 /*边框宽度 边框类型 边框颜色*/
@@ -16,7 +19,9 @@ border: 1px soild black;
 
 #### #border-radius边框圆角
 4个属性：border-top-left-radius,border-top-right-radius,border-bottom-right-radius,border-bottom-left-radius
+
 说明：类似于时钟模型，但是方向是左上->右上->右下->左下
+
 示例1
 ~~~css
 /*表示所有边框的的角的边长都是10*/
@@ -29,6 +34,7 @@ border-radius： 10px 20px 30px;
 border-radius： 10px 20px 30px 40px;
 ~~~
 注意：这里的2个值和上面的不一样，这个是对角线是一对的，第一个值控制“左上 & 右下”，第二个值控制“右上 & 左下”；
+
 示例2：
 ~~~css
 /* /表示是4个属性的前半和后半 */
@@ -44,6 +50,7 @@ border-bottom-left-radius: 3px 4px; 右上&左下
 
 #### #background背景
 8个属性：background-color,nackground-image,background-repeat,background-position,background-attchment,background-size,background-origin,background-clip
+
 说明：值的顺序比较灵活，但又遵循一定的习惯，background-size一定要跟在background-position后面，用/分隔
 示例：
 ~~~css
