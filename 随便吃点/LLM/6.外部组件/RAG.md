@@ -1,6 +1,6 @@
 # RAG
 RAG（Retrieval-Augmented Generation，检索增强生成）是一种结合信息检索与语言生成的技术，常用于提升大语言模型（LLM）在特定领域或知识密集型任务中的准确性与相关性。下面我将带你一步步实操一个简单的 RAG 系统。
-## 🧰 一、RAG 基本原理
+## 一、RAG 基本原理
 
 RAG = **检索器（Retriever）** + **生成器（Generator）**
 
@@ -11,7 +11,7 @@ RAG = **检索器（Retriever）** + **生成器（Generator）**
 
 ---
 
-## 🛠️ 二、实操环境准备
+## 二、实操环境准备
 
 我们将使用 Python + 开源工具搭建一个本地 RAG 系统。
 
@@ -28,7 +28,7 @@ pip install pypdf  # 如果要读取 PDF
 
 ---
 
-## 📚 三、准备知识库（示例）
+## 三、准备知识库（示例）
 
 假设我们有一个本地知识库：`data/` 目录下有几个 `.txt` 文件，内容是关于“人工智能发展史”的片段。
 
@@ -40,7 +40,7 @@ pip install pypdf  # 如果要读取 PDF
 
 ---
 
-## 🔍 四、构建 RAG 系统（代码）
+## 四、构建 RAG 系统（代码）
 
 ### 步骤 1：加载文档
 ```python
@@ -68,7 +68,7 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorstore = FAISS.from_documents(chunks, embeddings)
 #chunk 会被封装成 Document 对象，并作为向量库的基本存储和检索单元。
 ```
-### 🔍 常用模型推荐
+### 常用模型推荐
 
 | 用途       | 模型名称                                                          | 特点                                   |
 | -------- | ------------------------------------------------------------- | ------------------------------------ |
@@ -135,7 +135,7 @@ for doc in result["source_documents"]:
 
 ---
 
-## 🌐 五、进阶建议
+## 五、进阶建议
 
 1. **使用更强大的 LLM**：如 LLaMA-2、ChatGLM、Qwen（需 GPU）
 2. **使用 Chroma 或 Weaviate** 替代 FAISS，支持持久化
@@ -144,7 +144,7 @@ for doc in result["source_documents"]:
 
 ---
 
-## 🧪 六、完整示例（简化版）
+## 六、完整示例（简化版）
 
 你也可以用 LangChain + OpenAI 快速体验（需 API Key）：
 
