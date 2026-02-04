@@ -69,7 +69,7 @@ embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 vectorstore = FAISS.from_documents(chunks, embeddings)
 #chunk 会被封装成 Document 对象，并作为向量库的基本存储和检索单元。
 ```
-### 工具库 vs 完整系统
+#### 数据库选择：工具库 vs 完整系统
 
 - **FAISS (Facebook AI Similarity Search):** 它是由 Meta 开发的一个**高性能索引库**。它专注于如何在内存中以极快的速度进行向量相似度搜索。它不具备存储原始文档、元数据过滤、用户权限管理或网络接口等功能。
     
