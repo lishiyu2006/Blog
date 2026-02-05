@@ -34,8 +34,7 @@ git push # 新版GitHub默认分支是main，旧版是master，若报错就加�
 例下载dify
 ~~~bash
 d:
+cd /software/dify
 # 克隆代码仓库
 git clone https://github.com/langgenius/dify.git
-# 进入 docker 部署目录
-cd dify/docker
 ~~~
