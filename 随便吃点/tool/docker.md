@@ -1,6 +1,26 @@
 # docker
 ## windows
 
+dcker的软件是默认在c盘的一个特殊的轻量linux里面WSL，在助眠软件
+
+查看当前镜像
+
+~~~bash
+docker images
+~~~
+
+停止镜像
+~~~bash
+docker stop my-chroma
+~~~
+
+删除镜像
+~~~bash
+docker rm my-chroma
+~~~
+
+
+
 让某个东西运行某个端口上
 
 例：下载运行chroma
