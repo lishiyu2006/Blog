@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随便吃点/tool/git.md",
+                "file": "随便吃点/tool/docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "docker"
             }
           }
         ],
@@ -188,6 +188,7 @@
   },
   "active": "d7f88d33e4a88304",
   "lastOpenFiles": [
+    "随便吃点/tool/git.md",
     "随便吃点/tool/docker.md",
     "随便吃点/tool/1.preface.md",
     "随便吃点/tool/python之禅.md",
@@ -200,7 +201,6 @@
     "随便吃点/LLM/6.外部组件/RAG.md",
     "随便吃点/LLM/2.基础网络组件/嵌入层 Embedding层.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
-    "随便吃点/tool/git.md",
     "前端/常用css缩写.md",
     "index.md",
     "logo.png",

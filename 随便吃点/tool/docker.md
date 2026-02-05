@@ -1,6 +1,12 @@
 # docker
 ## windows
 
+展示正在运行的容器
+
+~~~bash
+docker ps
+~~~
+
 dcker的软件是默认在c盘的一个特殊的轻量linux里面WSL，在桌面软件docker desktop里面的设置可以看见wsl在哪个位置
 
 如果你在界面上没看到这个选项，或者迁移失败，可以使用 WSL 命令手动迁移：
