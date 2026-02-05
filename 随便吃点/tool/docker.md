@@ -23,3 +23,5 @@ docker run -d `     # 1. 在后台运行，别把命令行窗口占用了
 - `E:\software\ai-project\dify-agent` 文件夹里。即使你删了容器，售后知识库的数据也不会丢。
     
 - **`--restart always`**: 保证你重启电脑后，Chroma 会自动启动。
+
+检查chroma是否运行，在浏览器输入：`http://localhost:8000/api/v2/heartbeat` 如果你看到一串类似 `{"nanosecond heartbeat": ...}` 的数字，说明它已经活了。
