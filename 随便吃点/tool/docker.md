@@ -1,7 +1,39 @@
 # docker
 ## windows
 
-dcker的软件是默认在c盘的一个特殊的轻量linux里面WSL，在助眠软件
+dcker的软件是默认在c盘的一个特殊的轻量linux里面WSL，在桌面软件docker desktop里面的设置可以看见wsl在哪个位置
+
+如果你在界面上没看到这个选项，或者迁移失败，可以使用 WSL 命令手动迁移：
+
+1. **彻底关闭 Docker**：在右下角托盘退出 Docker Desktop。
+    
+2. **查看状态**：打开 PowerShell，输入 `wsl -l -v`，确保 `docker-desktop-data` 的状态是 `Stopped`。如果没停止，输入 `wsl --shutdown` 强制关闭。
+    
+3. **导出数据**：将现有的 Docker 数据导出为一个文件（假设存到 D 盘）：
+    
+    PowerShell
+    
+    ```
+    wsl --export docker-desktop-data D:\docker-desktop-data.tar
+    ```
+    
+4. **注销原有的数据**：
+    
+    PowerShell
+    
+    ```
+    wsl --unregister docker-desktop-data
+    ```
+    
+5. **导入到新位置**：将数据导入到你想要存放的目录（例如 `D:\DockerData`）：
+    
+    PowerShell
+    
+    ```
+    wsl --import docker-desktop-data D:\DockerData D:\docker-desktop-data.tar --version 2
+    ```
+    
+6. **重启 Docker**：现在你可以删掉 `D:\docker-desktop-data.tar` 这个临时文件，重新启动 Docker Desktop 即可。
 
 查看当前镜像
 

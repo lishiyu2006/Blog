@@ -30,3 +30,12 @@ git remote rm 【仓库名】 # 删除名为origin的远程关联
 ~~~bash
 git push # 新版GitHub默认分支是main，旧版是master，若报错就加上git push -u origin master
 ~~~
+
+例下载dify
+~~~bash
+d:
+# 克隆代码仓库
+git clone https://github.com/langgenius/dify.git
+# 进入 docker 部署目录
+cd dify/docker
+~~~
