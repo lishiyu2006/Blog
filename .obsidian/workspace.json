@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/js/转换类型.md",
+                "file": "前端/js/js基础.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "转换类型"
+              "title": "js基础"
             }
           }
         ]
@@ -173,6 +173,7 @@
   },
   "active": "4ae90ac5d6b3118a",
   "lastOpenFiles": [
+    "前端/js/转换类型.md",
     "随便吃点/diary/行为准则.md",
     "随便吃点/diary/1.preface.md",
     "随便吃点/tool/jupyter手册.md",
@@ -198,7 +199,6 @@
     "随便吃点/LLM/6.外部组件/RAG.md",
     "随便吃点/LLM/6.外部组件/高斯噪声.md",
     "随便吃点/LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
-    "随便吃点/LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
     "未命名",
     "前端/js",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
