@@ -1,6 +1,6 @@
 推荐[李沐老师的课程](https://zh.d2l.ai/) 
 
-# 基础
+# PyTorch基础
 ## 一、Graph计算图——TensorFlow的计算模型
 
 计算图是TensorFlow中最基本的一个概念，TensorFlow中的所有计算都会被转化为计算图上的节点，依据节点中传递的值，进行数值的“Flow”。

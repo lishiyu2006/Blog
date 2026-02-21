@@ -1,5 +1,5 @@
 # dify搭建agent
-### 1. RAG 基础与核心价值
+## 1. RAG 基础与核心价值
 
 - **定义**：RAG (Retrieval-Augmented Generation) 通过检索外部知识库增强大模型的生成能力。
     
@@ -22,11 +22,11 @@
     4. **生成 (Generate)**：将检索到的片段作为上下文输入LLM，生成答案。
         
 
-### 2. RAG 技术进阶 (Advanced RAG & Modular RAG)
+## 2. RAG 技术进阶 (Advanced RAG & Modular RAG)
 
 课程详细讲解了为了克服朴素RAG的局限性而引入的高级技术，分为三个阶段：
 
-#### A. 预检索阶段 (Pre-Retrieval)
+### A. 预检索阶段 (Pre-Retrieval)
 
 - **查询重写 (Query Rewriting)**
     
@@ -65,7 +65,7 @@
     - **逻辑**：根据问题类型（如：摘要类、细节类、对比类），决定调用哪个检索器，或者去哪个知识库（如：去SQL查数据还是去向量库查文档）。
         
 
-#### B. 检索阶段 (Retrieval) & 索引优化
+### B. 检索阶段 (Retrieval) & 索引优化
 
 - **索引策略**：
     
@@ -120,7 +120,7 @@
         - **公式**：Score = 1 / (k + rank_i)，排名越靠前，得分越高。
             
 
-#### C. 后检索阶段 (Post-Retrieval)
+### C. 后检索阶段 (Post-Retrieval)
 
 - **重排序 (Rerank)**
     
@@ -141,14 +141,14 @@
     - **方法**：使用工具（如LLMLingua）识别并删除prompt中对输出贡献度低的token，或者过滤掉无关的句子，只保留核心信息。
         
 
-### 3. 代码实战与框架 (LangChain & LlamaIndex)
+## 3. 代码实战与框架 (LangChain & LlamaIndex)
 
 - **LangChain**：基本的RAG链、多重查询Retriever等。
     
 - **LlamaIndex**：从加载数据、构建索引、配置Retriever到Query Engine的全流程。重点展示了如何通过代码实现**混合检索**和**自定义融合算法**。
     
 
-### 4. Embedding 模型与微调 (Fine-tuning)
+## 4. Embedding 模型与微调 (Fine-tuning)
 
 深入到了模型层面，讲解了Embedding的原理及如何优化：
 
@@ -173,7 +173,7 @@
     - **目的**：让通用Embedding模型适应特定垂直领域（如医疗、法律）的专业术语，显著提升检索效果。：
         
 
-### 5. 重排序技术 (Rerank) —— RAG 的“精修师”
+## 5. 重排序技术 (Rerank) —— RAG 的“精修师”
 
 深入讲解了重排序技术的原理、流派及微调方法，这是提升RAG准确率的关键步骤。
 
@@ -204,7 +204,7 @@
     - 了如何基于特定业务数据（正负样本对）优化 BGE-Reranker，使其更懂业务逻辑。
         
 
-### 6. 向量数据库内核 (Vector DB) —— RAG 的“海马体”
+## 6. 向量数据库内核 (Vector DB) —— RAG 的“海马体”
 
 课程极其硬核地拆解了向量数据库的底层算法，这在一般教程中很少见。
 
@@ -229,7 +229,7 @@
     - **传统数据库扩展**：pgvector (PostgreSQL插件)、Elasticsearch (支持向量但在高维性能上弱于专用库)、Redis。
         
 
-### 7. RAG 效果评估 (Evaluation) —— 拒绝“盲目优化”
+## 7. RAG 效果评估 (Evaluation) —— 拒绝“盲目优化”
 
 如何科学地衡量RAG系统的好坏？课程介绍了一套完整的评估体系。
 
@@ -252,7 +252,7 @@
 - **代码实战**：演示了如何在代码中集成Ragas，生成可视化的评估分数表格，指导系统优化方向。
     
 
-### 8. 行业落地经验与架构设计
+## 8. 行业落地经验与架构设计
 
 课程最后拔高到了架构师视角，分享了企业落地的真实经验。
 

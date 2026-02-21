@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5299ff5839d7f0db",
+        "id": "1005bc6751b6d702",
         "type": "tabs",
         "children": [
           {
-            "id": "44f1ee3796bd0bf5",
+            "id": "4ae90ac5d6b3118a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/1.preface.md",
+                "file": "前端/js/转换类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.preface"
-            }
-          },
-          {
-            "id": "d7f88d33e4a88304",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/神秘小知识.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "神秘小知识"
-            }
-          },
-          {
-            "id": "8a015bfe8fa5c055",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/js/js基础.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "js基础"
-            }
-          },
-          {
-            "id": "a5e507fbef84cf58",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "前端/js/取整.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "取整"
+              "title": "转换类型"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#border边框",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,36 +171,36 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a5e507fbef84cf58",
+  "active": "4ae90ac5d6b3118a",
   "lastOpenFiles": [
-    "前端/js/js基础.md",
-    "前端/js/取整.md",
-    "未命名",
-    "前端/常用css缩写.md",
-    "前端/神秘小知识.md",
-    "随便吃点/project/论文写作.md",
-    "随便吃点/project/overleaf.md",
-    "随便吃点/project/dify售后机器人.md",
-    "随便吃点/tool/python之禅.md",
-    "随便吃点/project/1.preface.md",
-    "随便吃点/question/setdefault.md",
-    "随便吃点/1.preface.md",
-    "前端/js.md",
-    "前端/js",
-    "随便吃点/tool/1.preface.md",
-    "随便吃点/tool/conda.md",
-    "随便吃点/tool/docker.md",
-    "随便吃点/tool/git.md",
-    "随便吃点/tool/hugging.md",
+    "随便吃点/diary/行为准则.md",
+    "随便吃点/diary/1.preface.md",
     "随便吃点/tool/jupyter手册.md",
+    "随便吃点/tool/python之禅.md",
+    "随便吃点/tool/hugging.md",
+    "随便吃点/tool/git.md",
+    "随便吃点/tool/docker.md",
+    "随便吃点/tool/conda.md",
+    "随便吃点/tool/1.preface.md",
+    "随便吃点/question/setdefault.md",
+    "随便吃点/question/py面向对象.md",
+    "随便吃点/question/list.md",
+    "随便吃点/question/graph.md",
+    "随便吃点/question/字符串.md",
+    "随便吃点/question/枚举 and 拉链.md",
+    "随便吃点/question/矩阵.md",
     "随便吃点/question/范数.md",
     "随便吃点/question/并行计算.md",
     "随便吃点/question/并查集.md",
-    "随便吃点/LLM/3.预训练模型/预训练语言模型/BERT.md",
-    "随便吃点/LLM/3.预训练模型/预训练语言模型/预训练语言模型（Pre-trained Language Models, PLMs）.md",
-    "随便吃点/LLM/3.预训练模型/图像分割模型/UNet.md",
-    "随便吃点/LLM/3.预训练模型/跨模态预训练模型/CLIP.md",
-    "随便吃点/LLM/2.基础网络组件/嵌入层 Embedding层.md",
+    "随便吃点/project/overleaf.md",
+    "随便吃点/project/dify售后机器人.md",
+    "随便吃点/project/论文写作.md",
+    "随便吃点/LLM/6.外部组件/RAG.md",
+    "随便吃点/LLM/6.外部组件/高斯噪声.md",
+    "随便吃点/LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/stable duffusion.md",
+    "随便吃点/LLM/5.model应用/AIGC（人工智能生成内容）/扩散家族/扩散模型DDPM（deosising diffusion probabilistic models）.md",
+    "未命名",
+    "前端/js",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "logo.png",
     "前端",
