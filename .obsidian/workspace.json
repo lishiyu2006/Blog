@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/js/反转字符.md",
+                "file": "前端/js/js基础.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "反转字符"
+              "title": "js基础"
             }
           }
         ],
@@ -188,10 +188,15 @@
   },
   "active": "8561e65541feca1d",
   "lastOpenFiles": [
-    "前端/js/js基础.md",
-    "前端/js/反转字符.md",
-    "前端/js/取整.md",
     "前端/js/转换类型.md",
+    "前端/js/取整.md",
+    "前端/js/反转字符.md",
+    "前端/神秘小知识.md",
+    "前端/常用css缩写.md",
+    "前端.md",
+    "随便吃点/1.preface.md",
+    "前端/js/js基础.md",
+    "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "随便吃点/diary/行为准则.md",
     "随便吃点/diary/1.preface.md",
     "随便吃点/tool/jupyter手册.md",
@@ -210,13 +215,8 @@
     "随便吃点/question/矩阵.md",
     "随便吃点/question/范数.md",
     "随便吃点/question/并行计算.md",
-    "随便吃点/question/并查集.md",
-    "随便吃点/project/overleaf.md",
-    "随便吃点/project/dify售后机器人.md",
-    "随便吃点/project/论文写作.md",
     "未命名",
     "前端/js",
-    "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "logo.png",
     "前端",
     "随便吃点",
