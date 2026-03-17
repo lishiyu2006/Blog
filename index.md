@@ -34,7 +34,7 @@ features:
     link: /前端/1.preface.md# 点击这个卡片跳转的链接
   - title: 过往
     details: 人生的价值，并不是用时间，而是用深度去衡量的。 —— 列夫·托尔斯泰
-    link: /随便吃点1.preface.md# 点击这个卡片跳转的链接
+    link: /随便吃点/1.preface.md# 点击这个卡片跳转的链接
 ---
 
 <!-- 
