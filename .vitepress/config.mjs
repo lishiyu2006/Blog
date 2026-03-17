@@ -45,8 +45,9 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: '过往', link: '/随便吃点/1.preface' },
-      { text: '现在', link: '/前端/1.preface' },
+      { text: 'ai搭建', link: '/随便吃点/1.preface' },
+      { text: '前端', link: '/前端/1.preface' },
+      { text: 'agent', link: '/agent/1.preface' },
       { text: '主页', link: '/' }
     ],
 

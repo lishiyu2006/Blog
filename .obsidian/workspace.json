@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端.md",
+                "file": "agent/1.preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "前端"
+              "title": "1.preface"
             }
           }
         ]
@@ -173,6 +173,10 @@
   },
   "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
+    "前端/1.preface.md",
+    "agent/1.preface.md",
+    "agent",
+    "前端.md",
     "前端/js/js基础.md",
     "随便吃点/LLM/3.预训练模型/预训练语言模型/预训练语言模型（Pre-trained Language Models, PLMs）.md",
     "随便吃点/LLM/3.预训练模型/预训练语言模型/LLM.md",
@@ -193,14 +197,10 @@
     "前端/js/反转字符.md",
     "前端/神秘小知识.md",
     "前端/常用css缩写.md",
-    "前端.md",
     "随便吃点/1.preface.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "随便吃点/tool/jupyter手册.md",
     "随便吃点/tool/python之禅.md",
-    "随便吃点/tool/hugging.md",
-    "随便吃点/tool/git.md",
-    "未命名",
     "前端/js",
     "logo.png",
     "前端",
