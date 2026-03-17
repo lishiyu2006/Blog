@@ -10,7 +10,7 @@ hero:
   text: "一个知识沉淀的角落" # 主标题下的副标题
   tagline: 凡是过去，皆为序章。——莎士比亚 # 标语
   image: # 你可以在这里放一个 logo 或图片
-    src: https://github.com/lishiyu2006/Blog/blob/master/logo.png?raw=true # 图片路径 (需要你把 logo.png 放到 public 文件夹下)
+    src:/logo.png # 图片路径 (需要你把 logo.png 放到 public 文件夹下)
     alt: 下午茶 Logo
 # --- START: 这是为您新增的样式配置 ---
     # 注意 style 的缩进，它比 image 多2个空格
@@ -30,12 +30,11 @@ hero:
 
 # ----------------- 特色卡片配置 -----------------
 features:
-  - icon: 📖 # 你可以使用 emoji 作为图标
+  - # 你可以使用 emoji 作为图标
     title: 学习日记now
     details: 我走得很慢，但我从不后退。——林肯
     link: /前端/1.preface.md# 点击这个卡片跳转的链接
-  - icon: 🤔
-    title: 过往
+  - title: 过往
     details: 人生的价值，并不是用时间，而是用深度去衡量的。 —— 列夫·托尔斯泰
     link: /随便吃点1.preface.md# 点击这个卡片跳转的链接
 ---
