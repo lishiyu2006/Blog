@@ -1,4 +1,7 @@
 # Claude code agent 教程
+
+## Claude code 就是典型的agent
+
 ## 一、Claude code的读取顺序
 
 Claude Code 采用**四层记忆层级**，优先级从高到低：
@@ -75,4 +78,6 @@ my-project/
 ~~~~
 Claude Code 只在处理对应目录的文件时加载子目录的 CLAUDE.md，节省 token 的同时提供更精准的上下文。
 
+## Auto Memory的原理
 
+AGENt
