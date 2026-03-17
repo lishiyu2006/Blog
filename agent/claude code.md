@@ -1,8 +1,8 @@
-# Claude code agent 教程
+# Claude code 教程
 
-## Claude code 就是典型的agent
+## Claude code 就是 agent
 
-## 一、Claude code的读取顺序
+## 一、Claude code读取的顺序
 
 Claude Code 采用**四层记忆层级**，优先级从高到低：
 
@@ -78,6 +78,41 @@ my-project/
 ~~~~
 Claude Code 只在处理对应目录的文件时加载子目录的 CLAUDE.md，节省 token 的同时提供更精准的上下文。
 
-## Auto Memory的原理
+## 三、Auto Memory的原理
 
-AGENt
+Auto Memory 让 Claude 能够跨会话**自我积累知识**，无需用户手动编写任何内容，以便在new session的时候可以带着上次的记忆。Claude 会在工作过程中自动保存笔记，包括：
+
+- 构建命令和调试技巧
+- 架构决策笔记
+- 代码风格偏好
+- 工作流习惯
+
+Claude 并不会每次都保存内容，它会判断哪些信息在**未来会话中有用**才写入。
+
+### 自动记忆的文件结构
+
+~~~md
+~/.claude/projects/<project>/memory/
+├── MEMORY.md          # 简洁的索引文件，每次会话开始时加载（前 200 行）
+├── debugging.md       # 调试模式的详细笔记
+├── api-conventions.md # API 设计决策
+└── ...                # Claude 创建的其他主题文件
+~~~
+
+<>代表占位符，这里是项目真正的名字，除此之外的都是固定的，这样才能被软件固定读取
+
+### 触发自动记忆
+
+当你告诉 Claude 某些事情时，它会自动保存到记忆中：
+
+```md
+你：始终使用 pnpm，不要用 npm
+你：记住 API 测试需要本地运行 Redis 实例
+你：我们的日期格式统一用 ISO 8601
+```
+
+**想保存到 CLAUDE.md 而不是 Auto Memory？** 明确说明：
+
+```md
+你：把这条加到 CLAUDE.md
+```
