@@ -12,8 +12,7 @@ hero:
   image:
       src: /logo.png
       alt: 下午茶 Logo  # <-- 检查这里！必须比上面的 image 缩进 2 个空格
-      style:            # <-- 同样，这里也要和 alt 对齐
-      border-radius: 24px
+      border-radius: 999px
       # 这两行又比 style 多2个空格
       #mask-image: radial-gradient(circle, black 60%, transparent 100%)
   # 注意 actions 的缩进，它必须和 name, text, image 等对齐

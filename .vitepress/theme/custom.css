@@ -1,0 +1,40 @@
+/* ===== 层级：粒子在最底层，内容在上面 ===== */
+.VPHome,
+.VPNav,
+.VPSidebar,
+.VPContent,
+.VPLocalNav {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Hero 区域背景透明，让粒子穿透 ===== */
+.VPHome .VPHero {
+  background: transparent !important;
+}
+
+/* ===== Hero image 容器：清空默认样式，交给插槽组件控制 ===== */
+.VPHero .image-container {
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+/* 隐藏 VitePress 默认渲染的 .image-src（被插槽替代） */
+.VPHero .image-container .image-src {
+  display: none !important;
+}
+
+/* ===== 导航栏毛玻璃 ===== */
+.VPNav {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* ===== 亮色主题：页面背景略透，增强粒子可见性 ===== */
+:root:not(.dark) .VPHome .name,
+:root:not(.dark) .VPHome .text,
+:root:not(.dark) .VPHome .tagline {
+  text-shadow: 0 1px 8px rgba(255,255,255,0.6);
+}
