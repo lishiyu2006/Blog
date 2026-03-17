@@ -9,12 +9,10 @@ hero:
   name: "下午茶" # 你的网站主标题
   text: "一个知识沉淀的角落" # 主标题下的副标题
   tagline: 凡是过去，皆为序章。——莎士比亚 # 标语
-  image: # 你可以在这里放一个 logo 或图片
-    src:/logo.png # 图片路径 (需要你把 logo.png 放到 public 文件夹下)
-    alt: 下午茶 Logo
-# --- START: 这是为您新增的样式配置 ---
-    # 注意 style 的缩进，它比 image 多2个空格
-    style:
+  image:
+      src: /logo.png
+      alt: 下午茶 Logo  # <-- 检查这里！必须比上面的 image 缩进 2 个空格
+      style:            # <-- 同样，这里也要和 alt 对齐
       border-radius: 24px
       # 这两行又比 style 多2个空格
       #mask-image: radial-gradient(circle, black 60%, transparent 100%)
