@@ -60,3 +60,19 @@ Claude 会分析你的目录结构，自动生成一份针对你的技术栈的 
 - 模糊指令如"遵循最佳实践"或"写干净的代码"
 - 过多通用规则（只放这个项目独有的约定）
 - 过时的信息（建议每月审查一次）
+
+### 子目录 CLAUDE.md
+
+~~~md
+my-project/
+├── CLAUDE.md              # 全局项目规范
+├── src/
+│   └── CLAUDE.md          # 仅在处理 src/ 文件时加载
+├── api/
+│   └── CLAUDE.md          # API 特定约定
+└── tests/
+    └── CLAUDE.md          # 测试特定规则
+~~~~
+Claude Code 只在处理对应目录的文件时加载子目录的 CLAUDE.md，节省 token 的同时提供更精准的上下文。
+
+
