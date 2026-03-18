@@ -62,64 +62,64 @@ RAG = **检索器（Retriever）** + **生成器（Generator）**
 	    - **效果**：适合处理复杂推理问题（例如：“A公司的子公司的CEO是谁？”）。
 	- **混合搜索 (Hybrid Search)**：
 		- **痛点**：向量检索（Dense）对专有名词（如产品型号、人名）匹配效果不如关键词检索（Sparse）。
-	- **方法**：同时执行两路检索：
+		- **方法**：同时执行两路检索：
         - **BM25**：基于关键词匹配的稀疏检索。
         - **Embedding**：基于语义向量的稠密检索。
-    - **结果**：将两路检索的结果合并。
- - **RRF 倒排融合 (Reciprocal Rank Fusion)**
-    - **场景**：当使用了混合检索或多路检索时，如何给结果排序？
-    - **算法**：不依赖具体的相似度分数（因为BM25的分数和向量余弦相似度无法直接比较），而是根据文档在各个列表中的**排名（Rank）**进行加权融合。
-    - **公式**：Score = 1 / (k + rank_i)，排名越靠前，得分越高。
+	    - **结果**：将两路检索的结果合并。
+	 - **RRF 倒排融合 (Reciprocal Rank Fusion)**
+	    - **场景**：当使用了混合检索或多路检索时，如何给结果排序？
+	    - **算法**：不依赖具体的相似度分数（因为BM25的分数和向量余弦相似度无法直接比较），而是根据文档在各个列表中的**排名（Rank）**进行加权融合。
+	    - **公式**：Score = 1 / (k + rank_i)，排名越靠前，得分越高。
 
 #### C. 后检索阶段 (Post-Retrieval)
 
-   - **重排序 (Rerank)**
+- **重排序 (Rerank)**
      - **核心逻辑**：
-       1. 第一轮检索（Retrieve）先粗排，为了速度，召回Top 50或Top 100个片段。
-       2. 第二轮引入**Cross-Encoder模型（Reranker）**，对这50个片段和用户问题进行精细的**逐对打分**。
-       3. 根据Rerank的高精度分数，截取Top 3或Top 5给大模型。
-     - **推荐模型**：BGE-Reranker, Cohere Rerank。
-   - **上下文压缩 (Context Compression)**
-     - **痛点**：召回的内容太长，浪费Token，且无关信息会干扰大模型。
-     - **方法**：使用工具（如LLMLingua）识别并删除prompt中对输出贡献度低的token，或者过滤掉无关的句子，只保留核心信息。
+	    1. 第一轮检索（Retrieve）先粗排，为了速度，召回Top 50或Top 100个片段。
+	    2. 第二轮引入**Cross-Encoder模型（Reranker）**，对这50个片段和用户问题进行精细的**逐对打分**。
+	    3. 根据Rerank的高精度分数，截取Top 3或Top 5给大模型。
+	    - **推荐模型**：BGE-Reranker, Cohere Rerank。
+	- **上下文压缩 (Context Compression)**
+	- **痛点**：召回的内容太长，浪费Token，且无关信息会干扰大模型。
+    - **方法**：使用工具（如LLMLingua）识别并删除prompt中对输出贡献度低的token，或者过滤掉无关的句子，只保留核心信息。
 
-   ### 3. 代码实战与框架 (LangChain & LlamaIndex)
+### 3. 代码实战与框架 (LangChain & LlamaIndex)
 
-   - **LangChain**：基本的RAG链、多重查询Retriever等。
-   - **LlamaIndex**：从加载数据、构建索引、配置Retriever到Query Engine的全流程。重点展示了如何通过代码实现**混合检索**和**自定义融合算法**。
+- **LangChain**：基本的RAG链、多重查询Retriever等。
+- **LlamaIndex**：从加载数据、构建索引、配置Retriever到Query Engine的全流程。重点展示了如何通过代码实现**混合检索**和**自定义融合算法**。
 
-   ### 4. Embedding 模型与微调 (Fine-tuning)
+### 4. Embedding 模型与微调 (Fine-tuning)
 
-   深入到了模型层面，讲解了Embedding的原理及如何优化：
+深入到了模型层面，讲解了Embedding的原理及如何优化：
 
-   - **原理**：介绍了Word2Vec (CBOW, Skip-gram) 的基本原理，解释了Embedding如何将高维稀疏数据转化为低维稠密向量。
-   - **评估 (Evaluation)**：
-     - 介绍了 **MTEB** (Massive Text Embedding Benchmark) 榜单。
-     - 演示了如何使用 InformationRetrievalEvaluator 评估模型的 **MRR (平均倒数排名)** 和 **Hit Rate (命中率)**。
-   - **微调实战**：
-     - **数据准备**：如何构建正负样本对（Anchor, Positive, Negative），以及利用LLM自动生成QA对作为训练数据。
-     - **工具**：
-       1. 使用 **LlamaIndex** 的微调引擎进行快速微调。
-       2. 使用 **HuggingFace AutoTrain** 进行更底层的微调操作。
-     - **目的**：让通用Embedding模型适应特定垂直领域（如医疗、法律）的专业术语，显著提升检索效果。：
+- **原理**：介绍了Word2Vec (CBOW, Skip-gram) 的基本原理，解释了Embedding如何将高维稀疏数据转化为低维稠密向量。
+- **评估 (Evaluation)**：
+	- 介绍了 **MTEB** (Massive Text Embedding Benchmark) 榜单。
+    - 演示了如何使用 InformationRetrievalEvaluator 评估模型的 **MRR (平均倒数排名)** 和 **Hit Rate (命中率)**。
+- **微调实战**：
+    - **数据准备**：如何构建正负样本对（Anchor, Positive, Negative），以及利用LLM自动生成QA对作为训练数据。
+    - **工具**：
+	    1. 使用 **LlamaIndex** 的微调引擎进行快速微调。
+	    2. 使用 **HuggingFace AutoTrain** 进行更底层的微调操作。
+    - **目的**：让通用Embedding模型适应特定垂直领域（如医疗、法律）的专业术语，显著提升检索效果。：
 
-   ### 5. 重排序技术 (Rerank) —— RAG 的“精修师”
+### 5. 重排序技术 (Rerank) —— RAG 的“精修师”
 
-   深入讲解了重排序技术的原理、流派及微调方法，这是提升RAG准确率的关键步骤。
+深入讲解了重排序技术的原理、流派及微调方法，这是提升RAG准确率的关键步骤。
 
-   - **核心原理**：
-     - **Bi-Encoder (双编码器)**：用于检索阶段（Embedding），速度快但精度一般，适合海量数据粗筛。
-     - **Cross-Encoder (交叉编码器)**：用于重排序阶段，将Query和Document拼接输入模型，计算相关性得分。精度极高但计算昂贵，仅适用于对Top-K（如前50条）进行精排。
-   - **技术流派**：
-     - **BERT-based**：如 BGE-Reranker，基于Encoder架构，效果稳健。
-     - **LLM-based**：利用GPT-4等大模型进行排序，方法包括：
-       - **Pointwise**：让LLM给每个文档打分。
-       - **Listwise**：一次性给LLM一堆文档，让其输出排序结果（受限于Context Window）。
-       - **Pairwise**：两两比较（冒泡排序思想），效果好但调用次数多。
-     - **ColBERT**：多向量交互模型，兼顾了双编码器的速度和交叉编码器的精度。
-   - **微调实战**：
-     - 使用 Sentence-Transformers 库对Rerank模型进行微调。
-     - 了如何基于特定业务数据（正负样本对）优化 BGE-Reranker，使其更懂业务逻辑。
+- **核心原理**：
+    - **Bi-Encoder (双编码器)**：用于检索阶段（Embedding），速度快但精度一般，适合海量数据粗筛。
+	- **Cross-Encoder (交叉编码器)**：用于重排序阶段，将Query和Document拼接输入模型，计算相关性得分。精度极高但计算昂贵，仅适用于对Top-K（如前50条）进行精排。
+- **技术流派**：
+    - **BERT-based**：如 BGE-Reranker，基于Encoder架构，效果稳健。
+    - **LLM-based**：利用GPT-4等大模型进行排序，方法包括：
+	    - **Pointwise**：让LLM给每个文档打分。
+	    - **Listwise**：一次性给LLM一堆文档，让其输出排序结果（受限于Context Window）。
+    - **Pairwise**：两两比较（冒泡排序思想），效果好但调用次数多。
+    - **ColBERT**：多向量交互模型，兼顾了双编码器的速度和交叉编码器的精度。
+- **微调实战**：
+    - 使用 Sentence-Transformers 库对Rerank模型进行微调。
+    - 了如何基于特定业务数据（正负样本对）优化 BGE-Reranker，使其更懂业务逻辑。
 
    ### 6. 向量数据库内核 (Vector DB) —— RAG 的“海马体”
 
