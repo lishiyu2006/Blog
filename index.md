@@ -10,7 +10,7 @@ hero:
   text: "一个知识沉淀的角落" # 主标题下的副标题
   tagline: 凡是过去，皆为序章。——莎士比亚 # 标语
   image:
-      src: /logo.png
+      src: https://github.com/lishiyu2006/Blog/blob/master/logo.png
       alt: 下午茶 Logo  # <-- 检查这里！必须比上面的 image 缩进 2 个空格
       border-radius: 999px
       # 这两行又比 style 多2个空格
