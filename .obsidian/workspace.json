@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/MCP.md",
+                "file": "agent/agent skill.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MCP"
+              "title": "agent skill"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/MCP.md",
+                "file": "agent/agent skill.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MCP 的大纲"
+              "title": "agent skill 的大纲"
             }
           }
         ],
@@ -187,9 +187,10 @@
   },
   "active": "60abeac70485a897",
   "lastOpenFiles": [
+    "agent/MCP.md",
+    "agent/agent skill.md",
     "agent/Claude/claude code记忆系统.md",
     "agent/Claude/Claude code MCP.md",
-    "agent/MCP.md",
     "agent/1.preface.md",
     "前端/js/函数（是否生成新数组）.md",
     "随便吃点/LLM/6.外部组件/RAG.md",
@@ -214,7 +215,6 @@
     "随便吃点/diary/行为准则.md",
     "随便吃点/diary/1.preface.md",
     "随便吃点/LLM/1.工具(库)/TensorFlow.md",
-    "前端/js/转换类型.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "前端/js",
     "logo.png",
