@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/agent skill.md",
+                "file": "随便吃点/tool/conda.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "agent skill"
+              "title": "conda"
             }
           }
         ],
@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 432.5049705505371
+    "width": 200
   },
   "right": {
     "id": "72433f0975ca11af",
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/agent skill.md",
+                "file": "随便吃点/tool/conda.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "agent skill 的大纲"
+              "title": "conda 的大纲"
             }
           }
         ],
@@ -187,8 +187,10 @@
   },
   "active": "60abeac70485a897",
   "lastOpenFiles": [
-    "agent/MCP.md",
+    "随便吃点/tool/python之禅.md",
+    "随便吃点/1.preface.md",
     "agent/agent skill.md",
+    "agent/MCP.md",
     "agent/Claude/claude code记忆系统.md",
     "agent/Claude/Claude code MCP.md",
     "agent/1.preface.md",
@@ -213,8 +215,6 @@
     "随便吃点/LLM/1.工具(库)/PyTorch.md",
     "随便吃点/LLM/0.食用手册/0.食用手册.md",
     "随便吃点/diary/行为准则.md",
-    "随便吃点/diary/1.preface.md",
-    "随便吃点/LLM/1.工具(库)/TensorFlow.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "前端/js",
     "logo.png",
