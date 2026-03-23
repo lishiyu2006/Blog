@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Claude/claude code记忆系统.md",
+                "file": "随便吃点/tool/docker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "claude code记忆系统"
+              "title": "docker"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Claude/claude code记忆系统.md",
+                "file": "随便吃点/tool/docker.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "claude code记忆系统 的大纲"
+              "title": "docker 的大纲"
             }
           }
         ],
@@ -187,15 +187,15 @@
   },
   "active": "60abeac70485a897",
   "lastOpenFiles": [
+    "随便吃点/tool/conda.md",
+    "agent/Claude/claude code记忆系统.md",
     "随便吃点/tool/docker.md",
     "随便吃点/tool/git.md",
     "随便吃点/tool/未命名.md",
-    "随便吃点/tool/conda.md",
     "随便吃点/tool/python之禅.md",
     "随便吃点/1.preface.md",
     "agent/agent skill.md",
     "agent/MCP.md",
-    "agent/Claude/claude code记忆系统.md",
     "agent/Claude/Claude code MCP.md",
     "agent/1.preface.md",
     "前端/js/函数（是否生成新数组）.md",

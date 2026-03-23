@@ -1,6 +1,12 @@
 # docker
 ## windows
 
+## 完全关闭wsl
+
+~~~bash
+wsl --shutdown
+~~~
+
 ### 展示正在运行的容器
 
 ~~~bash
