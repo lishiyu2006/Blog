@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随便吃点/tool/docker.md",
+                "file": "前端/js/API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docker"
+              "title": "API"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "随便吃点/tool/docker.md",
+                "file": "前端/js/API.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "docker 的大纲"
+              "title": "API 的大纲"
             }
           }
         ],
@@ -187,9 +187,11 @@
   },
   "active": "60abeac70485a897",
   "lastOpenFiles": [
+    "前端/js/取整.md",
+    "前端/js/API.md",
+    "随便吃点/tool/docker.md",
     "随便吃点/tool/conda.md",
     "agent/Claude/claude code记忆系统.md",
-    "随便吃点/tool/docker.md",
     "随便吃点/tool/git.md",
     "随便吃点/tool/未命名.md",
     "随便吃点/tool/python之禅.md",
@@ -213,8 +215,6 @@
     "随便吃点/LLM/4.架构/2.循环神经网络RNN.md",
     "随便吃点/LLM/4.架构/1.全连接神经网络FCNN.md",
     "随便吃点/LLM/4.架构/3.卷积接神经网络CNN.md",
-    "随便吃点/LLM/4.架构/隐式马尔可夫模型HMM（声学模型）.md",
-    "随便吃点/LLM/4.架构/Transformer.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "前端/js",
     "logo.png",
