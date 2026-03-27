@@ -8,5 +8,7 @@
     "node_modules/"
   ],
   "promptDelete": false,
-  "vimMode": false
+  "vimMode": false,
+  "showLineNumber": true,
+  "strictLineBreaks": true
 }
