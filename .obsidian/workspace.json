@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5049705505371,
-    "collapsed": true
+    "width": 224.5049705505371
   },
   "right": {
     "id": "72433f0975ca11af",
@@ -186,7 +185,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +200,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8c015fa3dc3f1c6d",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
     "前端/js/bind引起的数据不匹配.md",
     "前端/js/转换类型.md",
