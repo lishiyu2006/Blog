@@ -106,6 +106,11 @@ docker-compose up -d
 
 Docker Compose 会在**当前文件夹**下疯狂寻找一个名为 **`docker-compose.yaml`**（或 `.yml`）的文件。
 
+进入容器
+~~~
+docker exec -it mysql_container mariadb -u root -p
+~~~
+
 除此之外，还有
 
 - **`docker-compose stop`**：
