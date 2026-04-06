@@ -14,7 +14,7 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
   const { createApp } = Vue
-  #结构函数结构
+  //结构函数结构
   
   const appObj = {
     data() {
