@@ -30,3 +30,19 @@
 
 ## 文本插值
 
+~~~vue
+<span>Message: {{ msg }}</span>
+~~~
+
+
+## 响应式变量
+
+~~~vue
+const appObj = {  
+  data() {  
+    return {  
+      inputText: "",  
+    };  
+  },  
+};
+~~~
