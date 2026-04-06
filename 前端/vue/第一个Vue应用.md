@@ -10,16 +10,18 @@
 <div id="app">{{ message }}</div>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
 <script>
   const { createApp } = Vue
   #结构函数结构
-  createApp({
+  
+  const appObj = {
     data() {
       return {
         message: 'Hello Vue!'
       }
     }
-  }).mount('#app')
+  }
+  
+  createApp(appObj).mount('#app')
 </script>
 ~~~
