@@ -27,3 +27,6 @@
   createApp(appObj).mount('#app')
 </script>
 ~~~
+
+## 文本插值
+
