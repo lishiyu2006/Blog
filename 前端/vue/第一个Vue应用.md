@@ -7,7 +7,9 @@
 这个方法是存在于vue里的
 
 ~~~vue
-<div id="app">{{ message }}</div>
+<div id="app">
+	<input v-model="message" />
+</div>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
