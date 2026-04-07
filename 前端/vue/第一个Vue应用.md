@@ -6,7 +6,7 @@
 
 这个方法是存在于vue里的
 
-~~~vue
+~~~html
 <div id="app">
 	<input v-model="message" />
 </div>
