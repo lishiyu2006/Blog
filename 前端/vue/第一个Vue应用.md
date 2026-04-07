@@ -37,7 +37,7 @@
 
 ## 响应式变量
 
-~~~vue
+~~~js
 const appObj = {  
   data() {  
     return {  
