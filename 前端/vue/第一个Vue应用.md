@@ -19,6 +19,8 @@
   const appObj = {
     data() {
       return {
+        /*在没有挂载之前，这里只是一个对象中间的方法中的数值，
+        在挂载之后，就会变成一个响应式的变量初始值*/
         message: 'Hello Vue!'
       }
     }
