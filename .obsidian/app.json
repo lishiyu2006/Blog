@@ -10,5 +10,6 @@
   "promptDelete": false,
   "vimMode": false,
   "showLineNumber": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "tabSize": 2
 }
