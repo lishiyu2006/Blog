@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue/用法.md",
+                "file": "随便吃点/diary/近期出现的事情.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "用法"
+              "title": "近期出现的事情"
             }
           }
         ],
@@ -230,8 +230,9 @@
   },
   "active": "4e30ece9ac9b4f30",
   "lastOpenFiles": [
-    "前端/vue/第一个Vue应用.md",
+    "随便吃点/diary/1.preface.md",
     "前端/vue/用法.md",
+    "前端/vue/第一个Vue应用.md",
     "前端/vue/Vue介绍.md",
     "前端/1.preface.md",
     "前端/vue",
@@ -258,7 +259,6 @@
     "前端.md",
     "前端/js/js基础.md",
     "随便吃点/LLM/3.预训练模型/预训练语言模型/预训练语言模型（Pre-trained Language Models, PLMs）.md",
-    "随便吃点/LLM/3.预训练模型/预训练语言模型/LLM.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "前端/js",
     "logo.png",
