@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/1.preface.md",
+                "file": "前端/vue/用法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.preface"
+              "title": "用法"
             }
           },
           {
@@ -187,6 +187,8 @@
   },
   "active": "8c015fa3dc3f1c6d",
   "lastOpenFiles": [
+    "前端/vue/vue项目.md",
+    "前端/1.preface.md",
     "前端/vue/用法.md",
     "随便吃点/diary/近期出现的事情.md",
     "随便吃点/diary/1.preface.md",
@@ -194,7 +196,6 @@
     "前端/vue/Vue介绍.md",
     "前端/js/转换类型.md",
     "agent/1.preface.md",
-    "前端/1.preface.md",
     "前端/vue",
     "随便吃点/tool/docker.md",
     "随便吃点/tool/git.md",
@@ -215,7 +216,6 @@
     "agent/Claude",
     "agent",
     "前端.md",
-    "前端/js/js基础.md",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "前端/js",
     "logo.png",
