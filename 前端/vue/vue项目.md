@@ -12,3 +12,6 @@ pnpm create vue@latest
 
 还会有文件assets放css在components放主程序里面拆分的小组件
 
+## app.vue的修改
+
+加上
