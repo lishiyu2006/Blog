@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "050901532a713649",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/vue/6.API.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "6.API"
+            }
+          },
+          {
             "id": "463bc9729b7d7524",
             "type": "leaf",
             "state": {
@@ -35,7 +49,8 @@
               "title": "第一个Vue应用"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,11 +200,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8c015fa3dc3f1c6d",
+  "active": "050901532a713649",
   "lastOpenFiles": [
+    "前端/vue/5.比赛.md",
+    "前端/vue/6.API.md",
+    "未命名",
     "前端/vue/4.vue项目.md",
     "前端/vue/3.用法.md",
-    "前端/vue/5.比赛.md",
     "前端/js/2.API.md",
     "前端/js/js函数/bind引起的数据不匹配.md",
     "前端/js/js函数/转换类型.md",
@@ -214,7 +231,6 @@
     "随便吃点/tool/python之禅.md",
     "随便吃点/1.preface.md",
     "agent/agent skill.md",
-    "agent/MCP.md",
     "agent/Claude",
     "agent",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
@@ -225,7 +241,6 @@
     "未命名.canvas",
     "随便吃点/LLM/5.model应用",
     "随便吃点/LLM/0.食用手册",
-    "随便吃点/LLM/6.外部组件",
     "【哲风壁纸】守岸-鸣潮.png"
   ]
 }
