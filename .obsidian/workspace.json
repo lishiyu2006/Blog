@@ -27,12 +27,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue/4.Vue项目.md",
+                "file": "随便吃点/tool/hugging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.Vue项目"
+              "title": "hugging"
+            }
+          },
+          {
+            "id": "1e9044353890e4ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linux/linux起点.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "linux起点"
+            }
+          },
+          {
+            "id": "11d31157fb5eccd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端/vue/1.Vue介绍.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1.Vue介绍"
             }
           },
           {
@@ -50,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -200,15 +228,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "050901532a713649",
+  "active": "11d31157fb5eccd3",
   "lastOpenFiles": [
-    "前端/vue/5.比赛.md",
-    "前端/vue/6.API.md",
-    "前端/vue/4.Vue项目.md",
-    "前端/vue/3.其他函数用法.md",
     "前端/vue/2.第一个Vue应用.md",
+    "前端/vue/3.其他函数用法.md",
+    "前端/vue/6.API.md",
+    "前端/vue/5.比赛.md",
+    "linux/linux指令.md",
+    "linux/linux使用手册.md",
+    "linux/linux起点.md",
+    "linux/shell.md",
+    "随便吃点/tool/conda.md",
+    "linux",
+    "随便吃点/tool/未命名.md",
+    "随便吃点/tool/hugging.md",
+    "其他",
+    "前端/vue/4.Vue项目.md",
     "前端/vue/1.Vue介绍.md",
-    "未命名",
     "前端/js/2.API.md",
     "前端/js/js函数/bind引起的数据不匹配.md",
     "前端/js/js函数/转换类型.md",
@@ -224,13 +260,6 @@
     "前端/vue",
     "随便吃点/tool/docker.md",
     "随便吃点/tool/git.md",
-    "前端/js/js函数/取整.md",
-    "随便吃点/tool/conda.md",
-    "agent/Claude/claude code记忆系统.md",
-    "随便吃点/tool/未命名.md",
-    "随便吃点/tool/python之禅.md",
-    "随便吃点/1.preface.md",
-    "agent/agent skill.md",
     "agent/Claude",
     "agent",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
@@ -240,7 +269,6 @@
     "随便吃点",
     "未命名.canvas",
     "随便吃点/LLM/5.model应用",
-    "随便吃点/LLM/0.食用手册",
     "【哲风壁纸】守岸-鸣潮.png"
   ]
 }
