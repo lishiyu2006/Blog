@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue/7..md",
+                "file": "前端/vue/7.子父组件传值.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "7."
+              "title": "7.子父组件传值"
             }
           },
           {
@@ -245,7 +245,7 @@
   "active": "a008b060dd9e95f9",
   "lastOpenFiles": [
     "前端/vue/6.API.md",
-    "前端/vue/7..md",
+    "前端/vue/7.子父组件传值.md",
     "前端/vue/5.比赛.md",
     "linux/linux指令.md",
     "linux/linux使用手册.md",
