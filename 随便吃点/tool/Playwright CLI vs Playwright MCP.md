@@ -1,12 +1,61 @@
 # Playwright CLI vs Playwright MCP
 
-## 安装
+### 安装
 
 ```bash
 npm install -g @playwright/cli@latest
 playwright-cli --help
 ```
 
+
+## 快速上手
+
+工作目录下执行 `pnpm dlx create-playwright` 来生成一个 e2e 测试项目
+
+~~~bash
+pnpm dlx creat-playwright
+~~~
+
+生成的目录结构如下：
+
+```text
+my-test
+ ┣  node_modules
+ ┣  tests
+ ┃ ┗  example.spec.ts
+ ┣  tests-examples
+ ┃ ┗  demo-todo-app.spec.ts
+ ┣  .gitignore
+ ┣  package.json
+ ┣  playwright.config.ts
+ ┗  pnpm-lock.yaml
+```
+
+对于 `TypeScript` 项目，我们可以建立 `tsconfig.json` 来提供语言服务，并通过 `pnpm i -D @types/node` 安装 `node` 的类型声明，阻止 `playwright.config.ts` 报错。
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "outDir": "dist",
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "isolatedModules": true,
+    "types": ["node"]
+  },
+  "include": ["playwright.config.ts", "tests"],
+}
+```
 ## 打开一个可视化仪表盘，查看控制所有正在运行的浏览器
 
 ~~~bash
