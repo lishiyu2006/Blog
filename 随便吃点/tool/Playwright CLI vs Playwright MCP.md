@@ -56,6 +56,9 @@ my-test
   "include": ["playwright.config.ts", "tests"],
 }
 ```
+
+我们通过命令：`npx playwright test`，就能够执行全部测试。
+
 ## 打开一个可视化仪表盘，查看控制所有正在运行的浏览器
 
 ~~~bash
