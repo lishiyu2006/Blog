@@ -27,4 +27,7 @@
 - **types**：共享 TypeScript 类型定义。
 - **utils**：共享效用函数。
 
-![Uploading file...avcte]()
+![image.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202604281539422.png)
+
+
+from https://fadamakis.com/a-front-end-application-folder-structure-that-makes-sense-ecc0b690968b
