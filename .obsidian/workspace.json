@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue进阶/vue路由/vue-router.md",
+                "file": "前端/vue进阶/vue路由/vue-router导入方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vue-router"
+              "title": "vue-router导入方法"
             }
           }
         ],
@@ -242,7 +242,7 @@
     "前端/vue初级/2.第一个Vue应用.md",
     "前端/vue初级/1.Vue介绍.md",
     "前端/vue进阶/UI组件库的由来.md",
-    "前端/vue进阶/vue路由/vue-router.md",
+    "前端/vue进阶/vue路由/vue-router导入方法.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/vants/VUE项目结构.md",
