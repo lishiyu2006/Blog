@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue进阶/vue路由/vue-router导入方法.md",
+                "file": "前端/vue进阶/vue路由/创建Router.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vue-router导入方法"
+              "title": "创建Router"
             }
           }
         ],
@@ -230,6 +230,8 @@
   },
   "active": "529812e876774d4b",
   "lastOpenFiles": [
+    "前端/vue进阶/vue路由/vue-router导入方法.md",
+    "前端/vue进阶/vue路由/创建Router.md",
     "前端/vue初级/11.component组件运行后渲染问题.md",
     "前端/vue初级/10.options和composition写法.md",
     "前端/vue初级/9.缓存树，KeepAlive.md",
@@ -242,7 +244,6 @@
     "前端/vue初级/2.第一个Vue应用.md",
     "前端/vue初级/1.Vue介绍.md",
     "前端/vue进阶/UI组件库的由来.md",
-    "前端/vue进阶/vue路由/vue-router导入方法.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/vants/VUE项目结构.md",
@@ -262,7 +263,6 @@
     "随便吃点/tool/conda.md",
     "linux",
     "其他",
-    "前端/js/2.API.md",
     "前端/js/js函数",
     "前端/vue初级",
     "agent/Claude",
