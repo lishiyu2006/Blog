@@ -135,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 259.51254653930664
   },
   "right": {
     "id": "72433f0975ca11af",
@@ -228,7 +228,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "529812e876774d4b",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
     "前端/vue进阶/vue路由/vue-router导入方法.md",
     "前端/vue进阶/vue路由/创建Router.md",
