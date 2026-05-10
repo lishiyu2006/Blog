@@ -29,8 +29,17 @@ conda install "Url"
 conda remove "name"
 ~~~
 
+关闭
+~~~bash
+conda deactivate
+~~~
 
+## 修改配置
 
+默认步开启conda
+~~~bash
+conda config --set auto_activate_base false
+~~~
 
 
 
