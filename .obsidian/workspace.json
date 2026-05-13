@@ -8,35 +8,40 @@
         "type": "tabs",
         "children": [
           {
-            "id": "529812e876774d4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "随便吃点/tool/docker.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "docker"
-            }
-          },
-          {
             "id": "1c000b4ab04df327",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随便吃点/LLM/0.食用手册/0.食用手册.md",
+                "file": "随便吃点/LLM/5.model应用/SVM支持向量机.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.食用手册"
+              "title": "SVM支持向量机"
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "b686e17c7a192aab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46c60b57be5d3144",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "随便吃点/LLM/5.model应用/Logistic回归.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Logistic回归"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,8 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc0b8b4051c66274",
+  "active": "46c60b57be5d3144",
   "lastOpenFiles": [
+    "随便吃点/LLM/5.model应用/SVM支持向量机.md",
+    "随便吃点/LLM/5.model应用/Logistic回归.md",
+    "随便吃点/LLM/0.食用手册/0.食用手册.md",
     "MATLAB/logit回归.md",
     "随便吃点/LLM/2.基础网络组件/激活函数.md",
     "随便吃点/LLM/4.架构/3.卷积接神经网络CNN.md",
@@ -212,9 +220,6 @@
     "前端/vue初级/7.代理.md",
     "前端/vue初级/6.子父组件传值.md",
     "前端/vue初级/5.API.md",
-    "前端/vue初级/5.比赛.md",
-    "前端/vue初级/4.Vue项目.md",
-    "前端/vue初级/3.其他函数用法.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
