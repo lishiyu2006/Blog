@@ -4,6 +4,11 @@
 
 逻辑回归（Logistic Regression）是一种广义线性回归分析模型，虽然被称为回归，但其实际上是分类模型，并常用于二分类,预测事件发生的概率（0到1之间）
 ## 过程
+
+![mermaid-drawing.png](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202605131943869.png)
+
+![](https://raw.githubusercontent.com/lishiyu2006/picgo/main/cdning/202605131944359.png)
+
 ### 1. 线性预测：第一步
 
 首先，逻辑回归像普通的线性回归一样，给每个输入特征分配权重，算出一个综合得分 $z$。
@@ -13,21 +18,9 @@
 $$z = w_1x_1 + w_2x_2 + b$$
 
 这个 $z$ 的范围是负无穷到正无穷。但我们需要的是一个“是或否”的结论。
-~~~
-graph TD
-    A[输入特征 x1, x2] --> B["线性组合 (z):<br/>-3 + 1*x1 + 1*x2"]
-    B --> C["Sigmoid 函数 (g):<br/>hθ(x) = 1 / (1 + e^-z)"]
-    C --> D{预测概率 hθ(x)}
-    D -- "hθ(x) ≥ 0.5" --> E["预测 y = 1<br/>(落在决策边界上方)"]
-    D -- "hθ(x) < 0.5" --> F["预测 y = 0<br/>(落在决策边界下方)"]
-    
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-    style F fill:#bbf,stroke:#333,stroke-width:2px
-    style B fill:#fff,stroke:#333,stroke-width:2px
-~~~
 ### 2. 映射到概率：Sigmoid 函数
 
-为了把那个乱跑的 $z$ 变成概率，逻辑回归请出了 **Sigmoid 函数**（也叫 Logistic 函数）：
+为了把那个乱跑的 $z$ 变成概率，逻辑回归请出了 [Sigmoid函数]([激活函数 | 下午好](https://lishiyu2006.github.io/Blog/%E9%9A%8F%E4%BE%BF%E5%90%83%E7%82%B9/LLM/2.%E5%9F%BA%E7%A1%80%E7%BD%91%E7%BB%9C%E7%BB%84%E4%BB%B6/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0.html))（也叫 Logistic 函数）：
 
 $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 
@@ -67,19 +60,9 @@ $$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 4. **分类输出**（根据阈值决定是“优”还是“劣”）。
     
 
-### 为什么它在你的架构视野里很重要？
 
-作为一名 **计算机专业学生** 且关注 **Vue 3/AI 应用**，理解 Logistic 回归的原理有两层意义：
 
-- **微观层面上**：当你以后在神经网络里看到 **`sigmoid` 激活函数** 时，你会意识到：噢！这一层其实是在做无数个并行的“逻辑回归”。
-    
-- **宏观层面上**：它是最快的二分类方案。在你的“AI 互动智课”后端，如果你需要判断用户的一次点击是否属于“恶意刷课”，逻辑回归的计算成本极低，完全没必要动用 Transformer。
-    
 
-你现在是在整理算法笔记，还是准备在代码里实现一个简单的二分类器？
-
-假设你要判断一个学生是否能通过考试，输入特征有 $x_1$（学习时长）和 $x_2$（出勤率）：
-
-利用[Sigmoid函数]([激活函数 | 下午好](https://lishiyu2006.github.io/Blog/%E9%9A%8F%E4%BE%BF%E5%90%83%E7%82%B9/LLM/2.%E5%9F%BA%E7%A1%80%E7%BD%91%E7%BB%9C%E7%BB%84%E4%BB%B6/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0.html))（$(g(z) = \frac{1}{1 + e^{-z}}$)）将线性回归的输出 z（可以是 $-\infty$ 到 $+\infty$）转换为概率值 P ( 0 到 1 ) 。
+利用（$(g(z) = \frac{1}{1 + e^{-z}}$)）将线性回归的输出 z（可以是 $-\infty$ 到 $+\infty$）转换为概率值 P ( 0 到 1 ) 。
 
 
