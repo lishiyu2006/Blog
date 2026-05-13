@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MATLAB/logit回归.md",
+                "file": "随便吃点/LLM/0.食用手册/0.食用手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "logit回归"
+              "title": "0.食用手册"
             }
           }
         ],
@@ -186,13 +186,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1c000b4ab04df327",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
+    "MATLAB/logit回归.md",
     "随便吃点/LLM/2.基础网络组件/激活函数.md",
     "随便吃点/LLM/4.架构/3.卷积接神经网络CNN.md",
     "随便吃点/LLM/4.架构/2.循环神经网络RNN.md",
     "随便吃点/LLM/4.架构/1.全连接神经网络FCNN.md",
-    "MATLAB/logit回归.md",
     "MATLAB/BP神经网络.md",
     "随便吃点/tool/mysql.md",
     "MATLAB",
