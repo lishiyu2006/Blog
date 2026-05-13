@@ -20,13 +20,7 @@
               "icon": "lucide-file",
               "title": "SVM支持向量机"
             }
-          }
-        ]
-      },
-      {
-        "id": "b686e17c7a192aab",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "46c60b57be5d3144",
             "type": "leaf",
@@ -41,7 +35,8 @@
               "title": "Logistic回归"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
