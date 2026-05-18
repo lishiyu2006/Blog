@@ -11,14 +11,10 @@
             "id": "1c000b4ab04df327",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "随便吃点/LLM/5.model应用/Logistic回归.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Logistic回归"
+              "title": "新标签页"
             }
           }
         ]
@@ -78,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.51254653930664
+    "width": 200
   },
   "right": {
     "id": "72433f0975ca11af",
@@ -171,10 +167,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1c000b4ab04df327",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
-    "随便吃点/LLM/5.model应用/[激活函数.md",
+    "MATLAB/逻辑回归（Logistic Regression）.md",
+    "MATLAB/线性回归（Linear Regression.md",
+    "MATLAB/多项式回归（Polynomial Regression）.md",
+    "MATLAB/BP神经网络.md",
     "随便吃点/LLM/5.model应用/Logistic回归.md",
+    "随便吃点/LLM/5.model应用/[激活函数.md",
     "随便吃点/LLM/5.model应用/SVM支持向量机.md",
     "MATLAB/logit回归.md",
     "随便吃点/LLM/0.食用手册/0.食用手册.md",
@@ -182,7 +182,6 @@
     "随便吃点/LLM/4.架构/3.卷积接神经网络CNN.md",
     "随便吃点/LLM/4.架构/2.循环神经网络RNN.md",
     "随便吃点/LLM/4.架构/1.全连接神经网络FCNN.md",
-    "MATLAB/BP神经网络.md",
     "随便吃点/tool/mysql.md",
     "MATLAB",
     "随便吃点/tool/docker.md",
@@ -197,9 +196,6 @@
     "前端/vue初级/11.component组件运行后渲染问题.md",
     "前端/vue进阶/vue路由/创建Router.md",
     "前端/vue初级/10.options和composition写法.md",
-    "前端/vue初级/9.缓存树，KeepAlive.md",
-    "前端/vue初级/7.代理.md",
-    "前端/vue初级/6.子父组件传值.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
