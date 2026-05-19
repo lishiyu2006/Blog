@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue进阶/vue-use.md",
+                "file": "前端/vue初级/6.子父组件传值.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vue-use"
+              "title": "6.子父组件传值"
             }
           }
         ]
@@ -173,8 +173,12 @@
   },
   "active": "1c000b4ab04df327",
   "lastOpenFiles": [
-    "前端/vue进阶/vue路由/未命名",
+    "前端/vue初级/5.API.md",
+    "前端/vue初级/6.子父组件传值.md",
+    "前端/vue初级/9.缓存树，KeepAlive.md",
+    "前端/vue初级/11.component组件运行后渲染问题.md",
     "前端/vue进阶/vue-use.md",
+    "前端/vue进阶/vue路由/未命名",
     "MATLAB/逻辑回归（Logistic Regression）.md",
     "MATLAB/线性回归（Linear Regression.md",
     "MATLAB/多项式回归（Polynomial Regression）.md",
@@ -197,9 +201,6 @@
     "随便吃点/tool/Playwright CLI vs Playwright MCP.md",
     "随便吃点/tool/jupyter手册.md",
     "随便吃点/tool/python之禅.md",
-    "前端/vants/快速上手.md",
-    "前端/vue进阶/vue路由/vue-router导入方法.md",
-    "前端/vue初级/11.component组件运行后渲染问题.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
