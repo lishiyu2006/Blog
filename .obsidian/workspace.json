@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue初级/6.子父组件传值.md",
+                "file": "前端/项目结构/项目结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "6.子父组件传值"
+              "title": "项目结构"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 279.50389099121094
   },
   "right": {
     "id": "72433f0975ca11af",
@@ -173,11 +173,13 @@
   },
   "active": "1c000b4ab04df327",
   "lastOpenFiles": [
+    "前端/vue进阶/UI组件库的由来.md",
+    "前端/vue进阶/vue-use.md",
     "前端/vue初级/5.API.md",
+    "前端/vue初级/11.component组件运行后渲染问题.md",
+    "前端/vue初级/7.代理.md",
     "前端/vue初级/6.子父组件传值.md",
     "前端/vue初级/9.缓存树，KeepAlive.md",
-    "前端/vue初级/11.component组件运行后渲染问题.md",
-    "前端/vue进阶/vue-use.md",
     "前端/vue进阶/vue路由/未命名",
     "MATLAB/逻辑回归（Logistic Regression）.md",
     "MATLAB/线性回归（Linear Regression.md",
@@ -199,8 +201,6 @@
     "随便吃点/tool/conda.md",
     "随便吃点/tool/uv 和 conda 的并行.md",
     "随便吃点/tool/Playwright CLI vs Playwright MCP.md",
-    "随便吃点/tool/jupyter手册.md",
-    "随便吃点/tool/python之禅.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
