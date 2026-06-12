@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue初级/1.Vue介绍.md",
+                "file": "前端/vue进阶/vue路由/router and route.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Vue介绍"
+              "title": "router and route"
             }
           }
         ]
@@ -173,6 +173,9 @@
   },
   "active": "1c000b4ab04df327",
   "lastOpenFiles": [
+    "前端/vue进阶/vue路由/创建Router.md",
+    "前端/vue进阶/vue路由/router and route.md",
+    "前端/vue初级/1.Vue介绍.md",
     "前端/项目结构/项目结构.md",
     "前端/vue进阶/UI组件库的由来.md",
     "前端/vue进阶/vue-use.md",
@@ -198,9 +201,6 @@
     "随便吃点/tool/mysql.md",
     "MATLAB",
     "随便吃点/tool/docker.md",
-    "随便吃点/tool/conda.md",
-    "随便吃点/tool/uv 和 conda 的并行.md",
-    "随便吃点/tool/Playwright CLI vs Playwright MCP.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
