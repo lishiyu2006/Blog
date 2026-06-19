@@ -171,10 +171,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1c000b4ab04df327",
+  "active": "fc0b8b4051c66274",
   "lastOpenFiles": [
-    "前端/vue进阶/vue路由/创建Router.md",
+    "前端/vue进阶/vue路由/vue-router导入方法.md",
     "前端/vue进阶/vue路由/router and route.md",
+    "前端/vue进阶/vue路由/创建Router.md",
     "前端/vue初级/1.Vue介绍.md",
     "前端/项目结构/项目结构.md",
     "前端/vue进阶/UI组件库的由来.md",
@@ -200,7 +201,6 @@
     "随便吃点/LLM/4.架构/1.全连接神经网络FCNN.md",
     "随便吃点/tool/mysql.md",
     "MATLAB",
-    "随便吃点/tool/docker.md",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
     "前端/项目结构",
