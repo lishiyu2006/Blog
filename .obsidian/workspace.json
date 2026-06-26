@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue初级/4.Vue项目.md",
+                "file": "前端/其他/服务端渲染SSR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.Vue项目"
+              "title": "服务端渲染SSR"
             }
           }
         ]
@@ -173,6 +173,9 @@
   },
   "active": "30322e741690025f",
   "lastOpenFiles": [
+    "前端/其他",
+    "前端/vue初级/4.Vue项目.md",
+    "前端/其他/服务端渲染SSR.md",
     "前端/vue初级/1.Vue介绍.md",
     "前端/vue初级/2.第一个Vue应用.md",
     "前端/vue进阶/build可能出现的小问题.md",
@@ -200,9 +203,6 @@
     "MATLAB/逻辑回归（Logistic Regression）.md",
     "MATLAB/线性回归（Linear Regression.md",
     "MATLAB/多项式回归（Polynomial Regression）.md",
-    "MATLAB/BP神经网络.md",
-    "随便吃点/LLM/5.model应用/Logistic回归.md",
-    "随便吃点/LLM/5.model应用/[激活函数.md",
     "MATLAB",
     "前端/vue进阶/vue路由",
     "前端/vue进阶",
