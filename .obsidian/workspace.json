@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/其他/服务端渲染SSR.md",
+                "file": "其他/nvm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "服务端渲染SSR"
+              "title": "nvm"
             }
           }
         ]
@@ -173,9 +173,10 @@
   },
   "active": "30322e741690025f",
   "lastOpenFiles": [
+    "前端/其他/服务端渲染SSR.md",
+    "其他/nvm.md",
     "前端/其他",
     "前端/vue初级/4.Vue项目.md",
-    "前端/其他/服务端渲染SSR.md",
     "前端/vue初级/1.Vue介绍.md",
     "前端/vue初级/2.第一个Vue应用.md",
     "前端/vue进阶/build可能出现的小问题.md",
@@ -211,7 +212,6 @@
     "linux",
     "其他",
     "前端/js/js函数",
-    "前端/vue初级",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "未命名.canvas",
     "【哲风壁纸】守岸-鸣潮.png"
