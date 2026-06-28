@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/react/项目结构.md",
+                "file": "前端/react/临时.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目结构"
+              "title": "临时"
             }
           }
         ]
@@ -173,8 +173,9 @@
   },
   "active": "30322e741690025f",
   "lastOpenFiles": [
-    "前端/vue/项目结构.md",
     "前端/react/项目结构.md",
+    "前端/react/临时.md",
+    "前端/vue/项目结构.md",
     "前端/未命名.md",
     "前端/react",
     "前端/js/1.js基础.md",
@@ -204,7 +205,6 @@
     "前端/vue进阶/抽离Vue组合式函数时,什么时候要加上watch.md",
     "前端/vue/vue初级/5.API.md",
     "前端/vue/vue初级/11.component组件运行后渲染问题.md",
-    "前端/vue/vue初级/7.代理.md",
     "前端/vue进阶/vue路由/未命名",
     "MATLAB",
     "前端/vue/vue进阶/vue路由",
