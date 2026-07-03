@@ -47,7 +47,7 @@ const baseVitePressConfig = {
     nav: [
       { text: 'frontend', link: '/前端/1.preface' },
       { text: 'llm', link: '/随便吃点/1.preface' },
-      { text: 'liunx', link: '/liunx/1.preface' },
+      { text: 'linux', link: '/liunx/1.preface' },
       { text: 'agent', link: '/agent/1.preface' },
       { text: 'tool', link: '/工具/1.preface' },
       { text: '主页', link: '/' }
@@ -100,10 +100,10 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: 'liunx',
-    basePath: '/liunx/',
-    resolvePath: '/liunx/',
-    rootGroupText: 'liunx',
+    scanStartPath: 'linux',
+    basePath: '/linux/',
+    resolvePath: '/linux/',
+    rootGroupText: 'linux',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
