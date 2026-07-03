@@ -26,3 +26,16 @@ unrar x filename.rar
 ```
   unzip -n filename.zip
 ```
+
+
+cd “目录” = 到...目录
+
+remove “目录” = 删除
+
+curl “网址” =  下载
+
+pip “网址”  = 下载
+
+unzip “目录” = 解压
+
+D： = 换到D盘

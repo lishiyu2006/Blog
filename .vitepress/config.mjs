@@ -45,9 +45,11 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: 'ai搭建', link: '/随便吃点/1.preface' },
-      { text: '前端', link: '/前端/1.preface' },
+      { text: 'frontend', link: '/前端/1.preface' },
+      { text: 'llm', link: '/随便吃点/1.preface' },
+      { text: 'liunx', link: '/liunx/1.preface' },
       { text: 'agent', link: '/agent/1.preface' },
+      { text: 'tool', link: '/工具/1.preface' },
       { text: '主页', link: '/' }
     ],
 
@@ -86,11 +88,11 @@ const baseVitePressConfig = {
 // 建议：将 documentRootPath 设置为 '/'，代表 VitePress 的源目录
 const sidebarConfigs = [
   {
-    documentRootPath: '/', // 使用 '/' 表示文档根目录
-    scanStartPath: '随便吃点',
-    basePath: '/随便吃点/',
-    resolvePath: '/随便吃点/',
-    rootGroupText: '过往',
+    documentRootPath: '/',
+    scanStartPath: 'frontend',
+    basePath: '/frontend/',
+    resolvePath: '/frontend/',
+    rootGroupText: '现在',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
@@ -98,10 +100,43 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: '前端',
-    basePath: '/前端/',
-    resolvePath: '/前端/',
-    rootGroupText: '现在',
+    scanStartPath: 'liunx',
+    basePath: '/liunx/',
+    resolvePath: '/liunx/',
+    rootGroupText: 'liunx',
+    removePrefixAfterOrdering: true,
+    prefixSeparator: '.',
+    collapsed: true,
+    collapseDepth: 2,
+  },
+  {
+    documentRootPath: '/', // 使用 '/' 表示文档根目录
+    scanStartPath: 'llm',
+    basePath: '/llm/',
+    resolvePath: '/llm/',
+    rootGroupText: '过往',
+    removePrefixAfterOrdering: true,
+    prefixSeparator: '.',
+    collapsed: true,
+    collapseDepth: 2,
+  },
+  {
+    documentRootPath: '/', // 使用 '/' 表示文档根目录
+    scanStartPath: 'agent',
+    basePath: '/agent/',
+    resolvePath: '/agent/',
+    rootGroupText: 'agent',
+    removePrefixAfterOrdering: true,
+    prefixSeparator: '.',
+    collapsed: true,
+    collapseDepth: 2,
+  },
+  {
+    documentRootPath: '/',
+    scanStartPath: 'tool',
+    basePath: '/tool/',
+    resolvePath: '/tool/',
+    rootGroupText: 'tool',
     removePrefixAfterOrdering: true,
     prefixSeparator: '.',
     collapsed: true,
