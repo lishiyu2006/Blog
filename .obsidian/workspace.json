@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端/vue/vue初级/2.第一个Vue应用.md",
+                "file": "随便吃点/tool/git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.第一个Vue应用"
+              "title": "git"
             }
           }
         ]
@@ -173,6 +173,7 @@
   },
   "active": "30322e741690025f",
   "lastOpenFiles": [
+    "前端/vue/vue初级/2.第一个Vue应用.md",
     "前端/vue/vue初级/1.Vue介绍.md",
     "前端/react/临时.md",
     "前端/react/项目结构.md",
@@ -188,7 +189,6 @@
     "前端/vue/其他/服务端渲染SSR.md",
     "前端/vue/其他",
     "前端/vue/vue初级/4.Vue项目.md",
-    "前端/vue/vue初级/2.第一个Vue应用.md",
     "前端/vue/vue进阶/build可能出现的小问题.md",
     "前端/vue/vue进阶/自动化检查程序.md",
     "前端/vue/vue进阶/动态启动本地项目.md",

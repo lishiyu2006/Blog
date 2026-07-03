@@ -10,6 +10,10 @@ git add 文件名（. 表示全部文件）
 ~~~bash
 git commit -m "上传的名字" #-m 表示提交备注，即后面的名字
 ~~~
+推送到github上
+~~~bash
+git push # 新版GitHub默认分支是main，旧版是master，若报错就加上git push -u origin master
+~~~
 关联仓库
 ~~~bash
 git remote add origin https://github.com/【你的GitHub用户名】/【你创建的仓库名】.git
@@ -26,10 +30,7 @@ git remot show 【仓库名】
 ~~~bash
 git remote rm 【仓库名】 # 删除名为origin的远程关联
 ~~~
-推送到github上
-~~~bash
-git push # 新版GitHub默认分支是main，旧版是master，若报错就加上git push -u origin master
-~~~
+
 
 例下载dify
 ~~~bash
