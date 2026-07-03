@@ -89,7 +89,7 @@ const baseVitePressConfig = {
 const sidebarConfigs = [
   {
     documentRootPath: '/',
-    scanStartPath: 'frontend',
+    scanStartPath: '前端',
     basePath: '/frontend/',
     resolvePath: '/frontend/',
     rootGroupText: '现在',
@@ -111,7 +111,7 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/', // 使用 '/' 表示文档根目录
-    scanStartPath: 'llm',
+    scanStartPath: '随便吃点',
     basePath: '/llm/',
     resolvePath: '/llm/',
     rootGroupText: '过往',
@@ -133,7 +133,7 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: 'tool',
+    scanStartPath: '工具',
     basePath: '/tool/',
     resolvePath: '/tool/',
     rootGroupText: 'tool',
