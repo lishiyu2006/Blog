@@ -45,12 +45,12 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: '主页', link: '/' }
+      { text: '主页', link: '/' },
       { text: 'frontend', link: '/frontend/1.preface' }, // 保持与 sidebar 里的 /frontend/ 一致
       { text: 'llm', link: '/llm/1.preface' },           // 保持与 sidebar 里的 /llm/ 一致
       { text: 'linux', link: '/linux/1.preface' },       // 纠正了拼写，并与 /linux/ 一致
       { text: 'agent', link: '/agent/1.preface' },       // 保持与 sidebar 里的 /agent/ 一致
-      { text: 'tool', link: '/tool/1.preface' },         // 保持与 sidebar 里的 /tool/ 一致
+      { text: 'tool', link: '/tool/1.preface' }      // 保持与 sidebar 里的 /tool/ 一致
 
     ],
 
