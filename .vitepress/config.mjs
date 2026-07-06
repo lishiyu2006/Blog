@@ -89,7 +89,7 @@ const baseVitePressConfig = {
 const sidebarConfigs = [
   {
     documentRootPath: '/',       // 1. 你的项目文档根目录（通常是 docs 或项目根目录）
-    scanStartPath: '前端',       // 2. 告诉插件：去扫描项目下的 “前端” 这个文件夹
+    scanStartPath: 'frontend',       // 2. 告诉插件：去扫描项目下的 “前端” 这个文件夹
     basePath: '/frontend/',      // 3. 路由前缀。把“前端/xxx.md”变成“/frontend/xxx.html”
     resolvePath: '/frontend/',  // 4. 侧边栏激活路径。当浏览器地址是 /frontend/ 开头时，显示这个侧边栏
     rootGroupText: '现在',       // 5. 这个分组在侧边栏最顶层显示的名称叫“现在”
@@ -113,7 +113,7 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/', // 使用 '/' 表示文档根目录
-    scanStartPath: '随便吃点',
+    scanStartPath: 'llm',
     basePath: '/llm/',
     resolvePath: '/llm/',
     rootGroupText: '过往',
@@ -135,7 +135,7 @@ const sidebarConfigs = [
   },
   {
     documentRootPath: '/',
-    scanStartPath: '工具',
+    scanStartPath: 'tool',
     basePath: '/tool/',
     resolvePath: '/tool/',
     rootGroupText: 'tool',
