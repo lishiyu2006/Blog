@@ -45,11 +45,11 @@ const baseVitePressConfig = {
       }
     },
     nav: [
-      { text: 'frontend', link: '/前端/1.preface' },
-      { text: 'llm', link: '/随便吃点/1.preface' },
-      { text: 'linux', link: '/liunx/1.preface' },
-      { text: 'agent', link: '/agent/1.preface' },
-      { text: 'tool', link: '/工具/1.preface' },
+      { text: 'frontend', link: '/frontend/1.preface' }, // 保持与 sidebar 里的 /frontend/ 一致
+      { text: 'llm', link: '/llm/1.preface' },           // 保持与 sidebar 里的 /llm/ 一致
+      { text: 'linux', link: '/linux/1.preface' },       // 纠正了拼写，并与 /linux/ 一致
+      { text: 'agent', link: '/agent/1.preface' },       // 保持与 sidebar 里的 /agent/ 一致
+      { text: 'tool', link: '/tool/1.preface' },         // 保持与 sidebar 里的 /tool/ 一致
       { text: '主页', link: '/' }
     ],
 
@@ -88,15 +88,17 @@ const baseVitePressConfig = {
 // 建议：将 documentRootPath 设置为 '/'，代表 VitePress 的源目录
 const sidebarConfigs = [
   {
-    documentRootPath: '/',
-    scanStartPath: '前端',
-    basePath: '/frontend/',
-    resolvePath: '/frontend/',
-    rootGroupText: '现在',
-    removePrefixAfterOrdering: true,
-    prefixSeparator: '.',
-    collapsed: true,
-    collapseDepth: 2,
+    documentRootPath: '/',       // 1. 你的项目文档根目录（通常是 docs 或项目根目录）
+    scanStartPath: '前端',       // 2. 告诉插件：去扫描项目下的 “前端” 这个文件夹
+    basePath: '/frontend/',      // 3. 路由前缀。把“前端/xxx.md”变成“/frontend/xxx.html”
+    resolvePath: '/frontend/',  // 4. 侧边栏激活路径。当浏览器地址是 /frontend/ 开头时，显示这个侧边栏
+    rootGroupText: '现在',       // 5. 这个分组在侧边栏最顶层显示的名称叫“现在”
+
+    removePrefixAfterOrdering: true, // 6. 如果你的文件名叫 "1.preface.md"，在侧边栏显示时会自动去掉前面的数字，变成 "preface"
+    prefixSeparator: '.',            // 7. 指定序号的分隔符（配合上面那个用，这里是点 `.`）
+
+    collapsed: true,      // 8. 侧边栏默认折叠
+    collapseDepth: 2,     // 9. 超过 2 层的目录才折叠
   },
   {
     documentRootPath: '/',
