@@ -18,3 +18,17 @@
 
 
 
+ai-photo-app/
+├── src/
+│   ├── controllers/      # 业务逻辑（调用腾讯云API、处理生图）
+│   │   └── photoController.ts
+│   ├── views/            # 前端 HTML 模板 (EJS)
+│   │   ├── index.ejs     # 首页（上传照片、选择风格）
+│   │   └── result.ejs    # 结果页（展示生成的AI照片）
+│   ├── public/           # 静态资源（CSS、JS、本地图片）
+│   │   └── css/
+│   │       └── style.css
+│   └── server.ts         # 后端入口文件
+├── .env                  # 腾讯云密钥等环境变量
+├── package.json
+└── tsconfig.json
