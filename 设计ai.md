@@ -142,51 +142,176 @@
 
 
 # 提示词
-#### 1. 室内照明模块 (Indoor Lighting)
+### 一、 通用画质与反向提示词大底（全局封装）
 
-针对室内场景，内置提示词需要控制灯光的**类型、开关状态、氛围与温觉**：
+在实际调用 AI 接口时，为了保证室内和建筑设计的高级渲染质感，后端应在每个功能提示词前自动拼上**通用正向大底**，并在每次请求中附带**反向大底**：
 
-- **装饰灯-休闲氛围照明**：
+- **系统通用正向大底 (Global Positive Base)**：
     
-    - _内置提示词核心_：温暖环境光，精美吊灯点亮，休闲微暗氛围，柔和侧光，高级住宅影调。
-        
-- **焦点灯光场景模式**：
+    > `masterpiece, best quality, ultra-detailed, 8k resolution, photorealistic, ray-traced lighting, realistic shadow casting, complex global illumination, award-winning architectural photography,`
     
-    - _内置提示词核心_：精准射灯（spotlights），聚焦特定区域/艺术品，高对比度光影，暗调背景，强调纹理。
-        
-- **关闭天花灯带照明（灯光开关控制）**：
+- **系统通用反向大底 (Global Negative Base)**：
     
-    - _内置提示词核心_：无天花板发光条，仅保留地面/墙壁低位线性灯，极简暗光。
-        
-- **灯光手绘图转实景灯光**：
-    
-    - _内置提示词核心_：将手绘线条转化为真实的 LED 线性光、嵌入式筒灯，真实材质反射，室内渲染质量。
-        
+    > `bad quality, worst quality, low resolution, blurry, noisy, grainy, distorted architectural structure, unrealistic reflection, text, watermark, signature, draft, canvas edges, logo, overexposed, pure black background, monochrome, low contrast, corrupted textures, amateur 3d render`
+### 二、 全套 18 个核心功能卡片内置提示词矩阵
 
-#### 2. 户外亮化与建筑模块 (Outdoor & Architecture)
+#### 📂 模块 1：室内效果图设计（Indoor Effects & Adjustments）
 
-针对建筑外观与景观，内置提示词需要控制**时间转换、墙体亮化、植被光效**：
+##### 1. 装饰灯 - 休闲氛围照明 (`indoor_deco_leisure`)
 
-- **真实感白天转夜景（通用）**：
+- **正向提示词 (Prompt)**：`cozy indoor lighting, elegant decorative pendant light emitting soft warm light, amber ambient glow, relaxed luxury residential atmosphere, cinematic side lighting, premium fabric and leather textures, interior design trend`
     
-    - _内置提示词核心_：夜景，深蓝色夜空，繁星，建筑内部灯光透射，完美的窗户发光，高级夜景摄影。
-        
-- **白天转夜景只出环境光**：
+- **反向提示词 (Negative)**：`bright daylight, fluorescent light, overexposed, harsh direct light, flash photography, cold blue tone`
     
-    - _内置提示词核心_：微弱夜间环境光，无强烈直射光源，强调建筑轮廓剪影。
-        
-- **现代建筑幕墙灯光设计**：
+
+##### 2. 焦点灯光场景模式 (`indoor_spotlight_focus`)
+
+- **正向提示词 (Prompt)**：`precise ceiling spotlights, focused beams illuminating key architectural areas, narrow beam angle, dramatic chiaroscuro contrast, high-end museum gallery lighting, visible light cones, sharp shadow definitions`
     
-    - _内置提示词核心_：现代玻璃/混凝土幕墙，嵌入式外墙灯带，线性光向上洗墙，科技感建筑照明。
-        
-- **亮化设计风格迁移**：
+- **反向提示词 (Negative)**：`flat lighting, floodlight, shadowless, low contrast, uniformly illuminated room`
     
-    - _内置提示词核心_：参考特定高档建筑照明，高保真光效移植，奢华夜间亮化。
-        
-- **指定挂饰灯生成树木亮化**：
+
+##### 3. 关闭天花灯带照明 (`indoor_strip_turn_off`)
+
+- **正向提示词 (Prompt)**：`empty and unlit ceiling hidden cove, LED light strips completely turned off, minimal low-level linear lighting, subtle floor lamps and soft wall sconces glow, moody evening shadow atmosphere, clean architectural surfaces`
     
-    - _内置提示词核心_：树枝上挂满节日装饰灯串，微发光颗粒，浪漫夜间景观。
-        
-- **只给树木加投光灯**：
+- **反向提示词 (Negative)**：`bright ceiling cove, shining linear lights, fully illuminated ceiling, morning sun`
     
-    - _内置提示词核心_：地面绿化投光灯（uplighting），绿色植被被照亮，冷色调/特定色温光束。
+
+##### 4. 灯光手绘图转实景灯光 (`indoor_sketch_to_real`)
+
+- **正向提示词 (Prompt)**：`transform sketch into real luminous lighting, architectural LED linear profiles, modern recessed downlights, high-end V-ray interior rendering style, realistic glass and marble material reflections, tangible light sources`
+    
+- **反向提示词 (Negative)**：`visible lines, black and white sketch marks, hand-drawn background, unrefined surfaces, flat cartoon color`
+    
+
+##### 5. 一键智能灯光场景设计（给参考图） (`indoor_smart_scene`)
+
+- **正向提示词 (Prompt)**：`complete high-end intelligent lighting design, luxury hotel lobby ambiance, balanced direct and indirect lighting layout, multi-layered color temperatures, realistic light propagation on walls, professional soft diffusion`
+    
+- **反向提示词 (Negative)**：`single light source, unlit corners, chaotic shadows, neon colors, rave lighting`
+    
+
+##### 6. 提示词精准设计室内灯光 (`indoor_prompt_precision`)
+
+- **正向提示词 (Prompt)**：`custom high-fidelity lighting arrangement, sophisticated light fixture placement, detailed geometric shadows, soft light scattering, architectural digest magazine style presentation, high dynamic range`
+    
+- **反向提示词 (Negative)**：`random light leaks, volumetric fog overdone, low dynamic range, dark spots`
+    
+
+##### 7. 根据提示词准确得出灯光效果 (`indoor_prompt_matching`)
+
+- **正向提示词 (Prompt)**：`accurate light spectrum simulation, realistic physics-based rendering, clear illumination boundaries, distinct contrast between illuminated areas and shadows, crisp and clean architectural visualization`
+    
+- **反向提示词 (Negative)**：`vague light sources, floating artifacts, light bleeding through solid objects`
+    
+
+##### 8. 写提示词更改局部灯光色温 (`indoor_color_temp_tweak`)
+
+- **正向提示词 (Prompt)**：`architectural indoor color temperature adjustment, white balance fine-tuning, realistic warm and cold light interaction, smooth color bleeding on matte walls, exact Kelvin temperature look`
+    
+- **反向提示词 (Negative)**：`oversaturated neon, artificial rainbow colors, extreme tint, black and white`
+    
+
+##### 9. 一键调光功能调整灯光亮度 (`indoor_dimmer_control`)
+
+- **正向提示词 (Prompt)**：`controlled lumen adjustment, relative brightness scaling, accurate dimming simulation, soft shadow transitions, preserved texture details in shadow areas, ambient dark luxury`
+    
+- **反向提示词 (Negative)**：`pitch black, overexposed white blocks, washed out colors`
+    
+
+##### 10. 提亮整个室内空间灯光亮度 (`indoor_brighten_all`)
+
+- **正向提示词 (Prompt)**：`fully illuminated spatial volume, bright ambient fill light, shadowless corner enhancement, high-key lighting design, commercial interior presentation, clean and energetic atmosphere`
+    
+- **反向提示词 (Negative)**：`dim lighting, heavy vignette, gloomy atmosphere, dark corners, moody shadows`
+    
+
+##### 11. 一键去除天花原有灯具 (`indoor_erase_fixtures` - _重绘消除_)
+
+- **正向提示词 (Prompt)**：`clean and smooth gypsum ceiling surface, completely empty ceiling architecture, seamless drywall finish, no lamps, no tracks, original structural shadow lines preserved`
+    
+- **反向提示词 (Negative)**：`remaining wires, holes, broken glass, ghost artifacts, light spots where lamp was`
+    
+
+#### 📂 模块 2：精准位置控制（Canvas 涂抹/标线加灯）
+
+##### 12. 精准位置/室内任意加灯带照明 (`control_strip_light` - _红线约束_)
+
+- **正向提示词 (Prompt)**：`a continuous seamless LED light strip installed precisely along the marked line, hidden cove illumination, elegant grazing light effect flowing down the wall, 4000k linear light profile, crisp architectural linear alignment`
+    
+- **反向提示词 (Negative)**：`broken light lines, dots, crooked light strips, bulbs showing`
+    
+
+##### 13. 任意加射灯照明/指定位置加灯具 (`control_spotlight_lamp` - _红点/圈选约束_)
+
+- **正向提示词 (Prompt)**：`a sleek modern minimalist spotlight installed exactly on the marked position, down-pointing conical light beam, sharp accent illumination, metallic fixture casing seamlessly mounted to the ceiling`
+    
+- **反向提示词 (Negative)**：`floating lamps, disconnected wires, distorted lamp shape, multiple overlapping fixtures`
+    
+
+##### 14. 室内任意加磁吸灯/特定产品 (`control_magnetic_track`)
+
+- **正向提示词 (Prompt)**：`a high-end black magnetic track lighting rail integrated into the ceiling, slim linear track light modules inserted, continuous warm glow, high-end studio lighting hardware style`
+    
+- **反向提示词 (Negative)**：`clunky traditional chandeliers, retro styles, loose parts, messy ceiling`
+    
+
+#### 📂 模块 3：建筑效果图与户外亮化（Outdoor & Facade)
+
+##### 15. 真实感白天转夜景通用 (`outdoor_day_to_night`)
+
+- **正向提示词 (Prompt)**：`dusk evening architectural photography, deep blue hour sky background with subtle stars, beautiful warm golden lights glowing from inside building windows, interior illumination bleeding out, realistic glass facade reflections, high-end night appearance`
+    
+- **反向提示词 (Negative)**：`bright daylight, sunshine, blue sky with white clouds, sharp noon shadows, sun rays`
+    
+
+##### 16. 白天转夜景只出环境光 (`outdoor_night_ambient_only`)
+
+- **正向提示词 (Prompt)**：`night architectural silhouette, dim ambient environment lighting, twilight horizon sky background, subtle accent lighting on key columns, low contrast external light, emphasis on architectural form and geometry shadow`
+    
+- **反向提示词 (Negative)**：`bright floodlights, multi-colored flashing lights, fully illuminated facade, harsh neon signs`
+    
+
+##### 17. 现代建筑幕墙灯光设计 (`outdoor_curtain_wall`)
+
+- **正向提示词 (Prompt)**：`modern glass skyscraper facade lighting, linear LED vertical profiles running upwards, grazing wall wash light effect on concrete columns, tech-style architectural illumination, sharp clean geometric light beams, commercial building mood`
+    
+- **反向提示词 (Negative)**：`classic European building, messy chaotic wires, round vintage lantern lamps, flickering lights`
+    
+
+##### 18. 景观建筑夜景照明设计/风格迁移 (`outdoor_landscape_style`)
+
+- **正向提示词 (Prompt)**：`premium landscape illumination design, reference-grade light distribution on structural facades, elegant luxury property night presentation, harmonious interplay of warm white and neutral white light sources`
+    
+- **反向提示词 (Negative)**：`cheap street lights, security floodlights, green or red laser lights`
+    
+
+##### 19. 只给树木加投光灯 (`outdoor_tree_uplighting`)
+
+- **正向提示词 (Prompt)**：`landscape greening uplighting, ground-buried waterproof spotlights projecting upwards, illuminating botanical tree leaves and complex branches, vibrant organic textures, crisp light beams passing through green foliage`
+    
+- **反向提示词 (Negative)**：`ambient daylight, uniformly lit sky, unlit trees, floating lanterns`
+    
+
+##### 20. 指定挂饰灯生成树木亮化 (`outdoor_tree_hanging_deco`)
+
+- **正向提示词 (Prompt)**：`romantic landscape lighting, sparkling fairy light strings wrapped around tree branches, micro-glowing light particles, starry golden holiday decoration look, beautiful bokeh effects in the dark background`
+    
+- **反向提示词 (Negative)**：`industrial construction site floodlights, office lighting, minimal cold style`
+    
+
+#### 📂 模块 4：线稿互转（Structure Conversion）
+
+##### 21. 线稿图/草图转 3D 效果图 (`sketch_to_3d` - _ControlNet 约束_)
+
+- **正向提示词 (Prompt)**：`complete architectural visualization, filling materials with high-end realistic textures, realistic wood paneling and polished marble floors, balanced luxury interior layer lighting, photorealistic 3d render presentation`
+    
+- **反向提示词 (Negative)**：`remaining lines, pencil draft marks, empty untextured blocks, sketch background`
+    
+
+##### 22. 效果图转线稿手绘底图 (`image_to_sketch` - _大模型兜底模板_)
+
+- **正向提示词 (Prompt)**：`pure plain white background, clean crisp black and white lineart, sharp architectural structural contour lines, zero colors, zero shadows, perfect blueprint wireframe template for interior designers`
+    
+- **反向提示词 (Negative)**：`color gradients, grayscale shading, 3d volumetric render, photographic textures`
