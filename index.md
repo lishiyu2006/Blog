@@ -20,7 +20,7 @@ hero:
   actions:
     - theme: brand # 主按钮 (颜色更突出)
       text: 开始阅读 # 按钮文字
-      link: /前端/1.preface.md # 按钮链接，指向你第一个想让别人看的页面
+      link: /frontend/1.preface.md # 按钮链接，指向你第一个想让别人看的页面
     - theme: alt # 次要按钮
       text: 关于我
       link: ./about # 指向 about.md 页面 (需要你自己创建)
@@ -30,10 +30,10 @@ features:
   - # 你可以使用 emoji 作为图标
     title: 学习日记now
     details: 我走得很慢，但我从不后退。——林肯
-    link: /前端/1.preface.md
+    link: /frontend/1.preface.md
   - title: 过往
     details: 人生的价值，并不是用时间，而是用深度去衡量的。 —— 列夫·托尔斯泰
-    link: /随便吃点/1.preface.md
+    link: /llm/1.preface.md
 ---
 
 <!-- 
