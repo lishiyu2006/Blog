@@ -21,7 +21,7 @@ RAG = **检索器（Retriever）** + **生成器（Generator）**
 
 ### 2. RAG 技术进阶 (Advanced RAG & Modular RAG)
 
-课程详细讲解了为了克服朴素RAG的局限性而引入的高级技术，分为三个阶段：
+为了克服朴素RAG的局限性而引入的高级技术，分为三个阶段：
 
 #### A. 预检索阶段 (Pre-Retrieval)
 
