@@ -11,10 +11,14 @@
             "id": "30322e741690025f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "llm/LLM/6.外部组件/RAG.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "RAG"
             }
           }
         ]
@@ -167,8 +171,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fc0b8b4051c66274",
+  "active": "30322e741690025f",
   "lastOpenFiles": [
+    "llm/LLM/6.外部组件/RAG.md",
     "整体框架.md",
     "tool/域名.md",
     "设计ai.md",
@@ -198,7 +203,6 @@
     "前端/vue/vue初级/4.Vue项目.md",
     "前端/vue/vue进阶/build可能出现的小问题.md",
     "前端/vue/vue进阶/自动化检查程序.md",
-    "前端/vue/vue进阶/动态启动本地项目.md",
     "logo.png",
     "loge.png",
     "loge.jpg",
