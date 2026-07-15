@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "llm/project/dify售后机器人.md",
+                "file": "llm/LLM/6.外部组件/RAG评估算法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dify售后机器人"
+              "title": "RAG评估算法"
             }
           }
         ],
@@ -189,7 +189,9 @@
   "active": "e03dc3430e6c0cc6",
   "lastOpenFiles": [
     "llm/LLM/6.外部组件/RAG.md",
+    "llm/LLM/6.外部组件/高斯噪声.md",
     "llm/LLM/6.外部组件/RAG评估算法.md",
+    "llm/project/dify售后机器人.md",
     "整体框架.md",
     "tool/域名.md",
     "设计ai.md",
@@ -216,8 +218,6 @@
     "前端/vue",
     "前端/vue/其他/服务端渲染SSR.md",
     "前端/vue/其他",
-    "前端/vue/vue初级/4.Vue项目.md",
-    "前端/vue/vue进阶/build可能出现的小问题.md",
     "logo.png",
     "loge.png",
     "loge.jpg",
