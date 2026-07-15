@@ -16,9 +16,8 @@ RAG = **检索器（Retriever）** + **生成器（Generator）**
      1. **提取 (Extract)**：从PDF、网页等提取文本。
      2. **索引 (Index)**：切分文本（Chunking），Embedding（向量化），存入向量数据库。
      3. **检索 (Retrieve)**：将用户问题向量化，在数据库中查找相似片段。
-这时会用Rerank模型
-
-     4. **生成 (Generate)**：将检索到的片段作为上下文输入LLM，生成答案。
+			这时会用**Rerank 模型**通过对比查询与文档的深层语义，计算出极高精度的相关性分数，将最相关的内容排在最前面，供AI模型生成回答。这能有效提升准确率并减少幻觉
+	 4.  **生成 (Generate)**：将检索到的片段作为上下文输入LLM，生成答案。
 
 ### 2. RAG 技术进阶 (Advanced RAG & Modular RAG)
 
