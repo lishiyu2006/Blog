@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/meeting_minutes/2026前端圈会议总结.md",
+                "file": "frontend/底层/vdom.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026前端圈会议总结"
+              "title": "vdom"
             }
           }
         ],
@@ -188,8 +188,10 @@
   },
   "active": "e03dc3430e6c0cc6",
   "lastOpenFiles": [
-    "111.md",
     "frontend/meeting_minutes/2026前端圈会议总结.md",
+    "frontend/底层/vdom.md",
+    "frontend/底层",
+    "111.md",
     "frontend/meeting_minutes",
     "llm/LLM/5.model应用/AIGC（人工智能生成内容）/生成对抗网络GAN.md",
     "llm/LLM/6.外部组件/RAG.md",
@@ -216,7 +218,6 @@
     "前端/vue/项目结构.md",
     "前端/未命名.md",
     "前端/react",
-    "前端/js/1.js基础.md",
     "前端/vue",
     "前端/vue/其他",
     "logo.png",
@@ -226,7 +227,6 @@
     "MATLAB",
     "前端/vue/vue进阶/vue路由",
     "前端/vue/vue进阶",
-    "前端/vue/项目结构",
     "4749bb847d50d0f0204e4c72ec09bdb7.png",
     "未命名.canvas",
     "【哲风壁纸】守岸-鸣潮.png"
