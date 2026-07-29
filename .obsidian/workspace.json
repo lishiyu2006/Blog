@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "frontend/底层/vdom和vapor.md",
+                "file": "frontend/meeting_minutes/2026前端圈会议总结.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vdom和vapor"
+              "title": "2026前端圈会议总结"
             }
           }
         ],
@@ -188,8 +188,8 @@
   },
   "active": "e03dc3430e6c0cc6",
   "lastOpenFiles": [
-    "frontend/meeting_minutes/2026前端圈会议总结.md",
     "frontend/底层/vdom和vapor.md",
+    "frontend/meeting_minutes/2026前端圈会议总结.md",
     "frontend/底层",
     "111.md",
     "frontend/meeting_minutes",
