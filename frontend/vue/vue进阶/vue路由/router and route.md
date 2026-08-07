@@ -7,4 +7,4 @@ eg.创建响应式变量router,用router.push("./目标页面的域名")
 
 route实现数据读取
 函数createroute
-eg.route.path会将当前的地址的值直接以字符串的形式输出
+eg.route.path会将当前的地址的值直接以字符串的形式输出，一般匹配的时候会用name来匹配
