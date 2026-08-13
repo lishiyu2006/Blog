@@ -9,3 +9,7 @@ skill are folds of instructions , scritp , and resources thaat Agent loads dynam
 ## Wiki
 
 A wiki is a form of online hypertext publication that is collaborativaely edited and manged by its own  audience trought a web browser.
+
+总结：一个共享的实时的所有人可以操作的共享文档
+
+特点：极强的
