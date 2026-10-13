@@ -1,0 +1,3 @@
+# localstorage和组件渲染的问题
+
+如果组件的显示渲染逻辑里面有从localstorage里面读取。那么会出现，白屏的现象，因为localstorage还没加载出来

@@ -18,3 +18,8 @@ nvm use 版本号
 nvm node_mirror https://npmmirror.com/mirrors/node/
 nvm npm_mirror https://npmmirror.com/mirrors/npm/
 ~~~
+
+全局安装
+~~~
+npx ...
+~~~
